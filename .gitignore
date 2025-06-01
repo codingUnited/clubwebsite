@@ -1,0 +1,32 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+
+# === Django ===
+db.sqlite3
+*.log
+media/
+staticfiles/
+local_settings.py
+
+# === Docker ===
+*.pid
+*.tgz
+docker-compose.override.yml
+.env
+.env.*
+
+# === VS Code ===
+.vscode/
+
+# === Virtual Environments ===
+env/
+venv/
+ENV/
+.venv/
