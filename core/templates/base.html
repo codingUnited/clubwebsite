@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  {% load static %}
+  {%block title%}{%endblock%}
+
+  <!-- HTMX -->
+  <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+
+  <!-- Alpine.js -->
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <!-- Tailwind CSS-->
+   <link href="{% static 'output.css' %}" rel="stylesheet">
+   
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    button { margin-top: 1rem; }
+  </style>
+</head>
+<body>
+
+    {%block content%}{%endblock%}
+</body>
+
+</html>
