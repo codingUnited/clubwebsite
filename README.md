@@ -29,6 +29,7 @@ cd club-website
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) — Required to run the project in a containerized environment  
 - [Visual Studio Code](https://code.visualstudio.com/) — Recommended code editor
+- [Ubuntu Desktop](https://ubuntu.com/download) — Mandatory for hot reload to work for tailwind
 
 #### ✅ Recommended VS Code Extensions
 
@@ -42,9 +43,30 @@ cd club-website
 
 > 📝 **Note:** You do **not** need to install Python or Node.js on your system — the project runs entirely within Docker containers.
 
+
+### ⚙️ One-Time Docker Setup for Ubuntu (WSL)
+
+Make sure Docker is correctly configured to work with Ubuntu (WSL):
+
+1. Open **Docker Desktop**
+2. Go to **Settings → Resources → WSL Integration**
+3. Ensure **"Ubuntu"** is **checked** in the list of enabled distros
+4. Click **"Apply & Restart"**
+
+> 📝 **Note:** This allows Docker to work seamlessly from the Ubuntu CLI in VS Code.
+
 ---
 
-### 3. 🐳 Run the Project Using Docker
+### 3. 🖥️ Open Ubuntu CLI in VS Code
+
+In Visual Studio Code:
+- Click Terminal → New Terminal
+- In the terminal panel, click the dropdown arrow (▾) next to the plus (+) sign
+- Select Ubuntu from the list (e.g., Ubuntu (WSL) or Ubuntu)
+
+📝 Tip: If you don't see Ubuntu listed, make sure WSL and Ubuntu are installed correctly on your system.
+
+### 4. 🐳 Run the Project Using Docker
 
 Make sure Docker Desktop is running, then in your project directory run:
 
@@ -59,7 +81,7 @@ This will:
 
 ---
 
-### 4. 🌐 Access the Web App
+### 5. 🌐 Access the Web App
 
 Once the containers are running, open your browser and go to:
 
@@ -71,7 +93,7 @@ You should see the Club Website home page live on your machine! 🎉
 
 ---
 
-### 5. 🛠️ Useful Development Commands (Inside Container)
+### 6. 🛠️ Useful Development Commands (Inside Container)
 
 To open a shell inside the Django container:
 
@@ -88,7 +110,7 @@ python manage.py createsuperuser
 
 ---
 
-### 6. 🧹 Stop and Clean Up
+### 7. 🧹 Stop and Clean Up
 
 To stop the app:
 
