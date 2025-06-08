@@ -1,37 +1,85 @@
-# 🚀 Club Website Project
-
+# 🚀 Club Website Project  
 **Unlock Your Coding Potential!**  
-*A Visual Guide to the Coding United Commons' First Full-Stack Project Journey*
+*A Beginner-Friendly Guide to Building a Full-Stack Website*
 
-From **Zero to Deployment** with:  
-🔧 **Docker** · 🐍 **Django** · 🎨 **Tailwind CSS** · ⚡ **HTMX** · 🏔️ **Alpine.js**
+From Zero to Deployment with:  
+🔧 Docker · 🐍 Django · 🎨 Tailwind CSS · ⚡ HTMX · 🏔️ Alpine.js
 
-This project is built to help students and aspiring developers learn how to build full-stack web applications using modern tools and practices. It's perfect for club members looking to collaborate and grow together.
-
----
-
-## 🧰 Getting Started: Local Setup Instructions
-
-Follow these steps to get the Club Website running on your local machine.
+This project is designed for students and aspiring developers who are brand new to coding and want to learn how to build full-stack web apps with modern tools.
 
 ---
 
-### 1. 📦 Clone the GitHub Repository
+## 🧰 What You'll Need
+
+- A Windows 10 or 11 computer  
+- Internet access  
+- Around 1–2 hours to complete setup
+
+---
+
+## 🪜 Step-by-Step Setup Instructions
+
+---
+
+### 1. 🐧 Install Ubuntu on Windows (WSL)
+
+Ubuntu is the Linux environment we’ll use to run code.
+
+#### 1.1 Enable WSL
+
+1. Open the **Start Menu**, search for **PowerShell**, right-click it, and choose **“Run as administrator.”**
+2. Copy and paste this command:
+
+   ```powershell
+   wsl --install
+   ```
+
+3. Restart your computer when prompted.
+
+---
+
+### 2. 🏁 Set Up Ubuntu for the First Time
+
+1. Open **Ubuntu** from the Start Menu.  
+2. It will install and configure itself (this can take a few minutes).  
+3. When prompted:  
+   - Create a UNIX username  
+   - Create a password (you won’t see the characters — that’s normal)
+
+---
+
+### 3. 🐙 Install Git (in Ubuntu)
+
+Open Ubuntu and run:
 
 ```bash
-git clone https://github.com/your-username/club-website.git
-cd club-website
+sudo apt update
+sudo apt install git -y
 ```
 
 ---
 
-### 2. 💻 Install Required Software
+### 4. 🐳 Install Docker Desktop (on Windows)
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) — Required to run the project in a containerized environment  
-- [Visual Studio Code](https://code.visualstudio.com/) — Recommended code editor
-- [Ubuntu Desktop](https://ubuntu.com/download) — Mandatory for hot reload to work for tailwind
+1. Download Docker Desktop: https://www.docker.com/products/docker-desktop/  
+2. Install it normally.  
+3. Open Docker Desktop.  
+4. Go to **Settings → Resources → WSL Integration**  
+5. Check the box for **Ubuntu**  
+6. Click **Apply & Restart**
 
-#### ✅ Recommended VS Code Extensions
+---
+
+### 5. 💻 Install Visual Studio Code
+
+Download and install VS Code:  
+👉 https://code.visualstudio.com/
+
+---
+
+### 6. 🧠 Install Recommended VS Code Extensions
+
+In VS Code, open the **Extensions** tab (left sidebar) and install:
 
 - Python  
 - Pylance  
@@ -41,34 +89,93 @@ cd club-website
 - Tailwind CSS IntelliSense  
 - Django
 
-> 📝 **Note:** You do **not** need to install Python or Node.js on your system — the project runs entirely within Docker containers.
+---
 
+### 7. 📂 Create a `src` Folder in Windows & Clone the Project
 
-### ⚙️ One-Time Docker Setup for Ubuntu (WSL)
+We’ll store the project in a dedicated `src` folder in your **Windows home directory**. This keeps things organized and avoids confusion when opening files in VS Code.
 
-Make sure Docker is correctly configured to work with Ubuntu (WSL):
+#### 7.1 Create the folder:
 
-1. Open **Docker Desktop**
-2. Go to **Settings → Resources → WSL Integration**
-3. Ensure **"Ubuntu"** is **checked** in the list of enabled distros
-4. Click **"Apply & Restart"**
+1. Open **File Explorer**  
+2. Go to:
 
-> 📝 **Note:** This allows Docker to work seamlessly from the Ubuntu CLI in VS Code.
+   ```
+   C:\Users\YourName\
+   ```
+
+3. Create a new folder named: `src`
+
+#### 7.2 Access it from Ubuntu:
+
+```bash
+cd /mnt/c/Users/YourName/src
+```
+
+> Replace `YourName` with your actual Windows username.
+
+#### 7.3 Clone the project:
+
+```bash
+git clone https://github.com/your-username/club-website.git
+cd club-website
+```
 
 ---
 
-### 3. 🖥️ Open Ubuntu CLI in VS Code
+### 8. 🟢 Install Node.js and npm (in Ubuntu)
 
-In Visual Studio Code:
-- Click Terminal → New Terminal
-- In the terminal panel, click the dropdown arrow (▾) next to the plus (+) sign
-- Select Ubuntu from the list (e.g., Ubuntu (WSL) or Ubuntu)
+```bash
+sudo apt update
+sudo apt install nodejs -y
+sudo apt install npm -y
+```
 
-📝 Tip: If you don't see Ubuntu listed, make sure WSL and Ubuntu are installed correctly on your system.
+---
 
-### 4. 🐳 Run the Project Using Docker
+### 9. 🎨 Install Tailwind CSS
 
-Make sure Docker Desktop is running, then in your project directory run:
+Inside the `club-website` folder:
+
+```bash
+npm install tailwindcss --save-dev
+```
+
+---
+
+### 10. 🖥️ Open the Project in Visual Studio Code
+
+1. Open **VS Code**
+2. Click **File → Open Folder**
+3. Navigate to:
+
+   ```
+   C:\Users\YourName\src\club-website
+   ```
+
+4. Click **Open**
+
+---
+
+### 11. 🐳 Run the Project Using Docker (via Ubuntu Terminal in VS Code)
+
+#### 11.1 Open Ubuntu terminal in VS Code:
+
+1. In VS Code, go to:  
+   **Terminal → New Terminal**
+2. In the terminal panel, click the dropdown arrow (▾) next to the **+** sign
+3. Select:  
+   **Ubuntu** or **Ubuntu (WSL)**
+
+> 📝 This ensures you're using the correct environment Docker is set up to work with.
+
+You should now see something like:
+
+```
+username@yourmachine:/mnt/c/Users/YourName/src/club-website$
+```
+
+#### 11.2 Start the project:
 
 ```bash
 docker-compose up --build
@@ -76,24 +183,24 @@ docker-compose up --build
 
 This will:
 
-- ✅ Build the Docker images (only on first run or when the Dockerfile changes)  
-- ✅ Start the Django development server inside the container
+- ✅ Build Docker containers (on first run or if Dockerfile changes)
+- ✅ Start the Django development server
 
 ---
 
-### 5. 🌐 Access the Web App
+### 12. 🌐 View the Website
 
-Once the containers are running, open your browser and go to:
+In your browser, go to:
 
-```text
+```
 http://127.0.0.1:8000/
 ```
 
-You should see the Club Website home page live on your machine! 🎉
+You should see the Club Website homepage! 🎉
 
 ---
 
-### 6. 🛠️ Useful Development Commands (Inside Container)
+### 13. 🛠️ Useful Commands (Inside Docker)
 
 To open a shell inside the Django container:
 
@@ -101,7 +208,7 @@ To open a shell inside the Django container:
 docker-compose exec web bash
 ```
 
-Then you can run Django management commands like:
+Then run:
 
 ```bash
 python manage.py migrate
@@ -110,7 +217,7 @@ python manage.py createsuperuser
 
 ---
 
-### 7. 🧹 Stop and Clean Up
+### 14. 🧹 Stop and Clean Up
 
 To stop the app:
 
@@ -118,7 +225,7 @@ To stop the app:
 docker-compose down
 ```
 
-To stop and remove volumes and data (⚠️ this **deletes your database**):
+To stop and delete data:
 
 ```bash
 docker-compose down -v
@@ -128,9 +235,14 @@ docker-compose down -v
 
 ## 🧑‍💻 Want to Contribute?
 
-We welcome contributions!  
-Fork the repo, make your changes, and submit a pull request.
+Fork the repo, make improvements, and open a pull request!
 
 ---
 
-Happy coding! 💻✨
+## 💬 Need Help?
+
+Ask in the club chat or GitHub Discussions — we’re here to help!
+
+---
+
+**Happy coding! 💻✨**
