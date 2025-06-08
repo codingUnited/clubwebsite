@@ -247,3 +247,4 @@ We use **[Tailwind CSS](https://tailwindcss.com/)** utility-first classes to sty
 ---
 
 Keep your HTML semantic, your layouts clean, and let Tailwind do the heavy lifting. 💪
+
