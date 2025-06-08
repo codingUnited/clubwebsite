@@ -1,8 +1,26 @@
-services:
+ services:
   web:
-    build: .
-    ports:
-      - "8000:8000"
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    container_name: club_web
     volumes:
       - .:/app
-    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+    depends_on:
+      - tailwind
+
+
+  tailwind:
+    build:
+      context: .
+      dockerfile: Dockerfile.tailwind
+    container_name: club_css
+    volumes:
+      - .:/app
+    working_dir: /app
+    tty: true
+    stdin_open: true
