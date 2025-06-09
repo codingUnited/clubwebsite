@@ -117,12 +117,63 @@ cd /mnt/c/Users/YourName/src
 #### 7.3 Clone the project:
 
 ```bash
-git clone https://github.com/your-username/club-website.git
+git clone https://github.com/codingUnited/clubwebsite.git
+cd club-website
+```
+> If you get the following error while cloning:
+```
+Cloning into 'club-website'...
+error: chmod on /mnt/c/Users/delim/src/club-website/.git/config.lock failed: Operation not permitted
+fatal: could not set 'core.filemode' to 'false'
+```
+> If you did not get this error and were able to clone go to step 8, if your being asked for gitub username go to setp 7.4
+
+> This error means there is an issue with wsl permission to modify your windows directories to resolve this you want to run the following commands in Ubuntu CLI
+```
+sudo nano /etc/wsl.conf
+```
+> Arrow down to the bottom of the file and Add the following content:
+```
+[automount]
+options = "metadata"
+```
+> Save and exit the file:
+   - Press Ctrl+O to save.
+   - Press Enter to confirm.
+   - Press Ctrl+X to exit.
+> Close Ubuntu CLI by click on the X icon
+> Open Powershell if not already opened and run:
+```
+wsl --shutdown
+```
+This will shut down all WSL sessions
+> Reopen your Ubuntu terminal, navigate to src file and run git clone again:
+```
+git clone https://github.com/codingUnited/clubwebsite.git
 cd club-website
 ```
 
----
+#### 7.4 Github credentials
 
+First in terminal enter your Github username (**Not Email**) and click enter
+> If you don't remember your user name click on your profile on the upper right of the page and it will be displayed at the top.
+
+> Next you will need to generate a token for you password
+   - Click on this link: [https://github.com/settings/tokens(https://github.com/settings/tokens)
+   - Expand Personal Access tokens
+   - Click Tokens Classic
+   - Generate new token
+   - Name the token Ubuntu and select All Repositories
+   - Set desired expiration and click generate token
+   - Save the token somewhere secure because you will not see it in Github again
+
+> Enter your password in Ubuntu terminal (**carefully**)
+
+> Once the repo finishes cloning store your credentials by running the following command
+```
+git config --global credential.helper store
+```
+---
 ### 8. 🟢 Install Node.js and npm (in Ubuntu)
 
 ```bash
