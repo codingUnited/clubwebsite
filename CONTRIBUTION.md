@@ -238,6 +238,14 @@ We use **[Tailwind CSS](https://tailwindcss.com/)** utility-first classes to sty
 
 ---
 
+### Running a unit test
+1. Change to the project base directory.
+2. Activate the virtual environment (source .venv/bin/activate).
+3. Run the command: python3 manage.py test
+
+- You can add unit tests to the core/tests.py file
+
+---
 ### 📦 Helpful Resources
 
 - [Tailwind UI (free & paid components)](https://tailwindui.com/components)
