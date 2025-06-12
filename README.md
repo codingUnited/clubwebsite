@@ -20,6 +20,8 @@ This project is designed for students and aspiring developers who are brand new 
 ## 🪜 Step-by-Step Setup Instructions
 
 ---
+### 1. 🎞️ Video Tutorial: [LINK](https://youtu.be/1yPApFZtB8M)
+---
 
 ### 1. 🐧 Install Ubuntu on Windows (WSL)
 
