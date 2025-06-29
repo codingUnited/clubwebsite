@@ -1,14 +1,17 @@
-{%extends "base.html"%} 
-{% load static %}
-
-{%block title%}
-<link rel="icon" href="{% static 'core/images/coding_united_icon.png' %}">
-<title>Coding United </title>
-{%endblock%} 
-
-{%block content%}
-<div>
-  <p class="text-teal-600">Hello Coding United!</p>
-  <a href="{% url 'about' %}">Go to About Page</a>
+{%extends "base.html"%} {% load static %} {%block title%}
+<link rel="icon" href="{% static 'core/images/coding_united_icon.png' %}" />
+<title>Coding United</title>
+{%endblock%} {%block content%}
+<div class="mx-auto text-center">
+  <h1 class="font-mono font-bold text-2xl mb-2">Welcome to Coding United</h1>
+  <hr>
+  <div class="text-teal-700 mt-2">
+    <p class="text-xl mb-2 max-w-3xl mx-auto">
+      A student-led tech club dedicated to building real-world projects,
+      supporting academic success, and growing together through hands-on coding,
+      curiosity, and collaboration. We are not here to fit in. We are here to
+      build, to learn, and to become.
+    </p>
+  </div>
 </div>
 {%endblock%}

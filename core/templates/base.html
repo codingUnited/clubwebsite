@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  {% load static %}
-  {%block title%}{%endblock%}
+  <head>
+    <meta charset="UTF-8" />
+    {% load static %} {%block title%}{%endblock%}
 
-  <!-- HTMX -->
-  <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
 
-  <!-- Alpine.js -->
-  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <!-- Alpine.js -->
+    <script
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
 
-  <!-- Tailwind CSS-->
-   <link href="{% static 'output.css' %}" rel="stylesheet">
-   
-  <style>
-    body { font-family: sans-serif; padding: 2rem; }
-    button { margin-top: 1rem; }
-  </style>
-</head>
-<body>
+    <!-- Tailwind CSS-->
+    <link href="{% static 'output.css' %}" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2rem;
+      }
+      button {
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-gradient-to-r from-blue-400 to-purple-800 mb-3 flex">
+      <div class="flex p-1">
+        <a href="{% url 'home' %}"
+          ><img
+            class="size-12"
+            src="{% static 'core/images/coding_united_icon.png' %}"
+            alt="Coding United Logo"
+        /></a>
+        <h1 class="uppercase font-bold text-3xl self-center ml-2">
+          Coding United Club
+        </h1>
+      </div>
+      <div></div>
+    </header>
 
     {%block content%}{%endblock%}
-</body>
 
+    <footer class="bg-gradient-to-r from-blue-400 to-purple-800 flex justify-between items-center px-6 py-4">
+      <div>
+        <h1 class="uppercase font-bold text-lg">
+          Coding United Club
+        </h1>
+      </div>
+      <div class="justify-center">
+        <a class="text-teal-200" href="{% url 'about' %}">About US</a>
+      </div>
+    </footer>
+  </body>
 </html>
