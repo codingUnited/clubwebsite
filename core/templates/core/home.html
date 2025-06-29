@@ -1,13 +1,14 @@
-{%extends "base.html"%}
+{%extends "base.html"%} 
+{% load static %}
 
 {%block title%}
-    <title>Home</title>
-{%endblock%}
+<link rel="icon" href="{% static 'core/images/coding_united_icon.png' %}">
+<title>Coding United </title>
+{%endblock%} 
 
 {%block content%}
 <div>
-    <p class="text-teal-600">Hello Coding United!</p>
-    <a href="{% url 'about' %}">Go to About Page</a>
-
+  <p class="text-teal-600">Hello Coding United!</p>
+  <a href="{% url 'about' %}">Go to About Page</a>
 </div>
 {%endblock%}
