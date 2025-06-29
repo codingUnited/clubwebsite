@@ -1,0 +1,45 @@
+Name: First Name
+Email: first.name@snhu.edu
+Joining Coding United: yes
+Interested Event: 
+Comment: 
+----
+Name: Test Out
+Email: test.out@snhu.edu
+Joining Coding United: None
+Interested Event: 
+Comment: No User Input----
+Name: First Last
+Email: first.last@snhu.edu
+Joining Coding United: None
+Interested Event: No User Input
+Name: First Last
+Email: first.last@snhu.edu
+Joining Coding United: None
+Interested Event: No User Input
+Comment: No User Input
+----
+Name: first last
+Email: first.last@snhu.edu
+Joining Coding United: None
+Interested Event: No User Input
+Comment: No User Input
+----
+Name: first last
+Email: first.last@snhu.edu
+Joining Coding United: None
+Interested Event: No User Input
+Comment: No User Input
+----
+Name: Tim Bourisaw
+Email: tim.bourisaw@snhu.edu
+Joining Coding United: None
+Interested Event: **No User Input**
+Comment: **No User Input**
+----
+Name: Kevin Dowell
+Email: kevin.dowell@snhu.edu
+Joining Coding United: yes
+Interested Event: Coding Challenge
+Comment: write here please
+----

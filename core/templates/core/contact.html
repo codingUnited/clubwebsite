@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Contact Us</title>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/contact.css' %}">
+
+<p class="text-rose-600">Contact Page</p>
+<a href="{% url 'home' %}">Go to Home Page</a>
+
+<section id="contactform">
+    <form method="POST" action="{% url 'contact' %}">
+        {% csrf_token %}  <!--Error message says I need this csrf_token-->
+        <h1>Contact us</h1>
+        <hr>
+
+        <section class="contact_info">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname" minlength="2" maxlength="20" placeholder="John.." required>
+
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" id="lname" minlength="1" maxlength="20" placeholder="Doe.." required>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="your.name@snhu.edu" required>
+        </section>
+
+        <section class="join_us">
+            <label>Would you like to join Coding United?</label><br>
+            <input type="radio" id="yes" name="join" value="yes">
+            <label for="yes">Yes</label>  
+            <input type="radio" id="no" name="join" value="no"> 
+            <label for="no">No</label>
+        </section>  
+
+        <section class="event_list">
+            <label for="event">What event would you join?</label>
+            <input type="text" list="events" id="event" name="event" placeholder="event name..">
+            <datalist id="events">
+                <option value="Book Club"></option>
+                <option value="Coding Challenge"></option>
+                <option value="Club Website"></option>
+            </datalist>
+        </section>  
+
+        <section class="comments">
+            <label for="comment">Comments:</label>
+            <textarea id="comment" name="comment" row="5" cols="30" placeholder="write here..."></textarea>
+        </section>
+
+        <section class="submission">
+        <button type="submit">Submit</button>
+        </section>
+    </form>
+</section>
+{% endblock %}
+
+
+
+
+<!--Create Contact form that captures, users:
+Name (mandatory)
+Email (mandatory)
+Phone number (optional)
+Content (mandatory)
+Form should be submited, so button is required
+When form is submitted it should make a call to Email service to send this information to CodingUnitedClub@snhu.edu
+Email api service will need to be identified and plugged into the app.
+API Integration - needs to include secure env variables for api key management
+.env files should be added to gitignore so we don't accidently expose api keys
+Need to add error handling in case api call fails and display message to user that the email was not sent
+Need to display message to the user if email was sent successfully.
+-->
