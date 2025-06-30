@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% load static %} {%block title%}{%endblock%}
 
     <!-- HTMX -->
@@ -26,25 +27,23 @@
       }
     </style>
   </head>
-  <body>
-    <header class="bg-gradient-to-r from-blue-400 to-purple-800 mb-3 flex">
-      <div class="flex p-1">
+  <body class="m-0 p-0">
+    <header class="bg-gradient-to-r z-50 from-blue-400 to-purple-800 sticky top-0 flex">
+      <div class="flex space-x-2 pl-2 md:pl-3">
         <a href="{% url 'home' %}"
           ><img
-            class="size-12"
+            class="size-8 md:size-12"
             src="{% static 'core/images/coding_united_icon.png' %}"
             alt="Coding United Logo"
         /></a>
-        <h1 class="uppercase font-bold text-3xl self-center ml-2">
+        <h1 class="uppercase font-bold text-xl md:text-3xl self-center">
           Coding United Club
         </h1>
       </div>
       <div></div>
     </header>
-
-    {%block content%}{%endblock%}
-
-    <footer class="bg-gradient-to-r from-blue-400 to-purple-800 flex justify-between items-center px-6 py-4">
+      {%block content%}{%endblock%}
+    <footer class="bg-gradient-to-r from-blue-400 to-purple-800 sticky bottom-0 flex justify-between items-center px-6 py-4">
       <div>
         <h1 class="uppercase font-bold text-lg">
           Coding United Club
