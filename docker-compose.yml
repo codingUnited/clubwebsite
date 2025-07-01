@@ -1,8 +1,10 @@
- services:
+services:
   web:
     build:
       context: .
       dockerfile: Dockerfile.web
+    env_file:
+      - .env
     container_name: club_web
     volumes:
       - .:/app
@@ -12,7 +14,6 @@
       - DEBUG=1
     depends_on:
       - tailwind
-
 
   tailwind:
     build:
