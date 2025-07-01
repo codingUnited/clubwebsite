@@ -1,4 +1,6 @@
+
 from django.shortcuts import render, redirect
+
 import os
 
 # Create your views here.
@@ -7,6 +9,7 @@ def home(request):
 
 def about(request):
     return render(request, 'core/about.html')
+
 
 def contact(request):
     if request.method == "POST":
@@ -46,3 +49,7 @@ def contact(request):
         return redirect('/')  # redirect to home page after successful POST
 
     return render(request, 'core/contact.html')
+
+def errorPage(request, exception):
+    return render(request, 'core/404.html', status=404)
+
