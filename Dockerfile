@@ -24,11 +24,13 @@ RUN pip install --no-cache-dir --upgrade pip \
 COPY . .
 
 # --- Run Tailwind Install ---
-# This will install the necessary npm dependencies for Tailwind
 RUN python manage.py tailwind install
 
 # --- Build Tailwind CSS ---
 RUN python manage.py tailwind build  # Build Tailwind CSS
+
+# --- Collect Static Files ---
+RUN python manage.py collectstatic --no-input  # Collect static files
 
 # --- Runner Stage ---
 FROM python:3.13-slim as runner
@@ -47,5 +49,5 @@ COPY --from=builder /app /app
 # Expose the port Gunicorn will listen on internally
 EXPOSE 8000
 
-# Command to run the Gunicorn server for production
-CMD ["python", "-m", "gunicorn", "--bind", "0.0.0.0:8000", "clubwebsite.wsgi:application", "--workers", "3", "--log-file", "-"]
+# Command to run Gunicorn for production
+CMD ["gunicorn", "clubwebsite.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3"]
