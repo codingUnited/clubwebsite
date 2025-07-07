@@ -23,17 +23,17 @@ RUN pip install --no-cache-dir --upgrade pip \
 # Copy all application code into the builder stage
 COPY . .
 
-# --- Install Tailwind dependencies ---
-# --- Run Tailwind installation and build ---
-WORKDIR /app  # Return to the root of the project to run the django tailwind commands
+# --- Run Tailwind Install ---
+# This will install the necessary npm dependencies for Tailwind
 RUN python manage.py tailwind install
-RUN python manage.py tailwind build
+
+# --- Build Tailwind CSS ---
+RUN python manage.py tailwind build  # Build Tailwind CSS
 
 # --- Collect Static Files ---
-RUN python manage.py collectstatic --no-input
+RUN python manage.py collectstatic --no-input  # Collect static files
 
 # --- Runner Stage ---
-# This stage is for the final, lean production image
 FROM python:3.13-slim as runner
 
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -45,8 +45,6 @@ WORKDIR /app
 COPY --from=builder /usr/local/lib/python3.13/site-packages /usr/local/lib/python3.13/site-packages
 
 # Copy the entire /app directory from the builder stage
-# This includes all your application code, manage.py, and crucially,
-# the /app/staticfiles_collected directory created by collectstatic
 COPY --from=builder /app /app
 
 # Expose the port Gunicorn will listen on internally
