@@ -1,5 +1,4 @@
 # --- Builder Stage ---
-# This stage builds your application and all static assets
 FROM python:3.13-slim as builder
 
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -8,42 +7,35 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # Install OS dependencies for Python packages and Node.js
-# Use --no-install-recommends to keep image size down
 RUN apt-get update && apt-get install -y --no-install-recommends curl gnupg build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Node.js 20.x and npm
-# This script adds NodeSource's APT repository, then installs nodejs
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements.txt and install Python dependencies first
-# This allows Docker to cache this layer if requirements.txt doesn't change
 COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt
 
 # Copy all application code into the builder stage
-# This makes /app/theme/static_src accessible
 COPY . .
 
-# --- Build Tailwind CSS for production and collect Django static files ---
-# Change to the static_src directory where package.json lives
+# --- Install Tailwind dependencies ---
+# Change to the directory where Tailwind dependencies are located (static_src)
 WORKDIR /app/theme/static_src
-# Install npm dependencies (node_modules for tailwindcss CLI)
-RUN npm install
-# Build Tailwind CSS for production
-# This command compiles and minifies your CSS, outputting it to ../static/css/dist/styles.css
-# Assuming 'npm run build' is defined in your package.json, e.g., "build": "tailwindcss --postcss -i ./src/styles.css -o ../static/css/dist/styles.css --minify"
-RUN npm run build
+RUN python manage.py tailwind install
 
-# Change back to the application root directory for Django management commands
+# --- Build Tailwind CSS for production ---
+# Build and minify the Tailwind CSS using Django's tailwind management command
+RUN python manage.py tailwind build
+
+# --- Collect Static Files ---
+# Now that Tailwind CSS has been built, collect static files into the STATIC_ROOT directory
 WORKDIR /app
-# Collect all static files, including the newly built Tailwind CSS
-# These collected files will be served by Nginx in the runner stage
 RUN python manage.py collectstatic --no-input
-
 
 # --- Runner Stage ---
 # This stage is for the final, lean production image
@@ -66,6 +58,4 @@ COPY --from=builder /app /app
 EXPOSE 8000
 
 # Command to run the Gunicorn server for production
-# Workers: '3' is a good starting point (2*CPU_cores + 1)
-# --log-file -: Logs to stdout, which Docker collects
 CMD ["python", "-m", "gunicorn", "--bind", "0.0.0.0:8000", "clubwebsite.wsgi:application", "--workers", "3", "--log-file", "-"]
