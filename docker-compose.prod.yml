@@ -10,8 +10,7 @@ services:
       - .env.prod # Make sure this file exists and has your production environment variables
     environment:
       - DEBUG=0
-      - DJANGO_ALLOWED_HOSTS=${DJANGO_ALLOWED_HOSTS} # e.g., "codingunited.club,www.codingunited.club"
-    command: gunicorn clubwebsite.wsgi:application --bind 0.0.0.0:8000
+    command: python -m gunicorn clubwebsite.wsgi:application --bind 0.0.0.0:8000
     volumes:
       # Define these volumes to map to specific paths on your EC2 host.
       # These are the same paths you used in your Nginx config.
