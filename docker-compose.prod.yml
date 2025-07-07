@@ -1,0 +1,40 @@
+# docker-compose.prod.yml (for your 'clubwebsite' project)
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: club_web_prod # This name is crucial for Nginx
+    env_file:
+      - .env.prod # Make sure this file exists and has your production environment variables
+    environment:
+      - DEBUG=0
+      - DJANGO_ALLOWED_HOSTS=${DJANGO_ALLOWED_HOSTS} # e.g., "codingunited.club,www.codingunited.club"
+    command: gunicorn clubwebsite.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      # Define these volumes to map to specific paths on your EC2 host.
+      # These are the same paths you used in your Nginx config.
+      - static_files_on_host:/app/staticfiles
+      - media_files_on_host:/app/mediafiles # Only if you are using user-uploaded media files
+    ports:
+      # This maps the container's 8000 port to the EC2 host's 127.0.0.1:8001
+      # This is how your host Nginx will talk to your Django app.
+      - "127.0.0.1:8001:8000"
+
+  # --- IMPORTANT: REMOVE THE NGINX SERVICE FROM THIS FILE IF IT WAS EVER THERE ---
+  # Your EC2 host's Nginx is handling web serving directly, not a Dockerized Nginx.
+
+volumes:
+  # Define your host paths for these volumes.
+  # These MUST match the 'alias' paths in your Nginx config!
+  static_files_on_host:
+    driver_opts:
+      type: "none"
+      o: "bind"
+      device: "/var/www/clubwebsite/staticfiles_collected" # <--- VERIFY THIS EXACT PATH on EC2
+  media_files_on_host:
+    driver_opts:
+      type: "none"
+      o: "bind"
+      device: "/var/www/clubwebsite/mediafiles" # <--- VERIFY THIS EXACT PATH on EC2 (if used)

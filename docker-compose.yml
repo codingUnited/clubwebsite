@@ -1,27 +1,33 @@
+# docker-compose.dev.yml
+
 services:
   web:
     build:
       context: .
-      dockerfile: Dockerfile.web
+      dockerfile: Dockerfile
+      target: builder
+
     env_file:
       - .env
-    container_name: club_web
+
+    container_name: club_web_dev
+
     volumes:
       - .:/app
+
     ports:
       - "8000:8000"
+
     environment:
       - DEBUG=1
-    depends_on:
-      - tailwind
 
-  tailwind:
-    build:
-      context: .
-      dockerfile: Dockerfile.tailwind
-    container_name: club_css
-    volumes:
-      - .:/app
-    working_dir: /app
+    command: >
+      sh -c "
+        # Run tailwind install (idempotent, ensures node_modules)
+        python manage.py tailwind install &&
+        # Start the tailwind watcher in the background
+        python manage.py tailwind dev
+      "
+
     tty: true
     stdin_open: true

@@ -45,7 +45,18 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'tailwind',
+    'theme',
 ]
+
+if DEBUG:
+    # Add django_browser_reload only in DEBUG mode
+    INSTALLED_APPS += ['django_browser_reload']
+
+TAILWIND_APP_NAME = 'theme'
+INTERNAL_IPS = ['127.0.0.1']
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -57,6 +68,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+if DEBUG:
+    # Add django_browser_reload middleware only in DEBUG mode
+    MIDDLEWARE += [
+        "django_browser_reload.middleware.BrowserReloadMiddleware",
+    ]
+    
 ROOT_URLCONF = 'clubwebsite.urls'
 
 TEMPLATES = [
@@ -122,22 +139,28 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SESSION_COOKIE_SECURE = not DEBUG
 CSRF_COOKIE_SECURE = not DEBUG
 
-if not DEBUG:
-    # New for production
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-else:
-    # Optional: keep for dev (not used when DEBUG=False)
-    STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'core', 'static'),
-    ]
+# STATIC_ROOT is the destination for `collectstatic`.
+# It *must* always be defined for `collectstatic` to work.
+# It's intended for production and should be outside your version control.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_collected') # You can keep 'staticfiles' if you prefer
 
+# STATICFILES_DIRS is for additional static file locations Django should look in.
+# This is where you put static files that aren't tied to a specific app,
+# or your dev-only static files as you described.
+# It should be a list, and it's fine to define it unconditionally.
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'core', 'static'), 
+    os.path.join(BASE_DIR, 'theme', 'static'),# Your 'core' app's static for dev
+    # Add other project-wide static directories here if you have them, e.g.:
+    # os.path.join(BASE_DIR, 'project_static_assets'),
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
