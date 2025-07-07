@@ -24,17 +24,12 @@ RUN pip install --no-cache-dir --upgrade pip \
 COPY . .
 
 # --- Install Tailwind dependencies ---
-# Change to the directory where Tailwind dependencies are located (static_src)
-WORKDIR /app/theme/static_src
+# --- Run Tailwind installation and build ---
+WORKDIR /app  # Return to the root of the project to run the django tailwind commands
 RUN python manage.py tailwind install
-
-# --- Build Tailwind CSS for production ---
-# Build and minify the Tailwind CSS using Django's tailwind management command
 RUN python manage.py tailwind build
 
 # --- Collect Static Files ---
-# Now that Tailwind CSS has been built, collect static files into the STATIC_ROOT directory
-WORKDIR /app
 RUN python manage.py collectstatic --no-input
 
 # --- Runner Stage ---
