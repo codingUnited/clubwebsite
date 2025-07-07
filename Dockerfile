@@ -30,9 +30,6 @@ RUN python manage.py tailwind install
 # --- Build Tailwind CSS ---
 RUN python manage.py tailwind build  # Build Tailwind CSS
 
-# --- Collect Static Files ---
-RUN python manage.py collectstatic --no-input  # Collect static files
-
 # --- Runner Stage ---
 FROM python:3.13-slim as runner
 
