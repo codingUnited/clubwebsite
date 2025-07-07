@@ -15,7 +15,7 @@ services:
     volumes:
       # Define these volumes to map to specific paths on your EC2 host.
       # These are the same paths you used in your Nginx config.
-      - static_files_on_host:/app/staticfiles
+      - ./staticfiles_collected:/app/staticfiles_collected
       - media_files_on_host:/app/mediafiles # Only if you are using user-uploaded media files
     ports:
       # This maps the container's 8000 port to the EC2 host's 127.0.0.1:8001
