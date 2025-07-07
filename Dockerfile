@@ -68,4 +68,4 @@ EXPOSE 8000
 # Command to run the Gunicorn server for production
 # Workers: '3' is a good starting point (2*CPU_cores + 1)
 # --log-file -: Logs to stdout, which Docker collects
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "clubwebsite.wsgi:application", "--workers", "3", "--log-file", "-"]
+CMD ["python", "-m", "gunicorn", "--bind", "0.0.0.0:8000", "clubwebsite.wsgi:application", "--workers", "3", "--log-file", "-"]
