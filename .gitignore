@@ -34,7 +34,7 @@ local_settings.py
 *.tgz
 docker-compose.override.yml
 .env
-.env.*
+.env.prod
 
 # === VS Code ===
 .vscode/

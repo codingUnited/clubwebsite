@@ -1,0 +1,2 @@
+web: python manage.py runserver 0.0.0.0:8000
+tailwind: sh -c "cd theme/static_src && npm run dev"
