@@ -1,33 +1,18 @@
-# docker-compose.dev.yml
-
 services:
-  web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: builder
-
-    env_file:
-      - .env
-
-    container_name: club_web_dev
-
-    volumes:
-      - .:/app
-
+  club:
+    build: .
+    restart: unless-stopped
+    labels:
+      - "project=club-dev"
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py tailwind install &&
+             python manage.py tailwind start & 
+             python manage.py runserver 0.0.0.0:8000"
     ports:
       - "8000:8000"
-
+    volumes:
+      - .:/app
     environment:
       - DEBUG=1
-
-    command: >
-      sh -c "
-        # Run tailwind install (idempotent, ensures node_modules)
-        python manage.py tailwind install &&
-        # Start the tailwind watcher in the background
-        python manage.py tailwind dev
-      "
-
-    tty: true
-    stdin_open: true
+      - SECRET=your-dev-secret

@@ -1,15 +1,14 @@
+{% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% load static %} 
     <!---Load tailwind -->
-    {% load static tailwind_tags %}
     {% tailwind_css %}
 
     <!---Display logo in title-->
-    <link rel="icon" href="{% static 'images/coding_united_icon.png' %}" />
+    <link rel="icon" href="{% static 'core/images/coding_united_icon.png' %}" />
     {% block title %}
     {% endblock %}
 
@@ -33,7 +32,7 @@
           <a href="{% url 'home' %}"
             ><img
               class="size-8 md:size-12"
-              src="{% static 'images/coding_united_icon.png' %}"
+              src="{% static 'core/images/coding_united_icon.png' %}"
               alt="Coding United Logo"
           /></a>
           <h1 class="uppercase font-bold text-xl md:text-3xl self-center">
