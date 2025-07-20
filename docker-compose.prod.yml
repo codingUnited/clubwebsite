@@ -7,6 +7,8 @@ services:
              gunicorn clubwebsite.wsgi:application --bind 0.0.0.0:8000"
     volumes:
       - static_volume:/app/staticfiles_collected
+    env_file:
+      - .env
     expose:
       - "8000"
     environment:
