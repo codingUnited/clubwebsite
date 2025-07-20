@@ -1,5 +1,6 @@
 services:
   club:
+    container_name: club
     build: .
     command: >
       sh -c "python manage.py collectstatic --noinput &&
