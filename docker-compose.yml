@@ -1,26 +1,18 @@
- services:
-  web:
-    build:
-      context: .
-      dockerfile: Dockerfile.web
-    container_name: club_web
-    volumes:
-      - .:/app
+services:
+  club:
+    build: .
+    restart: unless-stopped
+    labels:
+      - "project=club-dev"
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py tailwind install &&
+             python manage.py tailwind start & 
+             python manage.py runserver 0.0.0.0:8000"
     ports:
       - "8000:8000"
-    environment:
-      - DEBUG=1
-    depends_on:
-      - tailwind
-
-
-  tailwind:
-    build:
-      context: .
-      dockerfile: Dockerfile.tailwind
-    container_name: club_css
     volumes:
       - .:/app
-    working_dir: /app
-    tty: true
-    stdin_open: true
+    environment:
+      - DEBUG=1
+      - SECRET=your-dev-secret

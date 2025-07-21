@@ -1,1 +1,6 @@
-Django>=5.2.1
+asgiref==3.8.1
+Django==4.2.23
+django-tailwind
+django-tailwind[reload]
+sqlparse==0.5.3
+gunicorn

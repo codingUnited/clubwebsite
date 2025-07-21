@@ -14,6 +14,8 @@ package-lock.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+core/static/output.css
+theme/static/css/
 .env.local
 .env.development.local
 .env.test.local
@@ -28,6 +30,7 @@ db.sqlite3
 media/
 staticfiles/
 local_settings.py
+staticfiles_collected/
 
 # === Docker ===
 *.pid
@@ -35,9 +38,12 @@ local_settings.py
 docker-compose.override.yml
 .env
 .env.*
+staticfiles_collected/
 
 # === VS Code ===
 .vscode/
+.DS_Store
+Thumbs.db
 
 # === Virtual Environments ===
 env/

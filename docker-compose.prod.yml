@@ -1,0 +1,25 @@
+services:
+  club:
+    container_name: club
+    build: .
+    command: >
+      sh -c "python manage.py collectstatic --noinput &&
+             gunicorn clubwebsite.wsgi:application --bind 0.0.0.0:8000"
+    volumes:
+      - static_volume:/app/staticfiles_collected
+    env_file:
+      - .env
+    expose:
+      - "8000"
+    environment:
+      - DEBUG=0
+      - SECRET=your-prod-secret
+    networks:
+      - app-network
+
+volumes:
+  static_volume:
+
+networks:
+  app-network:
+    external: true
