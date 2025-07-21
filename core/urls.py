@@ -8,7 +8,7 @@ urlpatterns = [
     path('about/', about, name='about'),
 
     path('contact/', contact, name='contact')
-
+]
 
 handler404 = errorPage
 
