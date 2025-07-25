@@ -1,16 +1,22 @@
 {%extends "base.html"%} {% load static %} {%block title%}
 <title>Coding United</title>
 {%endblock%} {%block content%}
-<section
-  class="relative h-[90vh] overflow-hidden"
->
-  <!-- Background Image -->
-  <img
-    src="{% static 'core/images/hero.jpg' %}"
-    alt="Hero Image"
-    class="absolute inset-0 w-full h-full object-cover object-bottom z-0"
-  />
+<section class="relative h-[70vh] overflow-hidden">
+  <div class="relative w-full h-full group">
+    <!-- Background Image -->
+    <img
+      src="{% static 'core/images/hero.jpg' %}"
+      alt="Default"
+      class="absolute inset-0 w-full h-full object-cover object-bottom transition-opacity duration-300 group-hover:opacity-0 z-10"
+    />
 
+    <!-- Hover Image -->
+    <img
+      src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGR5b3hzZmgzemRxNWF2c2ZqOXQ5anN0NXhndGN0aHVhcXI5dXQybCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WoD6JZnwap6s8/giphy.gif"
+      alt="Hover Img"
+      class="absolute inset-0 w-full h-full object-cover object-bottom opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-0"
+    />
+  </div>
   <!-- Content Container -->
   <div
     class="absolute pt-2 lg:pt-0 lg:top-1/12 lg:left-10 lg:right-auto z-10 bg-blue-800/80 p-2 lg:p-6 lg:rounded-lg max-w-4xl lg:max-w-2xl text-center"
@@ -25,6 +31,13 @@
       curiosity, and collaboration. We are not here to fit in. We are here to
       build, to learn, and to become.
     </p>
+  </div>
+</section>
+<section>
+  <div class="relative bg-amber-50 text-center">
+    <h1 class="text-5xl font-bold">Mission Statement</h1>
+    <hr class="h-1 bg-black">
+    <p>Say something</p>
   </div>
 </section>
 {%endblock%}

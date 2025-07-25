@@ -25,7 +25,7 @@
   >
     <div class="w-[80vw] mx-auto">
       <header
-        class="bg-gradient-to-r z-50 from-blue-400 to-purple-800 sticky top-0 flex"
+        class="bg-gradient-to-r to-blue-400 from-purple-800 sticky top-0 flex"
       >
         <div class="flex space-x-2">
           <a href="{% url 'home' %}"
@@ -42,7 +42,7 @@
       </header>
       {%block content%}{%endblock%}
       <footer
-        class="bg-gradient-to-r from-blue-400 text-sm md:text-lg to-purple-800 sticky border-0 flex justify-between px-3 lg:px-6 py-2 lg:py-4"
+        class="bg-gradient-to-r to-blue-400 border-0 text-sm md:text-lg from-purple-800 sticky flex justify-between px-3 lg:px-6 py-2 lg:py-4"
       >
         <div>
           <h1 class="uppercase font-bold">Coding United Club</h1>
@@ -51,11 +51,11 @@
           <a class="text-teal-200" href="{% url 'about' %}">About US</a>
         </div>
       </footer>
-      <h1
+      <!-- <h1
         class="absolute top-1/2 left-1/2 transform -translate-x-1/2 z-50 w-max text-base md:text-4xl lg:text-5xl font-bold text-yellow-500 text-center"
       >
         ⚠️⚠️ SITE UNDER CONSTRUCTION ⚠️⚠️
-      </h1>
+      </h1> -->
     </div>
   </body>
 </html>
