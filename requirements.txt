@@ -3,4 +3,5 @@ Django==4.2.23
 django-tailwind
 django-tailwind[reload]
 sqlparse==0.5.3
+python-dotenv
 gunicorn
