@@ -36,7 +36,7 @@ def contact(request):
         subject = f"New Contact Form from {fname} {lname}"
         from_email = 'codingunited28@gmail.com'    # created gmail to use
         to_email = ['CodingUnitedClub@snhu.edu']   # sends to club's email address
-
+        
         send_mail(
             subject,
             userSubmission,
