@@ -1,5 +1,9 @@
 
 from django.shortcuts import render, redirect
+from django.core.mail import send_mail
+from django.http import HttpResponse
+from django.contrib import messages 
+
 
 import os
 
@@ -20,36 +24,33 @@ def contact(request):
         event = request.POST.get('event')
         comment = request.POST.get('comment')
     
-        # where file is saved (got help from online on this line of code)
-        file_path = os.path.join('form_submissions', 'contact_data.txt')
+        # what will be sent to Club's email
+        userSubmission = f"""
+        Name: {fname} {lname}
+        Email: {email}
+        Joining Coding United: {join}
+        Interested Event(s): {event}
+        Comment: {comment}
+        """
 
-        # continue adding contact info into same file
-        no_input = '**No User Input**'  # output if someone doesn't fill in an optional line
-        with open(file_path, 'a') as outfile:
-            outfile.write('Name: {} {}\n'.format(fname, lname))     # required
-            outfile.write('Email: {}\n'.format(email))              # required
+        subject = f"New Contact Form from {fname} {lname}"
+        from_email = 'codingunited28@gmail.com'    # created gmail to use
+        to_email = ['CodingUnitedClub@snhu.edu']   # sends to club's email address
 
-            if join == "":
-                outfile.write('Joining Coding United: {}\n'.format(no_input)) # seems radio auto outputs "none" if nothing selected
-            else:
-                outfile.write('Joining Coding United: {}\n'.format(join))
-            
-            if event == "":
-                outfile.write('Interested Event: {}\n'.format(no_input))
-            else:
-                outfile.write('Interested Event: {}\n'.format(event))
-            
-            if comment == "":
-                outfile.write('Comment: {}\n'.format(no_input))
-            else:
-                outfile.write('Comment: {}\n'.format(comment))
-            
-            outfile.write('----\n')
+        send_mail(
+            subject,
+            userSubmission,
+            from_email,
+            to_email,
+            fail_silently=False,
+        )
 
-        return redirect('/')  # redirect to home page after successful POST
+        messages.success(request, "Your email was sent successfully!")
 
+        return redirect('contact')  # redirect back to contact page to pop up message
     return render(request, 'core/contact.html')
 
 def errorPage(request, exception):
     return render(request, 'core/404.html', status=404)
+
 

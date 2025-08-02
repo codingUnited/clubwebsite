@@ -11,6 +11,14 @@
 <p class="text-rose-600">Contact Page</p>
 <a href="{% url 'home' %}">Go to Home Page</a>
 
+{% if messages %}
+    <script>
+        {% for message in messages %}
+            alert("{{ message }}");
+        {% endfor %}
+    </script>
+{% endif %}
+
 <section id="contactform">
     <form method="POST" action="{% url 'contact' %}">
         {% csrf_token %}  <!--Error message says I need this csrf_token-->
