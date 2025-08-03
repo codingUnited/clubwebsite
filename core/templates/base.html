@@ -21,20 +21,20 @@
     ></script>
   </head>
   <body
-    class="m-0 p-0 min-h-screen bg-gradient-to-r z-50 from-blue-400 to-purple-800"
+    class="m-0 p-0 min-h-screen bg-gradient-to-r z-50 from-blue-100 to-purple-100"
   >
     <div class="w-[80vw] mx-auto">
       <header
         class="bg-gradient-to-r to-blue-400 from-purple-800 sticky top-0 flex"
       >
-        <div class="flex space-x-2">
+        <div class="flex space-x-3">
           <a href="{% url 'home' %}"
             ><img
-              class="size-8 md:size-12"
+              class="size-8 md:size-12 lg:size-16"
               src="{% static 'core/images/coding_united_icon.png' %}"
               alt="Coding United Logo"
           /></a>
-          <h1 class="uppercase font-bold text-xl md:text-3xl self-center">
+          <h1 class="uppercase font-bold text-teal-500 text-xl md:text-4xl self-center">
             Coding United Commons
           </h1>
         </div>
@@ -45,10 +45,10 @@
         class="bg-gradient-to-r to-blue-400 border-0 text-sm md:text-lg from-purple-800 sticky flex justify-between px-3 lg:px-6 py-2 lg:py-4"
       >
         <div>
-          <h1 class="uppercase font-bold">Coding United Club</h1>
+          <h1 class="uppercase text-teal-400 text-3xl font-bold">Coding United Club</h1>
         </div>
         <div class="justify-center">
-          <a class="text-teal-200" href="{% url 'about' %}">About US</a>
+          <a class="text-gray-200" href="{% url 'about' %}">About US</a>
         </div>
       </footer>
       <!-- <h1
