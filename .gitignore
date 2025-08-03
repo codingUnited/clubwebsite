@@ -50,3 +50,7 @@ env/
 venv/
 ENV/
 .venv/
+.env
+.env.prod
+db.sqlite3
+
