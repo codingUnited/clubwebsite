@@ -8,9 +8,6 @@
 {% load static %}
 <link rel="stylesheet" href="{% static '/contact.css' %}">
 
-<p class="text-rose-600">Contact Page</p>
-<a href="{% url 'home' %}">Go to Home Page</a>
-
 {% if messages %}
     <script>
         {% for message in messages %}
@@ -19,7 +16,7 @@
     </script>
 {% endif %}
 
-<section id="contactform">
+<section class="my-8" id="contactform">
     <form method="POST" action="{% url 'contact' %}">
         {% csrf_token %}  <!--Error message says I need this csrf_token-->
         <h1>Contact us</h1>
