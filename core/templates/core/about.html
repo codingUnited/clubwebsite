@@ -1,12 +1,197 @@
 {%extends "base.html"%}
+{% load static tailwind_tags %}
 
 {%block title%}
     <title>About Us</title>
 {%endblock%}
 
 {%block content%}
-<div>
-    <p class="text-rose-600">About</p>
-    <a href="{% url 'home' %}">Go to Home Page</a>
-</div>
+<section class="flex my-6 text-2xl">
+    <div>
+        <h1 class="font-bold text-4xl text-center"> WHO WE ARE </h1>
+        <hr>
+        <p class="mx-auto mt-6 w-3/4">
+            We are a university club focused on helping members grow their coding skills, 
+            learn industry tools, and prepare for careers in their chosen specialization, whether 
+            that's Software Engineering, Game Development, Network Engineering, or DevOps.  
+        </p>
+        <p class="mx-auto mt-3 w-3/4">
+            Our mission is to support every member on their journey by providing resources, 
+            training materials, hands-on projects, coding challenges, and a strong peer support network.
+        </p>
+    </div>
+</section>
+
+<section class="my-6 mt-10">
+  <h1 class="font-bold text-4xl text-center">Meet the Board</h1>
+  <hr />
+
+  <section class="flex flex-row overflow-x-auto text-lg px-4 py-6">
+    <div class="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
+      <h2 class="font-bold text-2xl">Club President</h2>
+      <h2 class="font-medium text-2xl">Jose Miguel de Lima</h2>
+      <hr />
+      <img class="my-3" src="{% static 'core/images/jose_avatar.png' %}" alt="Jose Avatar" />
+      <ul class="space-y-0.5 px-4">
+        <li>QA Engineer for 20 years</li>
+        <li>Major: Computer Science</li>
+        <li>Minor: Mathematics</li>
+        <li class="text-left">
+          <strong>Goals:</strong>
+          <ul class="list-disc list-inside ml-5 space-y-1">
+            <li>Design and program autonomous robotic systems</li>
+            <li>Develop embedded software using C++ and microcontrollers</li>
+            <li>Build and deploy AI/ML models for simulation and automation</li>
+            <li>Create interactive simulators and games that blend robotics, AI, and physics</li>
+            <li>Contribute to open-source tools or educational platforms for engineers</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
+      <h2 class="font-bold text-2xl">Club VP</h2>
+      <h2 class="font-medium text-2xl">Kailey</h2>
+      <hr />
+      <img class="my-3" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
+      <ul class="space-y-0.5 text-center px-4">
+        <li>Exp</li>
+        <li>Major</li>
+        <li>More info</li>
+        <li class="text-left">
+          <strong>Goals:</strong>
+          <ul class="list-disc list-inside ml-5 space-y-1">
+            <li>Goal 1</li>
+            <li>Goal 2</li>
+            <li>Goal 3</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
+      <h2 class="font-bold text-2xl">Club Secretary</h2>
+      <h2 class="font-medium text-2xl">Tony</h2>
+      <hr />
+      <img class="my-3" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
+      <ul class="space-y-0.5 text-center px-4">
+        <li>Exp</li>
+        <li>Major</li>
+        <li>More info</li>
+        <li class="text-left">
+          <strong>Goals:</strong>
+          <ul class="list-disc list-inside ml-5 space-y-1">
+            <li>Goal 1</li>
+            <li>Goal 2</li>
+            <li>Goal 3</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
+      <h2 class="font-bold text-2xl">Club Engagement Officer</h2>
+      <h2 class="font-medium text-2xl">Raina</h2>
+      <hr />
+      <img class="my-3" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
+      <ul class="space-y-0.5 text-center px-4">
+        <li>Exp</li>
+        <li>Major</li>
+        <li>More info</li>
+        <li class="text-left">
+          <strong>Goals:</strong>
+          <ul class="list-disc list-inside ml-5 space-y-1">
+            <li>Goal 1</li>
+            <li>Goal 2</li>
+            <li>Goal 3</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="flex flex-col border-2 w-1/3 rounded-2xl text-center p-2 shrink-0">
+      <h2 class="font-bold text-2xl">Club Event Coordinator</h2>
+      <h2 class="font-medium text-2xl">Chris</h2>
+      <hr />
+      <img class="my-3" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
+      <ul class="space-y-0.5 text-center px-4">
+        <li>Exp</li>
+        <li>Major</li>
+        <li>More info</li>
+        <li class="text-left">
+          <strong>Goals:</strong>
+          <ul class="list-disc list-inside ml-5 space-y-1">
+            <li>Goal 1</li>
+            <li>Goal 2</li>
+            <li>Goal 3</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+</section>
+
+<section class="my-6 mt-15">
+    <h1 class="font-bold text-4xl text-center">Meet our Club Officers</h1>
+    <hr>
+    <section class="flex flex-row overflow-x-auto text-lg px-4 py-6">
+        <div class="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
+      <h2 class="font-bold text-2xl">Social Outreach Officer</h2>
+      <h2 class="font-medium text-2xl">Erica</h2>
+      <hr />
+      <img class="my-3" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
+      <ul class="space-y-0.5 text-center px-4">
+        <li>Exp</li>
+        <li>Major</li>
+        <li>More info</li>
+        <li class="text-left">
+          <strong>Goals:</strong>
+          <ul class="list-disc list-inside ml-5 space-y-1">
+            <li>Goal 1</li>
+            <li>Goal 2</li>
+            <li>Goal 3</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="flex flex-col border-2 w-1/3 rounded-2xl text-center p-2 shrink-0">
+      <h2 class="font-bold text-2xl">Game Server Project Lead</h2>
+      <h2 class="font-medium text-2xl">Bryton</h2>
+      <hr />
+      <img class="my-3" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
+      <ul class="space-y-0.5 text-center px-4">
+        <li>Exp</li>
+        <li>Major</li>
+        <li>More info</li>
+        <li class="text-left">
+          <strong>Goals:</strong>
+          <ul class="list-disc list-inside ml-5 space-y-1">
+            <li>Goal 1</li>
+            <li>Goal 2</li>
+            <li>Goal 3</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+</section>
+
+<section class="my-6 mt-15">
+    <h1 class="font-bold text-4xl text-center">Meet our Club Members</h1>
+    <hr>
+    <div class="flex flex-col border-2 w-1/3 rounded-2xl text-center p-2 mt-4">
+        <h2>Name</h2>
+        <hr>
+        <img class="my-3" src="{% static "" %}" alt="">
+        <ul class="space-y-0.5">
+            <li>Exp</li>
+            <li>Major</li>
+            <li>More info</li>
+            <li class="text-left">
+                Goals:
+                <ul class="text-left list-disc list-inside ml-5 space-y-1">
+                    <li>Goal 1</li>
+                    <li>Goal 2</li>
+                    <li>Goal 3</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
 {%endblock%}

@@ -6,3 +6,4 @@ sqlparse==0.5.3
 python-dotenv
 python-decouple
 gunicorn
+python-decouple
