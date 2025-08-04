@@ -16,7 +16,7 @@
     </script>
 {% endif %}
 
-<section class="my-8" id="contactform">
+<section class="my-8 text-black" id="contactform">
     <form method="POST" action="{% url 'contact' %}">
         {% csrf_token %}  <!--Error message says I need this csrf_token-->
         <h1>Contact us</h1>

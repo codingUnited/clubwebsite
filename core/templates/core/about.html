@@ -7,7 +7,7 @@
 
 {%block content%}
 <section class="flex my-6 text-2xl">
-    <div>
+    <div class="text-black">
         <h1 class="font-bold text-4xl text-center"> WHO WE ARE </h1>
         <hr>
         <p class="mx-auto mt-6 w-3/4">
@@ -23,15 +23,15 @@
 </section>
 
 <section class="my-6 mt-10">
-  <h1 class="font-bold text-4xl text-center">Meet the Board</h1>
+  <h1 class="font-bold text-4xl text-black text-center">Meet the Board</h1>
   <hr />
 
-  <section class="flex flex-row overflow-x-auto text-lg px-4 py-6">
+  <section class="flex flex-row text-black overflow-x-auto text-lg px-4 py-6">
     <div class="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
       <h2 class="font-bold text-2xl">Club President</h2>
       <h2 class="font-medium text-2xl">Jose Miguel de Lima</h2>
       <hr />
-      <img class="my-3" src="{% static 'core/images/jose_avatar.png' %}" alt="Jose Avatar" />
+      <img class="my-3 w-full h-75 object-contain" src="{% static 'core/images/jose_avatar.png' %}" alt="Jose Avatar" />
       <ul class="space-y-0.5 px-4">
         <li>QA Engineer for 20 years</li>
         <li>Major: Computer Science</li>
@@ -52,7 +52,7 @@
       <h2 class="font-bold text-2xl">Club VP</h2>
       <h2 class="font-medium text-2xl">Kailey</h2>
       <hr />
-      <img class="my-3" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
+      <img class="my-3 w-full h-75 object-contain" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
       <ul class="space-y-0.5 text-center px-4">
         <li>Exp</li>
         <li>Major</li>
@@ -71,7 +71,7 @@
       <h2 class="font-bold text-2xl">Club Secretary</h2>
       <h2 class="font-medium text-2xl">Tony</h2>
       <hr />
-      <img class="my-3" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
+      <img class="my-3 w-full h-75 object-contain" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
       <ul class="space-y-0.5 text-center px-4">
         <li>Exp</li>
         <li>Major</li>
@@ -90,7 +90,7 @@
       <h2 class="font-bold text-2xl">Club Engagement Officer</h2>
       <h2 class="font-medium text-2xl">Raina</h2>
       <hr />
-      <img class="my-3" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
+      <img class="my-3 w-full h-75 object-contain" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
       <ul class="space-y-0.5 text-center px-4">
         <li>Exp</li>
         <li>Major</li>
@@ -109,7 +109,7 @@
       <h2 class="font-bold text-2xl">Club Event Coordinator</h2>
       <h2 class="font-medium text-2xl">Chris</h2>
       <hr />
-      <img class="my-3" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
+      <img class="my-3 w-full h-75 object-contain" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
       <ul class="space-y-0.5 text-center px-4">
         <li>Exp</li>
         <li>Major</li>
@@ -127,34 +127,32 @@
   </section>
 </section>
 
-<section class="my-6 mt-15">
+<section class="my-6 text-black mt-15">
     <h1 class="font-bold text-4xl text-center">Meet our Club Officers</h1>
     <hr>
     <section class="flex flex-row overflow-x-auto text-lg px-4 py-6">
-        <div class="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
-      <h2 class="font-bold text-2xl">Social Outreach Officer</h2>
-      <h2 class="font-medium text-2xl">Erica</h2>
-      <hr />
-      <img class="my-3" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
-      <ul class="space-y-0.5 text-center px-4">
-        <li>Exp</li>
-        <li>Major</li>
-        <li>More info</li>
-        <li class="text-left">
-          <strong>Goals:</strong>
-          <ul class="list-disc list-inside ml-5 space-y-1">
-            <li>Goal 1</li>
-            <li>Goal 2</li>
-            <li>Goal 3</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+      <div class="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
+        <h2 class="font-bold text-2xl">Social Outreach Officer</h2>
+        <h2 class="font-medium text-2xl">Erica Boterf</h2>
+        <hr />
+        <img class="my-3 w-full h-75 object-contain" src="{% static 'core/images/erica_boterf.jpg' %}" alt="Kailey Avatar" />
+        <ul class="space-y-0.5 text-center px-4">
+          <li>I am a Computer Science student seeking my bachelor's degree. I love working with computers and coding is life!</li>
+          <li>Major: Computer Science</li>
+          <li class="text-left">
+            <strong>Goals:</strong>
+            <ul class="list-disc list-inside ml-5 space-y-1">
+              <li>Working within a company handling data.</li>
+              <li>Owning a homestead and living off the land</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     <div class="flex flex-col border-2 w-1/3 rounded-2xl text-center p-2 shrink-0">
       <h2 class="font-bold text-2xl">Game Server Project Lead</h2>
       <h2 class="font-medium text-2xl">Bryton</h2>
       <hr />
-      <img class="my-3" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
+      <img class="my-3 w-full h-75 object-contain" src="{% static 'core/images/jose_avatar.png' %}" alt="Kailey Avatar" />
       <ul class="space-y-0.5 text-center px-4">
         <li>Exp</li>
         <li>Major</li>
@@ -172,7 +170,7 @@
   </section>
 </section>
 
-<section class="my-6 mt-15">
+<section class="my-6 text-black mt-15">
     <h1 class="font-bold text-4xl text-center">Meet our Club Members</h1>
     <hr>
     <div class="flex flex-col border-2 w-1/3 rounded-2xl text-center p-2 mt-4">
