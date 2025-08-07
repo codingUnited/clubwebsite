@@ -176,7 +176,8 @@
 <section class="my-6 text-black text-lg mt-15">
     <h1 class="font-bold text-4xl text-center">Meet our Club Members</h1>
     <hr>
-    <div class="flex flex-col border-2 w-1/3 rounded-2xl text-center p-2 mt-4">
+    <div class="flex space-x-10">
+      <div class="flex flex-col border-2 w-1/3 rounded-2xl text-center p-2 mt-4">
         <h2 class="font-medium text-2xl">John Schmidt</h2>
         <hr />
         <img class="my-3 w-full h-75 object-contain" src="{% static 'core/images/John S.jpg' %}" alt="Kailey Avatar" />
@@ -193,6 +194,28 @@
               </ul>
             </li>
         </ul>
+      </div>
+      <div class="flex flex-col border-2 w-1/3 rounded-2xl text-center p-2 mt-4">
+        <h2 class="font-medium text-2xl">Stephen Berkley</h2>
+        <hr />
+        <img class="my-3 w-full h-75 object-contain" src="{% static 'core/images/Stephen_Berkley.png' %}" alt="Kailey Avatar" />
+        <ul class="space-y-0.5 text-center px-4">
+            <li>Major: Computer Science</li>
+            <li>Concentration: Software Engineering</li>
+            <li>Why did the Java developer wear glasses?</li>
+            <li>...</li>
+            <li>...</li>
+            <li>Because they couldn’t C#.</li>
+            <li class="text-left">
+              <strong>Goals:</strong>
+              <ul class="list-disc list-inside ml-5 space-y-1">
+                <li>Sharpen my Java and C++ skill to write cleaner, more efficient code.</li>
+                <li>Explore game engine physics and backend systems.</li>
+                <li>Collaborate on real projects to further expand my skill sets and to learn from others.</li>
+              </ul>
+            </li>
+        </ul>
+      </div>
     </div>
 </section>
 {%endblock%}
