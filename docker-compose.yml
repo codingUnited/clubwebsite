@@ -16,3 +16,26 @@ services:
     environment:
       - DEBUG=1
       - SECRET=your-dev-secret
+      - DATABASE_URL=postgres://clubuser:clubpass@db:5432/clubdb
+
+  db:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    environment:
+      - POSTGRES_DB=clubdb
+      - POSTGRES_USER=clubuser
+      - POSTGRES_PASSWORD=clubpass
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U clubuser -d clubdb"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    # Optional: expose for local tools like psql/GUI
+    ports:
+      - "5432:5432"
+
+volumes:
+ pgdata:
