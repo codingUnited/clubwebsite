@@ -66,3 +66,5 @@ ALTER TABLE member_zipcodes
 DELETE FROM member_zipcodes
 WHERE id IS NULL
 AND zipcode IS NULL;
+
+DROP TABLE IF EXISTS club_roster_registration;

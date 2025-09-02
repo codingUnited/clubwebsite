@@ -33,6 +33,7 @@ services:
       retries: 10
     volumes:
       - pgdata:/var/lib/postgresql/data
+      - ./sql_files:/import:ro # added in this line to mount csv directory 
     # Optional: expose for local tools like psql/GUI
     ports:
       - "5432:5432"
