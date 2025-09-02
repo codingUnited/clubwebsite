@@ -54,3 +54,7 @@ ENV/
 .env.prod
 db.sqlite3
 
+#PostgreSQL
+data_files/
+*.csv
+*.tsv
