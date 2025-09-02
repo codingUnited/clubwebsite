@@ -33,6 +33,7 @@ services:
       retries: 10
     volumes:
       - pgdata:/var/lib/postgresql/data
+      - ./form_submissions:/import:ro # added in this line to mount form submissions directory
     # Optional: expose for local tools like psql/GUI
     ports:
       - "5432:5432"
