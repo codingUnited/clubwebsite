@@ -109,10 +109,14 @@ WSGI_APPLICATION = 'clubwebsite.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+  "default": {
+    "ENGINE": "django.db.backends.postgresql",
+    "NAME": os.environ.get("POSTGRES_DB","clubdb"),
+    "USER": os.environ.get("POSTGRES_USER","clubuser"),
+    "PASSWORD": os.environ.get("POSTGRES_PASSWORD","clubpass"),
+    "HOST": os.environ.get("POSTGRES_HOST","db"),  # <- docker service name
+    "PORT": os.environ.get("POSTGRES_PORT","5432"),
+  }
 }
 
 
