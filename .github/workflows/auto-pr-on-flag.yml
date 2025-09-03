@@ -1,0 +1,83 @@
+# .github/workflows/auto-pr-on-flag.yml
+name: Auto PR on "--pull"
+
+on:
+  push:
+    branches:
+      - '**'            # run on all branches
+  workflow_dispatch: {} # allow manual runs
+
+permissions:
+  contents: read
+  pull-requests: write   # harmless even when using a PAT
+
+jobs:
+  auto-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for --pull flag in pushed commits
+        id: check
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const commits = context.payload.commits || [];
+            const hasFlag = commits.some(c => (c.message || '').includes('--pull'));
+            core.setOutput('hasFlag', hasFlag ? 'true' : 'false');
+
+      - name: Create PR with PAT if flag present
+        if: ${{ steps.check.outputs.hasFlag == 'true' }}
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}   # <-- create a repo secret with your Personal Access Token
+          script: |
+            const repo      = context.payload.repository;
+            const owner     = repo.owner.login;
+            const repoName  = repo.name;
+            const base      = repo.default_branch;          // e.g., "main"
+            const ref       = context.ref || '';
+            if (!ref.startsWith('refs/heads/')) {
+              core.info('Not a branch push (maybe a tag); skipping.');
+              return;
+            }
+            const headRef = ref.replace('refs/heads/', '');
+
+            if (headRef === base) {
+              core.info(`Push is to default branch "${base}"; skipping PR.`);
+              return;
+            }
+
+            // Avoid duplicate PRs from the same branch
+            const existing = await github.rest.pulls.list({
+              owner,
+              repo: repoName,
+              state: 'open',
+              head: `${owner}:${headRef}`,
+              base
+            });
+            if (existing.data.length > 0) {
+              core.info(`PR already exists: #${existing.data[0].number}`);
+              return;
+            }
+
+            // Build a helpful PR body with recent commit messages
+            const messages = (context.payload.commits || [])
+              .map(c => `- ${c.id.slice(0,7)} ${c.message}`)
+              .join('\n');
+
+            const pr = await github.rest.pulls.create({
+              owner,
+              repo: repoName,
+              title: `Auto PR: ${headRef}`,
+              head: headRef,
+              base,
+              body: [
+                'This PR was created automatically because at least one pushed commit contained `--pull`.',
+                '',
+                'Recent commits:',
+                messages
+              ].join('\n'),
+              maintainer_can_modify: true,
+              draft: false
+            });
+
+            core.info(`Created PR #${pr.data.number}: ${pr.data.html_url}`);
