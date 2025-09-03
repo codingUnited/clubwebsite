@@ -1,0 +1,79 @@
+name: CI  # 👈 This is the workflow name that shows up in GitHub Actions
+
+on:
+  push:         # 👈 Run this workflow whenever code is pushed
+    branches:   # 👈 Optional: limit branches if you want
+      - '**'    # 👈 Means all branches (you can change to "main" or "feature/**")
+  workflow_dispatch: {}  # 👈 Allows you to manually trigger this workflow from GitHub UI
+
+permissions:
+  contents: read          # 👈 Needed to read repo contents
+  pull-requests: write    # 👈 Needed to create pull requests
+
+jobs:
+  build:  # 👈 Example job (keep your existing jobs)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Running tests..."
+
+  auto-pr:  # 👈 New job that automatically creates PRs when "--pull" is in a commit message
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for --pull flag in pushed commits
+        id: check
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Get all commits in this push event
+            const commits = context.payload.commits || [];
+            // Look for any commit message containing "--pull"
+            const hasFlag = commits.some(c => (c.message || '').includes('--pull'));
+            // Store the result for later steps
+            core.setOutput('hasFlag', hasFlag ? 'true' : 'false');
+
+      - name: Create PR if flag present
+        if: ${{ steps.check.outputs.hasFlag == 'true' }}  # 👈 Only runs if "--pull" was found
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const repo      = context.payload.repository;
+            const owner     = repo.owner.login;
+            const repoName  = repo.name;
+            const base      = repo.default_branch;   // 👈 Usually "main" or "master"
+            const ref       = context.ref || '';
+            const isBranch  = ref.startsWith('refs/heads/');
+            if (!isBranch) {
+              core.info('Push was not to a branch (maybe a tag); skipping.');
+              return;
+            }
+            const headRef = ref.replace('refs/heads/', '');
+
+            if (headRef === base) {
+              core.info(`Push is to default branch "${base}"; not opening a PR.`);
+              return;
+            }
+
+            // Check if there’s already an open PR from this branch
+            const existing = await github.rest.pulls.list({
+              owner,
+              repo: repoName,
+              state: 'open',
+              head: `${owner}:${headRef}`,
+              base
+            });
+
+            if (existing.data.length > 0) {
+              core.info(`Open PR already exists: #${existing.data[0].number}`);
+              return;
+            }
+
+            // Create a new PR
+            await github.rest.pulls.create({
+              owner,
+              repo: repoName,
+              title: `Auto PR: ${headRef}`,   //  👈 Title of the PR
+              head: headRef,                  // 👈 Source branch
+              base,                           // 👈 Target branch (main)
+              body: 'This PR was created automatically because a commit contained `--pull`.'
+            });
