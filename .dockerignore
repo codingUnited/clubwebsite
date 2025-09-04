@@ -9,3 +9,8 @@ __pycache__
 data_files/
 *.csv
 *.tsv
+.gitignore
+node_modules
+**/node_modules
+npm-debug.log
+ 
