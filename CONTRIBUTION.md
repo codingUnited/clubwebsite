@@ -25,16 +25,19 @@ Thank you for your interest in contributing! This guide explains how to work wit
    ```bash
    git checkout master
    ```
+
 2. Pull the latest changes from the remote:
 
     ```bash
     git pull origin master
     ```
+
 3. Now create and switch to a new branch:
 
     ```bash
     git checkout -b your-feature-branch
     ```
+
 > 📝 Replace `your-feature-branch` with a descriptive name like `feature/add-login` or `bugfix/fix-header`.
 
 ---
@@ -42,26 +45,37 @@ Thank you for your interest in contributing! This guide explains how to work wit
 ### 🔄 How to Ensure Your Local Branch Is Up to Date with `master`
 
 Before pushing your changes, make sure your branch is updated with the latest `master` changes.
+
 1. Switch to `master`:
+
     ```bash
     git checkout master
     ```
+
 2. Pull the latest updates:
+
     ```bash
     git pull origin master
     ```
+
 3. Switch back to your feature branch:
+
     ```bash
     git checkout your-feature-branch
     ```
+
 4. Merge `master` into your feature branch:
+
     ```bash
     git merge master
     ```
+
 5. If there are merge conflicts, resolve them, then commit:
+
     ```bash
     git commit -am "Resolve merge conflicts"
     ```
+
 ### 🚀 How to Push a New Branch to the Remote Repository
 
 After committing your changes locally, push your branch to the remote repository:
@@ -69,20 +83,25 @@ After committing your changes locally, push your branch to the remote repository
 ```bash
 git push origin your-feature-branch
 ```
+
 > 🚀 This creates the branch on GitHub if it doesn’t exist yet.
 
 ---
+
 ### ♻️ How to Push Updates to an Existing Remote Branch
 
 If you've already pushed the branch and made more changes:
+
 ```bash
 git add .
 git commit -m "Describe your update"
 git push
 ```
+
 >🛠️ Or use `git push origin your-feature-branch` if needed.
 
 ---
+
 ### 🔁 How to Create a Pull Request (PR) Into `master`
 
 Once your branch is pushed:
@@ -98,6 +117,7 @@ Once your branch is pushed:
 > ✅ Your code is now ready for review and merging.
 
 ---
+
 ### 📘 Summary of Common Git Commands
 
 | Task                              | Command                               |
@@ -116,7 +136,7 @@ Once your branch is pushed:
 
 🙌 **Thank you for contributing!**
 
-*****************************************************************************************************
+---
 
 <br>
 <br>
@@ -237,16 +257,19 @@ We use **[Tailwind CSS](https://tailwindcss.com/)** utility-first classes to sty
 - Break large templates into reusable components (e.g., via Django template includes).
 
 ---
+
 ## Database Contributions (Models & Migrations)
 
 Django uses models to define database structure, and migrations to keep the database schema in sync with code. Follow these steps when making database changes:
 
 ---
+
 ### Update or Create a Model
 
 1. Open the correct `models.py` file for the app you’re working on.
    - Example: `core/models.py`
 2. Add your new model or update an existing one:
+
   ```python
    from django.db import models
 
@@ -258,17 +281,21 @@ Django uses models to define database structure, and migrations to keep the data
        def __str__(self):
            return self.name
   ```
+
 ### Create a Migration Script
 
 Once you’ve updated models, generate a migration file:
+
 ```bash
 python manage.py makemigrations
 ```
+
 This will create a file inside the app’s migrations/ folder (e.g., core/migrations/0002_auto.py).
 
 ### Apply Migrations to Your Local Database
 
 Run the migration to update your local database schema:
+
 ```bash
 python manage.py migrate
 ```
@@ -276,15 +303,19 @@ python manage.py migrate
 ### Verify Changes
 
 1. Open the Django shell to inspect your models:
+
    ```bash
    python manage.py shell
    ```
+
 2. Or log into the database container and check tables directly:
+
    ```bash
    docker compose exec db psql -U $POSTGRES_USER -d $POSTGRES_DB -c "\dt"
    ```
 
 ### Workflow Notes
+
 - Never edit migration files manually unless you are resolving a conflict.
 - Commit both your model changes and the generated migration files.
 - If collaborating, always run:
@@ -293,18 +324,22 @@ python manage.py migrate
   git pull origin master
   python manage.py migrate
   ```
+
   to stay in sync before starting new model changes.
 
   ### Quick Commands Recap
-  |Task	|Command|
+
+  |Task |Command|
   |-----|-------|
-  |Make migrations	|python manage.py makemigrations|
-  |Apply migrations	|python manage.py migrate|
-  |Check SQL for migration	|python manage.py sqlmigrate <app> <id>|
-  |Show migration status	|python manage.py showmigrations|
+  |Make migrations |python manage.py makemigrations|
+  |Apply migrations |python manage.py migrate|
+  |Check SQL for migration |python manage.py sqlmigrate <app> <id>|
+  |Show migration status |python manage.py showmigrations|
 
 ---
+
 ### Running a unit test
+
 1. Change to the project base directory.
 2. Activate the virtual environment (source .venv/bin/activate).
 3. Run the command: python3 manage.py test
@@ -312,6 +347,7 @@ python manage.py migrate
 - You can add unit tests to the core/tests.py file
 
 ---
+
 ### 📦 Helpful Resources
 
 - [Tailwind UI (free & paid components)](https://tailwindui.com/components)
@@ -320,5 +356,4 @@ python manage.py migrate
 
 ---
 
-Keep your HTML semantic, your layouts clean, and let Tailwind do the heavy lifting. 💪
-
+Keep your HTML semantic, your layouts clean, and let Tailwind do the heavy lifting.
