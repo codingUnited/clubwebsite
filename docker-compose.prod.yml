@@ -2,22 +2,51 @@ services:
   club:
     container_name: club
     build: .
+    restart: unless-stopped
     command: >
-      sh -c "python manage.py collectstatic --noinput &&
-             gunicorn clubwebsite.wsgi:application --bind 0.0.0.0:8000"
+      sh -c "
+        python manage.py migrate &&
+        python manage.py collectstatic --noinput &&
+        gunicorn clubwebsite.wsgi:application --bind 0.0.0.0:8000
+      "
     volumes:
       - static_volume:/app/staticfiles_collected
     env_file:
-      - .env
-    expose:
-      - "8000"
+      - .env        # put SECRET_KEY, DB creds/URL here
     environment:
       - DEBUG=0
-      - SECRET=your-prod-secret
+      # avoid putting secrets inline; use .env instead
+    depends_on:
+      db:
+        condition: service_healthy
+    expose:
+      - "8000"
+    networks:
+      - app-network
+
+  db:
+    image: postgres:16-alpine
+    container_name: club-db
+    restart: unless-stopped
+    shm_size: 128mb
+    env_file:
+      - .env        # POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB} -h localhost"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    volumes:
+      - pgdata:/var/lib/postgresql/data
     networks:
       - app-network
 
 volumes:
+  pgdata:
   static_volume:
 
 networks:
