@@ -17,10 +17,10 @@
     </script>
 {% endif %}
 
-<section class="my-8 text-black" id="conactform">
+<section class="flex flex-1 justify-center my-8 text-black border-2 bg-blue-200 border-black rounded-lg p-2" id="conactform">
     <form method="POST" action="{% url 'contact' %}">
         {% csrf_token %}  <!--Error message says I need this csrf_token-->
-        <h1 class= "flex flex-1 border-4 border-black">Contact us</h1>
+        <h1>Contact us</h1>
         <hr>
 
         <section class="contact_info p-4">

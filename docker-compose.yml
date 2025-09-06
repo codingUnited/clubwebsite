@@ -37,6 +37,15 @@ services:
     # Optional: expose for local tools like psql/GUI
     ports:
       - "5432:5432"
+  
+  # Example addition to docker-compose.yml
+  tailwind:
+    build: .
+    command: python manage.py tailwind start
+    volumes:
+      - .:/app
+    depends_on:
+      - club
 
 volumes:
  pgdata:
