@@ -1,12 +1,11 @@
 {% extends "base.html" %}
-{% load static tailwind_tags %}
 
 {% block title %}
     <title>Contact Us</title>
 {% endblock %}
 
 {% block content %}
-{% comment %} {% load static %} {% endcomment %}
+{% load static %}
 {% comment %} <link rel="stylesheet" href="{% static 'core/contact.css' %}"> {% endcomment %}
 
 {% if messages %}
@@ -17,13 +16,13 @@
     </script>
 {% endif %}
 
-<section class="flex flex-1 justify-center my-8 text-black border-2 bg-white border-black rounded-lg p-2" id="conactform">
+<section class="my-8 text-black" id="conactform">
     <form method="POST" action="{% url 'contact' %}">
         {% csrf_token %}  <!--Error message says I need this csrf_token-->
         <h1>Contact us</h1>
         <hr>
 
-        <section class="contact_info p-4">
+        <section class="contact_info">
             <label for="fname">First Name</label>
             <input type="text" name="fname" id="fname" minlength="2" maxlength="20" placeholder="John.." required>
 
