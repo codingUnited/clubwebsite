@@ -16,25 +16,25 @@
     </script>
 {% endif %}
 
-<section class="my-8 text-black" id="conactform">
+<section class="flex justify-center w-max my-8 text-black bg-slate-100 border-2 border-slate-100 rounded-lg p-2" id="conactform">
     <form method="POST" action="{% url 'contact' %}">
         {% csrf_token %}  <!--Error message says I need this csrf_token-->
-        <h1>Contact us</h1>
-        <hr>
+        <h1 class="flex flex-1 justify-center font-bold text-2xl">Contact us</h1>
+        {% comment %} <hr class="mb-2"> {% endcomment %}
 
-        <section class="contact_info">
-            <label for="fname">First Name</label>
-            <input type="text" name="fname" id="fname" minlength="2" maxlength="20" placeholder="John.." required>
+        <section class="contact_info flex flex-col w-full">
+            <label for="fname" class="mt-2 text-md">First Name</label>
+            <input type="text" name="fname" id="fname" minlength="2" maxlength="20" placeholder="John.." class="flex w-full border-2 border-white bg-white rounded-lg px-3 py-1 text-sm" required>
 
-            <label for="lname">Last Name</label>
-            <input type="text" name="lname" id="lname" minlength="1" maxlength="20" placeholder="Doe.." required>
+            <label for="lname"class="mt-2 text-md">Last Name</label>
+            <input type="text" name="lname" id="lname" minlength="1" maxlength="20" placeholder="Doe.." class="flex w-full border-2 border-white bg-white rounded-lg px-3 py-1 text-sm" required>
 
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="your.name@snhu.edu" required>
+            <label for="email" class="mt-2 text-md">Email</label>
+            <input type="email" name="email" id="email" placeholder="your.name@snhu.edu" class="flex w-full border-2 border-white bg-white rounded-lg px-3 py-1 text-sm" required>
         </section>
 
         <section class="join_us">
-            <label>Would you like to join Coding United?</label><br>
+            <label class="mt-2 text-md">Would you like to join Coding United?</label><br>
             <input type="radio" id="yes" name="join" value="yes">
             <label for="yes">Yes</label>  
             <input type="radio" id="no" name="join" value="no"> 
@@ -42,22 +42,22 @@
         </section>  
 
         <section class="event_list">
-            <label for="event">What event would you join?</label>
-            <input type="text" list="events" id="event" name="event" placeholder="event name..">
+            <label for="event" class=" flex w-full mt-2 text-md">What event would you join?</label>
+            <input type="text" list="events" id="event" name="event" placeholder="event name.." class="flex w-full border-2 border-white bg-white rounded-lg px-3 py-1 text-sm">
             <datalist id="events">
-                <option value="Book Club"></option>
+                <option value="Book Club" ></option>
                 <option value="Coding Challenge"></option>
                 <option value="Club Website"></option>
             </datalist>
         </section>  
 
-        <section class="comments">
+        <section class="comments mt-2 text-md">
             <label for="comment">Comments:</label>
-            <textarea id="comment" name="comment" row="5" cols="30" placeholder="write here..."></textarea>
+            <textarea id="comment" name="comment" row="5" cols="30" placeholder="write here..." class="flex w-full border-2 border-white bg-white rounded-lg px-3 py-1 text-sm"></textarea>
         </section>
 
-        <section class="submission">
-        <button type="submit">Submit</button>
+        <section class="submission mt-2 text-md text-white text-bold flex justify-center">
+        <button type="submit" class="bg-blue-600 border-2 border-blue-600 px-4 py-2 rounded-full">Submit</button>
         </section>
     </form>
 </section>
