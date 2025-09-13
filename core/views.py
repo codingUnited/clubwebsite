@@ -1,16 +1,29 @@
 
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.contrib import messages 
+from .models import BoardMemberData
 
 import os
+
 
 # Create your views here.
 def home(request):
     return render(request, 'core/home.html')
 
+
 def about(request):
-    return render(request, 'core/about.html')
+    if request.method == "POST":
+        name = "Hanna"
+        email = "hannah@sutton"
+        title = "devil"
+
+        BoardMemberData.objects.create(name=name, email=email, board_position=title)
+        return HttpResponse("Inserted")
+    board_members = BoardMemberData.objects.all()
+    return render(request, 'core/about.html', {'board': board_members})
+
 
 
 def contact(request):

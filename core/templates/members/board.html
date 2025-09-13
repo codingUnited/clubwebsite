@@ -1,0 +1,5 @@
+<ul>
+  {% for member in board %}
+    <li>{{ member.name }} ({{ member.email }}) ({{ member.board_position }})</li>
+  {% endfor %}
+</ul>
