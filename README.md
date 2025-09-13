@@ -59,10 +59,18 @@ docker compose down
 ```bash
 docker compose down -v
 ```
-- Open Django shell in container
-```bash
-docker compose exec web bash
-```
+
+### Initial DB Setup
+- Once docker is up and running
+  ```bash
+  docker compose exec club python manage.py migrate
+  ```
+- Setup DB IDE i.e., DBeaver
+  - Host: localhost
+  - DB: clubdb
+  - Port: 5432
+  - Username: clubuser
+  - Password: clubpass
 --------------
 ## 🤝 Contributing
 - Create a branch, make changes, push, and open a PR.
