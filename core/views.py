@@ -12,6 +12,8 @@ def home(request):
 def about(request):
     return render(request, 'core/about.html')
 
+def session(request):
+    return render(request, 'core/session.html')
 
 def contact(request):
     if request.method == "POST":
