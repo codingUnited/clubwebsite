@@ -46,6 +46,8 @@
           <a href="{% url 'about' %}">About Us</a>
           <span class="mx-3">|</span>
           <a href="{% url 'contact' %}">Contact Us</a>
+          <span class="mx-3">|</span>
+          <a href="{% url 'session' %}">Meetings</a>
         </nav>
       </header>
       {%block content%}{%endblock%}
@@ -58,6 +60,7 @@
         <div class="flex flex-col justify-center">
           <a class="text-gray-200" href="{% url 'about' %}">About US</a>
           <a class="text-gray-200" href="{% url 'contact' %}">Contact US</a>
+          <a class="text-gray-200" href="{% url 'session' %}">Meetings</a>
         </div>
       </footer>
     </div>
