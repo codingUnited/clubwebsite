@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import home, about, errorPage, contact, session
+from .views import home, about, errorPage, contact, session, faq
 
 
 urlpatterns = [
@@ -9,6 +9,8 @@ urlpatterns = [
 
     path('contact/', contact, name='contact'),
     path('session/', session, name='session'),
+    path('faq/', faq, name='faq'),
+
 
 ]
 
