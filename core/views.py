@@ -15,6 +15,10 @@ def about(request):
 def session(request):
     return render(request, 'core/session.html')
 
+def faq(request):
+    return render(request, 'core/faq.html')
+
+
 def contact(request):
     if request.method == "POST":
         fname = request.POST.get('fname')

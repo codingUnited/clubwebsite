@@ -8,7 +8,7 @@
     {% tailwind_css %}
 
     <!---Display logo in title-->
-    <link rel="icon" href="{% static 'core/images/coding_united_icon.png' %}" />
+    <link rel="icon" href="{% static 'core/images/CodingUnitedLogoNew.png' %}" />
     {% block title %} {% endblock %}
 
     <!-- HTMX -->
@@ -30,7 +30,7 @@
           <a href="{% url 'home' %}">
             <img
               class="size-8 md:size-12 lg:size-16"
-              src="{% static 'core/images/coding_united_icon.png' %}"
+              src="{% static 'core/images/CodingUnitedLogoNew.png' %}"
               alt="Coding United Logo"
             />
           </a>
@@ -48,6 +48,8 @@
           <a href="{% url 'contact' %}">Contact Us</a>
           <span class="mx-3">|</span>
           <a href="{% url 'session' %}">Meetings</a>
+          <span class="mx-3">|</span>
+          <a href="{% url 'faq' %}">FAQ</a>
         </nav>
       </header>
       {%block content%}{%endblock%}
@@ -61,6 +63,7 @@
           <a class="text-gray-200" href="{% url 'about' %}">About US</a>
           <a class="text-gray-200" href="{% url 'contact' %}">Contact US</a>
           <a class="text-gray-200" href="{% url 'session' %}">Meetings</a>
+          <a class="text-gray-200" href="{% url 'faq' %}">FAQ</a>
         </div>
       </footer>
     </div>
