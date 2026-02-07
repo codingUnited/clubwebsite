@@ -1,0 +1,176 @@
+import PageBuilder from "@/components/ui/page-builder";
+import PageBuilderFooter from "@/components/ui/page-builder/template-builder/footer-template";
+import Image from "next/image";
+
+export default function Home() {
+  const HomePage = new PageBuilderFooter();
+  HomePage.setTitle("Coding United");
+  HomePage.setDescription("Coding United");
+  HomePage.setFooter(
+    <footer className="bg-gray-800 text-white py-4 text-center">
+      <p>&copy; 2024 Coding United. All rights reserved.</p>
+    </footer>,
+  );
+
+  return (
+    <>
+      <title>{HomePage.getTitle()}</title>
+      {HomePage.getFooter()}
+      <section className="relative h-[70vh] overflow-hidden">
+        <div className="relative w-full h-full group">
+          {/* <!-- Background Image --> */}
+          <img
+            src="{% static 'core/images/hero.jpg' %}"
+            alt="Default"
+            className="absolute inset-0 w-full h-full object-cover object-bottom transition-opacity duration-300 group-hover:opacity-0 z-10"
+          />
+
+          {/* <!-- Hover Image --> */}
+          <img
+            src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGR5b3hzZmgzemRxNWF2c2ZqOXQ5anN0NXhndGN0aHVhcXI5dXQybCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WoD6JZnwap6s8/giphy.gif"
+            alt="Hover Img"
+            className="absolute inset-0 w-full h-full object-cover object-bottom opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-0"
+          />
+        </div>
+        {/* <!-- Content Container --> */}
+        <div className="absolute pt-2 lg:pt-0 lg:top-1/12 lg:left-10 lg:right-auto z-10 bg-blue-800/80 p-2 lg:p-6 lg:rounded-lg max-w-4xl lg:max-w-2xl text-center">
+          <h1 className="font-mono text-gray-300 font-bold text-lg md:text-3xl mb-4">
+            Welcome to Coding United
+          </h1>
+          <hr className="border-gray-500 mb-4" />
+          <p className="text-purple-300 text-sm sm:text-lg md:text-xl">
+            A student-led tech club dedicated to building real-world projects,
+            supporting academic success, and growing together through hands-on
+            coding, curiosity, and collaboration. We are not here to fit in. We
+            are here to build, to learn, and to become.
+          </p>
+        </div>
+      </section>
+      <section className="text-2xl my-8">
+        <div className="relative text-center">
+          <h1 className="text-black text-5xl font-bold">Mission Statement</h1>
+          <hr className="h-1 bg-black" />
+          <p className="text-purple-300 text-sm sm:text-lg md:text-xl" />
+          <p className="mx-auto px-8 py-5 font-medium w-2/3 text-4xl font-serif text-black">
+            Our mission is to foster a vibrant and inclusive community of
+            student developers, empowering everyone with the skills and
+            experience to succeed in the world of technology.
+          </p>
+
+          <div className="flex flex-wrap justify-center p-2">
+            <section className="flex flex-row">
+              <div className="border-2 w-1/3 bg-purple-100 rounded-xl m-3 shadow-black shadow-xl  text-black">
+                <h1 className="text-3xl font-bold">Club Projects</h1>
+                <hr />
+                <ul className="list-disc text-left list-inside py-2 mx-4 space-y-2 text-black">
+                  <li>
+                    Build a strong coding portfolio through group projects
+                  </li>
+                  <li>Join 2–3 active projects maintained by the club</li>
+                  <li>Work with real, shared codebases</li>
+                  <li>
+                    Gain experience in team collaboration and problem-solving
+                  </li>
+                </ul>
+              </div>
+
+              <div className="border-2 w-1/3 bg-gradient-to-r rounded-xl from-purple-100 to-blue-100 m-3 shadow-black shadow-xl text-black">
+                <h1 className="text-3xl font-bold">Open Office Hours</h1>
+                <hr />
+                <ul className="list-disc text-left list-inside py-2 mx-4 space-y-2">
+                  <li>
+                    Online learning can feel isolating — it's easy to think
+                    you're on your own
+                  </li>
+                  <li>
+                    That's why we created the Open Office Hours initiative
+                  </li>
+                  <li>
+                    Drop in anytime for questions, debugging help, or quiet
+                    co-working
+                  </li>
+                  <li>
+                    Just knowing you're not alone can make all the difference
+                  </li>
+                </ul>
+              </div>
+
+              <div className="border-2 w-1/3 bg-blue-100 m-3 rounded-xl shadow-black shadow-xl text-black">
+                <h1 className="text-3xl font-bold">Coding Challenges</h1>
+                <hr />
+                <ul className="list-disc text-left list-inside py-2 mx-4 space-y-2">
+                  <li>
+                    Regular coding challenges open to all languages and skill
+                    levels
+                  </li>
+                  <li>Designed to push members outside their comfort zones</li>
+                  <li>
+                    Encourages creative problem-solving from multiple
+                    perspectives
+                  </li>
+                  <li>Helps develop well-rounded, adaptable developers</li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="flex flex-row">
+              <div className="border-2 w-1/3 bg-purple-100 m-3 rounded-xl shadow-black shadow-xl text-black">
+                <h1 className="text-3xl font-bold">
+                  Coding Education and Guidance
+                </h1>
+                <hr />
+                <ul className="list-disc text-left list-inside py-2 mx-4 space-y-2">
+                  <li>
+                    We curate free educational resources for all learning paths
+                  </li>
+                  <li>
+                    From game development and AI to quantum computing — all are
+                    welcome
+                  </li>
+                  <li>
+                    Our goal is to make learning accessible, regardless of
+                    experience level
+                  </li>
+                  <li>
+                    Sometimes the biggest barrier is simply not knowing what's
+                    available
+                  </li>
+                </ul>
+              </div>
+
+              <div className="border-2 w-1/3 bg-gradient-to-r rounded-xl from-purple-100 to-blue-100 m-3 shadow-black shadow-xl text-black">
+                <h1 className="text-3xl font-bold">Book Club</h1>
+                <hr />
+                <ul className="list-disc text-left list-inside py-2 mx-4 space-y-2">
+                  <li>
+                    No matter your career path, reading is essential for growth
+                  </li>
+                  <li>Club holds polls to choose relevant topics and books</li>
+                  <li>Keeping members accountable and engaged</li>
+                  <li>Learning beyond the standard curriculum</li>
+                </ul>
+              </div>
+
+              <div className="border-2 w-1/3 bg-blue-100 m-3 rounded-xl shadow-black shadow-xl  text-black">
+                <h1 className="text-3xl font-bold">Fostering Leadership</h1>
+                <hr />
+                <ul className="list-disc text-left list-inside py-2 mx-4 space-y-2">
+                  <li>Opportunities to have your voice heard and contribute</li>
+                  <li>Lead club projects or take initiative on new ideas</li>
+                  <li>
+                    Assist with administrative tasks and behind-the-scenes
+                    coordination
+                  </li>
+                  <li>
+                    Build valuable communication and leadership skills along the
+                    way
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
