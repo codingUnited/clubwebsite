@@ -79,7 +79,7 @@ export default function About() {
             <hr />
             <img
               className="my-3 w-full h-75 object-contain"
-              src="{% static 'core/images/tony_davis.jpg' %}"
+              src="core/images/tony_davis.jpg"
               alt="Kailey Avatar"
             />
             <ul className="space-y-0.5 text-center px-4">
