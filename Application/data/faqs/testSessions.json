@@ -1,20 +1,63 @@
 [
   {
-    "title": "How Do I Get Started?",
-    "response": "Join a project, introduce yourself, and start contributing. You'll learn fastest by building, asking questions, and shipping small pieces consistently.",
+    "title": "Do I Need Prior Coding Experience to Join?",
+    "response": "No. You do not need to be an expert. However, this club is not a beginner tutorial series. You should be willing to learn by building, asking questions, and take ownership of small tasks. Members at all levels participate, but everyone contributes to real projects.",
     "date": "2025-06-03T16:00:00Z",
     "category": "General"
   },
   {
-    "title": "How Do I Get Started?",
-    "response": "Join a project, introduce yourself, and start contributing. You'll learn fastest by building, asking questions, and shipping small pieces consistently.",
+    "title": "Is this a Learning Club or a Project Club?",
+    "response": "It is a project-first club. Learning happens through active development, not passive coursework. Tutorials, lectures, and crash courses exist only to support ongoing project work.",
     "date": "2025-06-03T16:00:00Z",
     "category": "General"
   },
   {
-    "title": "How Do I Get Started?",
-    "response": "Join a project, introduce yourself, and start contributing. You'll learn fastest by building, asking questions, and shipping small pieces consistently.",
+    "title": "What Kind of Projects does the Club Work On?",
+    "response": "We focus on real, end-to-end projects that solve problems or create value. Current projects include; Games (using engines like Godot), Embedded and IoT builds (such as the Roku Remote Project), Deterministic AI Systems (logic- and decision-based, not hype-driven), Full-Stack Web Applications (such as the Club Website and Mokse Volunteer Project), and Infrastructure and Homelab Projects. Projects are selected based on workforce relevance, not trends.",
+    "date": "2025-06-03T16:00:00Z",
+    "category": "General"
+  },
+  {
+    "title": "Do You Use AI Tools in the Club?",
+    "response": "Yes. AI tools are part of modern sofware work, and we treat them as such. Members are expected to use AI intentionally and responsibly, and to understand and explain the systems they build. AI is a productivity tool, not a substitue for reasoning or fundamentals.",
+    "date": "2025-06-03T16:00:00Z",
+    "category": "General"
+  },
+  {
+    "title": "How Is Progress Measured?",
+    "response": "Progress is measured by contribution to projects, not by attendance or passive participation. Members are expected to take ownership of tasks, complete work, and demonstrate growth through their contributions. Regular check-ins and project milestones help track progress.",
+    "date": "2025-06-03T16:00:00Z",
+    "category": "General"
+  },
+  {
+    "title": "How Much Time Commitment is Expected?",
+    "response": "Time commitment varies by project, but consistency matters more than hours. Members are expected to contribute regularly, communicate clearly, and contribute meaningfully to their teams.",
+    "date": "2025-06-03T16:00:00Z",
+    "category": "General"
+  },
+  {
+    "title": "Are there Lecutres or Classes?",
+    "response": "Yes, but they are not the main focus. Lectures and classes are offered as needed to support project work, but they are not a substitute for hands-on development. The emphasis is on learning by doing.",
+    "date": "2025-06-03T16:00:00Z",
+    "category": "General"
+  },
+  {
+    "title": "Is this Club only for People Interested in Software Development?",
+    "response": "No, but the club is designed around industry expectations. Members interested in game development, embedded systems, infrastructure, automation, or applied AI will all find relevant work here.",
+    "date": "2025-06-03T16:00:00Z",
+    "category": "General"
+  },
+  {
+    "title": "What Makes Coding United Different from Other Coding Clubs?",
+    "response": "We operate like a small engineering studio, not a classroom. Our focus is on delivery, ownership, AI-augmented workflows, and real proof of work. We prepare members for the realities of software development, not just the theory.",
+    "date": "2025-06-03T16:00:00Z",
+    "category": "General"
+  },
+  {
+    "title": "How do I Get Started?",
+    "response": "Join a project, introduce yourself, and start contributing. You'll learn fast by building real things, asking questions, and collaborating with others. Don't worry about being perfect; just be proactive and engaged.",
     "date": "2025-06-03T16:00:00Z",
     "category": "General"
   }
+  
 ]

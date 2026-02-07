@@ -20,7 +20,7 @@ export default function Home() {
         <div className="relative w-full h-full group">
           {/* <!-- Background Image --> */}
           <img
-            src="{% static 'core/images/hero.jpg' %}"
+            src="/images/hero.jpg"
             alt="Default"
             className="absolute inset-0 w-full h-full object-cover object-bottom transition-opacity duration-300 group-hover:opacity-0 z-10"
           />
