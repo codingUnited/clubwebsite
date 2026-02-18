@@ -1,6 +1,9 @@
 import PageBuilder from "@/components/ui/page-builder";
 import PageBuilderFooter from "@/components/ui/page-builder/template-builder/footer-template";
 import Image from "next/image";
+import { clubFeatures } from "@/app/data";
+import FeatureCard from "@/components/cards/feature-card";
+import React from "react";
 
 export default function Home() {
   const HomePage = new PageBuilderFooter();
@@ -15,7 +18,6 @@ export default function Home() {
   return (
     <>
       <title>{HomePage.getTitle()}</title>
-      {HomePage.getFooter()}
       <section className="relative h-[70vh] overflow-hidden">
         <div className="relative w-full h-full group">
           {/* <!-- Background Image --> */}
@@ -58,116 +60,19 @@ export default function Home() {
           </p>
 
           <div className="flex flex-wrap justify-center p-2">
-            <section className="flex flex-row">
-              <div className="border-2 w-1/3 bg-purple-100 rounded-xl m-3 shadow-black shadow-xl  text-black">
-                <h1 className="text-3xl font-bold">Club Projects</h1>
-                <hr />
-                <ul className="list-disc text-left list-inside py-2 mx-4 space-y-2 text-black">
-                  <li>
-                    Build a strong coding portfolio through group projects
-                  </li>
-                  <li>Join 2–3 active projects maintained by the club</li>
-                  <li>Work with real, shared codebases</li>
-                  <li>
-                    Gain experience in team collaboration and problem-solving
-                  </li>
-                </ul>
-              </div>
+           
+              
+               {clubFeatures.map((row, rowIndex) => (
+                <section className="flex flex-row"key={rowIndex}> 
+                  {row.map((feature, index) => (
+                    <FeatureCard key={index} title={feature.title} bgColor={feature.bgColor} items={feature.items} />
+                  ))} 
+                </section>
+              )
+              )
+              }
 
-              <div className="border-2 w-1/3 bg-gradient-to-r rounded-xl from-purple-100 to-blue-100 m-3 shadow-black shadow-xl text-black">
-                <h1 className="text-3xl font-bold">Open Office Hours</h1>
-                <hr />
-                <ul className="list-disc text-left list-inside py-2 mx-4 space-y-2">
-                  <li>
-                    Online learning can feel isolating — it's easy to think
-                    you're on your own
-                  </li>
-                  <li>
-                    That's why we created the Open Office Hours initiative
-                  </li>
-                  <li>
-                    Drop in anytime for questions, debugging help, or quiet
-                    co-working
-                  </li>
-                  <li>
-                    Just knowing you're not alone can make all the difference
-                  </li>
-                </ul>
-              </div>
-
-              <div className="border-2 w-1/3 bg-blue-100 m-3 rounded-xl shadow-black shadow-xl text-black">
-                <h1 className="text-3xl font-bold">Coding Challenges</h1>
-                <hr />
-                <ul className="list-disc text-left list-inside py-2 mx-4 space-y-2">
-                  <li>
-                    Regular coding challenges open to all languages and skill
-                    levels
-                  </li>
-                  <li>Designed to push members outside their comfort zones</li>
-                  <li>
-                    Encourages creative problem-solving from multiple
-                    perspectives
-                  </li>
-                  <li>Helps develop well-rounded, adaptable developers</li>
-                </ul>
-              </div>
-            </section>
-
-            <section className="flex flex-row">
-              <div className="border-2 w-1/3 bg-purple-100 m-3 rounded-xl shadow-black shadow-xl text-black">
-                <h1 className="text-3xl font-bold">
-                  Coding Education and Guidance
-                </h1>
-                <hr />
-                <ul className="list-disc text-left list-inside py-2 mx-4 space-y-2">
-                  <li>
-                    We curate free educational resources for all learning paths
-                  </li>
-                  <li>
-                    From game development and AI to quantum computing — all are
-                    welcome
-                  </li>
-                  <li>
-                    Our goal is to make learning accessible, regardless of
-                    experience level
-                  </li>
-                  <li>
-                    Sometimes the biggest barrier is simply not knowing what's
-                    available
-                  </li>
-                </ul>
-              </div>
-
-              <div className="border-2 w-1/3 bg-gradient-to-r rounded-xl from-purple-100 to-blue-100 m-3 shadow-black shadow-xl text-black">
-                <h1 className="text-3xl font-bold">Book Club</h1>
-                <hr />
-                <ul className="list-disc text-left list-inside py-2 mx-4 space-y-2">
-                  <li>
-                    No matter your career path, reading is essential for growth
-                  </li>
-                  <li>Club holds polls to choose relevant topics and books</li>
-                  <li>Keeping members accountable and engaged</li>
-                  <li>Learning beyond the standard curriculum</li>
-                </ul>
-              </div>
-
-              <div className="border-2 w-1/3 bg-blue-100 m-3 rounded-xl shadow-black shadow-xl  text-black">
-                <h1 className="text-3xl font-bold">Fostering Leadership</h1>
-                <hr />
-                <ul className="list-disc text-left list-inside py-2 mx-4 space-y-2">
-                  <li>Opportunities to have your voice heard and contribute</li>
-                  <li>Lead club projects or take initiative on new ideas</li>
-                  <li>
-                    Assist with administrative tasks and behind-the-scenes
-                    coordination
-                  </li>
-                  <li>
-                    Build valuable communication and leadership skills along the
-                    way
-                  </li>
-                </ul>
-              </div>
-            </section>
+            
           </div>
         </div>
       </section>
