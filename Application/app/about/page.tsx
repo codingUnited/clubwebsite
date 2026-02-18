@@ -44,7 +44,7 @@ export default function About() {
             <hr />
             <img
               className="my-3 w-full h-75 object-contain"
-              src="{% static 'core/images/jose_avatar.png' %}"
+              src="/images/jose_avatar.png"
               alt="Jose Avatar"
             />
             <ul className="space-y-0.5 px-4">
@@ -79,7 +79,7 @@ export default function About() {
             <hr />
             <img
               className="my-3 w-full h-75 object-contain"
-              src="core/images/tony_davis.jpg"
+              src="/images/tony_davis.jpg"
               alt="Kailey Avatar"
             />
             <ul className="space-y-0.5 text-center px-4">
@@ -128,8 +128,8 @@ export default function About() {
             <hr />
             <img
               className="my-3 w-full h-75 object-contain"
-              src="{% static 'core/images/Mikayla.png' %}"
-              alt="Kailey Avatar"
+              src="/images/Mikayla.png"
+              alt="Mikayla Avatar"
             />
             <ul className="space-y-0.5 text-center px-4">
               <li>Major: To Be Determind</li>
@@ -152,8 +152,8 @@ export default function About() {
             <hr />
             <img
               className="my-3 w-full h-75 object-contain"
-              src="{% static 'core/images/dakota.png' %}"
-              alt="Kailey Avatar"
+              src="/images/dakota.png"
+              alt="Dakota Avatar"
             />
             <ul className="space-y-0.5 text-center px-4">
               <li>Major: Computer Science</li>
@@ -199,8 +199,8 @@ export default function About() {
             <hr />
             <img
               className="my-3 w-full h-75 object-contain"
-              src="{% static 'core/images/jacob.jpg' %}"
-              alt="Jose Avatar"
+              src="/images/jacob.jpg"
+              alt="Jacob Avatar"
             />
             <ul className="space-y-0.5 text-center px-4">
               <li>Major: Computer Science</li>
@@ -252,8 +252,8 @@ export default function About() {
             <hr />
             <img
               className="my-3 w-full h-75 object-contain"
-              src="{% static 'core/images/John S.jpg' %}"
-              alt="Kailey Avatar"
+              src="/images/John S.jpg"
+              alt="John Schmidt Avatar"
             />
             <ul className="space-y-0.5 text-center px-4">
               <li>Major: Computer Science</li>
@@ -287,8 +287,8 @@ export default function About() {
             <hr />
             <img
               className="my-3 w-full h-75 object-contain"
-              src="{% static 'core/images/Stephen_Berkley.png' %}"
-              alt="Kailey Avatar"
+              src="/images/Stephen_Berkley.png"
+              alt="Stephen Berkley Avatar"
             />
             <ul className="space-y-0.5 text-center px-4">
               <li>Major: Computer Science</li>
@@ -318,8 +318,8 @@ export default function About() {
             <hr />
             <img
               className="my-3 w-full h-75 object-contain"
-              src="{% static 'core/images/Devell.png' %}"
-              alt="Kailey Avatar"
+              src="/images/Devell.png"
+              alt="Devell Robinson Avatar"
             />
             <ul className="space-y-0.5 text-center px-4">
               <li>Major: Computer Science</li>
@@ -351,8 +351,8 @@ export default function About() {
             <hr />
             <img
               className="my-3 w-full h-75 object-contain"
-              src="{% static 'core/images/erica_boterf.jpg' %}"
-              alt="Kailey Avatar"
+              src="/images/erica_boterf.jpg"
+              alt="Erica Boterf Avatar"
             />
             <ul className="space-y-0.5 text-center px-4">
               <li>
@@ -374,8 +374,8 @@ export default function About() {
             <hr />
             <img
               className="my-3 w-full h-75 object-contain"
-              src="{% static 'core/images/bryton_sarrell.png' %}"
-              alt="Kailey Avatar"
+              src="/images/bryton_sarrell.png"
+              alt="Bryton Sarrel Avatar"
             />
             <ul className="space-y-0.5 text-center px-4">
               <li>
@@ -408,8 +408,8 @@ export default function About() {
             <hr />
             <img
               className="my-3 w-full h-75 object-contain"
-              src="{% static 'core/images/jenn cigler.png' %}"
-              alt="Kailey Avatar"
+              src="/images/jenn_cigler.png"
+              alt="Jenn Cigler Avatar"
             />
             <ul className="space-y-0.5 text-center px-4">
               <li>Major: Cybersecurity</li>
@@ -437,7 +437,7 @@ export default function About() {
             <hr />
             <img
               className="my-3 w-full h-75 object-contain"
-              src="{% static 'core/images/Caroline_potter.png' %}"
+              src="/images/Caroline_potter.png"
               alt="Caroline Avatar"
             />
             <ul className="space-y-0.5 text-center px-4">
