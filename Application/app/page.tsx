@@ -4,6 +4,7 @@ import Image from "next/image";
 import { clubFeatures } from "@/app/data";
 import FeatureCard from "@/components/cards/feature-card";
 import React from "react";
+import { Box, Heading, Text, Separator, Container, VStack } from '@chakra-ui/react';
 
 export default function Home() {
   const HomePage = new PageBuilderFooter();
@@ -22,60 +23,60 @@ export default function Home() {
         <div className="relative w-full h-full group">
           {/* <!-- Background Image --> */}
           <img
-            src="/images/hero.jpg"
+            src="/images/newhero.png"
             alt="Default"
-            className="absolute inset-0 w-full h-full object-cover object-bottom transition-opacity duration-300 group-hover:opacity-0 z-10"
+            className="absolute inset-0 w-full h-full object-cover object-bottom transition-opacity duration-300"
           />
 
-          {/* <!-- Hover Image --> */}
-          <img
-            src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGR5b3hzZmgzemRxNWF2c2ZqOXQ5anN0NXhndGN0aHVhcXI5dXQybCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WoD6JZnwap6s8/giphy.gif"
-            alt="Hover Img"
-            className="absolute inset-0 w-full h-full object-cover object-bottom opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-0"
-          />
         </div>
         {/* <!-- Content Container --> */}
-        <div className="absolute pt-2 lg:pt-0 lg:top-1/12 lg:left-10 lg:right-auto z-10 bg-blue-800/80 p-2 lg:p-6 lg:rounded-lg max-w-4xl lg:max-w-2xl text-center">
-          <h1 className="font-mono text-gray-300 font-bold text-lg md:text-3xl mb-4">
-            Welcome to Coding United
-          </h1>
-          <hr className="border-gray-500 mb-4" />
-          <p className="text-purple-300 text-sm sm:text-lg md:text-xl">
-            A student-led tech club dedicated to building real-world projects,
-            supporting academic success, and growing together through hands-on
-            coding, curiosity, and collaboration. We are not here to fit in. We
-            are here to build, to learn, and to become.
-          </p>
-        </div>
+        <Box position="absolute" zIndex={10} top={{ base: "2", lg: "8%" }} left={{ base: "0", lg: "10" }} right={{ base: "0", lg: "auto" }} bg="blue.800/80" backdropFilter="blur(8px)" p={{ base: 4, lg: 10 }} rounded={{ base: "none", lg: "2xl" }} maxW={{ base: "4xl", lg: "2xl" }} textAlign="center" shadow="2xl">
+          <VStack gap={5} align="stretch">
+            <Heading as="h1" fontFamily="mono" color="gray.300" fontSize={{ base: "lg", md: "3xl" }} letterSpacing="wider">
+              Welcome to Coding United
+            </Heading>
+
+            <Separator borderColor="gray.500/50" />
+
+            <Text color="purple.200" fontSize={{ base: "sm", sm: "lg", md: "xl" }} lineHeight="tall" fontWeight="medium">
+              A student-led tech club dedicated to building real-world projects,
+              supporting academic success, and growing together through hands-on
+              coding, curiosity, and collaboration.
+              <Box as="span" display="block" mt={4} fontStyle="italic" color="whiteAlpha.900">
+                We are not here to fit in. We are here to build, to learn, and to become.
+              </Box>
+            </Text>
+          </VStack>
+        </Box>
+        )
       </section>
-      <section className="text-2xl my-8">
-        <div className="relative text-center">
-          <h1 className="text-black text-5xl font-bold">Mission Statement</h1>
-          <hr className="h-1 bg-black" />
-          <p className="text-purple-300 text-sm sm:text-lg md:text-xl" />
-          <p className="mx-auto px-8 py-5 font-medium w-2/3 text-4xl font-serif text-black">
+      <Container maxW="container.md" py={20} textAlign="center">
+        <VStack spacing={10} align="stretch">
+          <Box>
+            <Heading as="h1" size="2xl" fontWeight="bold" letterSpacing="tight" color="gray.800">
+              Mission Statement
+            </Heading>
+            <Separator borderColor="black" borderBottomWidth="2px" mt={4} opacity={1} />
+          </Box>
+
+          <Text
+            fontSize={{ base: '2xl', md: '4xl' }} fontFamily="serif" lineHeight="shorter" color="gray.700" fontWeight="medium">
             Our mission is to foster a vibrant and inclusive community of
             student developers, empowering everyone with the skills and
             experience to succeed in the world of technology.
-          </p>
+          </Text>
+        </VStack>
+      </Container>
 
-          <div className="flex flex-wrap justify-center p-2">
-           
-              
-               {clubFeatures.map((row, rowIndex) => (
-                <section className="flex flex-row"key={rowIndex}> 
-                  {row.map((feature, index) => (
-                    <FeatureCard key={index} title={feature.title} bgColor={feature.bgColor} items={feature.items} />
-                  ))} 
-                </section>
-              )
-              )
-              }
-
-            
-          </div>
-        </div>
-      </section>
+      <div className="flex flex-wrap justify-center p-2">
+        {clubFeatures.map((row, rowIndex) => (
+          <section className="flex flex-row" key={rowIndex}>
+            {row.map((feature, index) => (
+              <FeatureCard key={index} title={feature.title} bgColor={feature.bgColor} items={feature.items} />
+            ))}
+          </section>
+        ))}
+      </div>
     </>
   );
 }
