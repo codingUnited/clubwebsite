@@ -13,7 +13,7 @@ export default function About() {
       <title>{AboutPage.getTitle()}</title>
 
       <Container maxW="container.md" py={10} textAlign="center">
-        <VStack spacing={10} align="stretch">
+        <VStack gap={10} align="stretch">
           <Box>
             <Heading as="h1" size="2xl" fontWeight="bold" letterSpacing="tight" color="gray.800">
               About the Club
@@ -29,7 +29,7 @@ export default function About() {
       </Container>
 
       <Container maxW="container.md" py={1} textAlign="center">
-        <VStack spacing={10} align="stretch">
+        <VStack gap={10} align="stretch">
           <Box>
             <Heading as="h1" size="2xl" fontWeight="bold" letterSpacing="tight" color="gray.800">
               Our Mission
@@ -46,7 +46,7 @@ export default function About() {
 
 
       <Container maxW="container.md" py={1} textAlign="center">
-        <VStack spacing={10} align="stretch">
+        <VStack gap={10} align="stretch">
           <Box>
             <Heading as="h1" size="2xl" fontWeight="bold" letterSpacing="tight" color="gray.800">
               Meet the Board
