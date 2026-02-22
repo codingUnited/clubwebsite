@@ -1,5 +1,6 @@
 "use client";
 import PageBuilder from "@/components/ui/page-builder";
+import { Box, Heading, Text, Separator, Container, VStack } from '@chakra-ui/react';
 
 export default function About() {
   const AboutPage = new PageBuilder();
@@ -11,164 +12,182 @@ export default function About() {
     <>
       <title>{AboutPage.getTitle()}</title>
 
-      <section className="flex my-6 text-2xl">
-        <div className="text-black">
-          <h1 className="font-bold text-4xl text-center">About the Club</h1>
+      <Container maxW="container.md" py={10} textAlign="center">
+        <VStack spacing={10} align="stretch">
+          <Box>
+            <Heading as="h1" size="2xl" fontWeight="bold" letterSpacing="tight" color="gray.800">
+              About the Club
+            </Heading>
+            <Separator borderColor="black" borderBottomWidth="2px" mt={4} opacity={1} />
+          </Box>
+
+          <Text
+            fontSize={{ base: '2xl', md: '2xl' }} fontFamily="serif" lineHeight="shorter" color="gray.700" fontWeight="medium">
+            We are a university club focused on helping members grow their coding skills, learn industry tools, and prepare for careers in their chosen specialization, whether that's Software Engineering, Game Development, Network Engineering, or DevOps.
+          </Text>
+        </VStack>
+      </Container>
+
+      <Container maxW="container.md" py={1} textAlign="center">
+        <VStack spacing={10} align="stretch">
+          <Box>
+            <Heading as="h1" size="2xl" fontWeight="bold" letterSpacing="tight" color="gray.800">
+              Our Mission
+            </Heading>
+            <Separator borderColor="black" borderBottomWidth="2px" mt={4} opacity={1} />
+          </Box>
+
+          <Text
+            fontSize={{ base: 'xl', md: '2xl' }} fontFamily="serif" lineHeight="shorter" color="gray.700" fontWeight="medium">
+            To support every member on their journey by providing resources, training materials, hands-on projects, coding challenges, and a strong peer support network.
+          </Text>
+        </VStack>
+      </Container>
+
+
+      <Container maxW="container.md" py={1} textAlign="center">
+        <VStack spacing={10} align="stretch">
+          <Box>
+            <Heading as="h1" size="2xl" fontWeight="bold" letterSpacing="tight" color="gray.800">
+              Meet the Board
+            </Heading>
+            <Separator borderColor="black" borderBottomWidth="1px" mt={4} opacity={1} />
+          </Box>
+        </VStack>
+      </Container>
+
+      <section className="flex flex-row text-black overflow-x-auto text-lg px-4 py-6">
+        <div className="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
+          <h2 className="font-bold text-2xl">Club President</h2>
+          <h2 className="font-medium text-2xl">Tony Davis</h2>
           <hr />
-          <p className="mx-auto mt-6 w-3/4">
-            We are a university club focused on helping members grow their
-            coding skills, learn industry tools, and prepare for careers in
-            their chosen specialization, whether that's Software Engineering,
-            Game Development, Network Engineering, or DevOps.
-          </p>
-          <h2 className="font-bold text-3xl text-center">Our Mission</h2>
+          <img
+            className="my-3 w-full h-75 object-contain"
+            src="/images/tony_davis.jpg"
+            alt="Tony Avatar"
+          />
+          <ul className="space-y-0.5 px-4">
+            <li>Fraud Analyst Turned Developer</li>
+            <li>Major: Computer Science</li>
+            <li>Concentration: Software Engineering</li>
+            <li className="text-left">
+              <strong>Goals:</strong>
+              <ul className="list-disc list-inside ml-5 space-y-1">
+                <li>Strengthen leadership and organizational efficiency withinthe club, improving communication, structur, and resource sharing</li>
+                <li>Create and lead a recurring "Introduction to Coding United" session each term, helping new members understand tools, collaboration practices, and project pathways</li>
+                <li>Build a strong portfolio of creative and technical projects to support long-term goals in software engineering and emerging tech</li>
+                <li>Grow skills in software engineering and web development, focusing on full-stack projects using React, Flask, APIs, and Cloud Services</li>
+                <li>Explore robotics simulations as an extension of problem-solving and system design, including embedded engineering</li>
+                <li>Build Python-based automation and AI/ML tools, drawing from fraud-analysis experience and real industry workflows</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div className="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
+          <h2 className="font-bold text-2xl">Club VP</h2>
+          <h2 className="font-medium text-2xl">Devell Robinson</h2>
           <hr />
-          <p className="mx-auto mt-3 w-3/4">
-            To support every member on their journey by providing resources,
-            training materials, hands-on projects, coding challenges, and a
-            strong peer support network.
-          </p>
+          <img
+            className="my-3 w-full h-75 object-contain"
+            src="/images/Devell.png"
+            alt="Devell Avatar"
+          />
+          <ul className="space-y-0.5 text-center px-4">
+            <li>Major: Computer Science</li>
+            <li>Concentration: Software Engineering</li>
+            <li className="text-left">
+              <strong>Goals:</strong>
+              <ul className="list-disc list-inside ml-5 space-y-1">
+                <li>Create an inclusive social platform designed for developers of all backgrounds, skill levels, and specialties. It will foster collaboration, learning, and community across every area of software development.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div className="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
+          <h2 className="font-bold text-2xl">Club Secretary</h2>
+          <h2 className="font-medium text-2xl">Mikayla Gonzalez</h2>
+          <hr />
+          <img
+            className="my-3 w-full h-75 object-contain"
+            src="/images/Mikayla.png"
+            alt="Mikayla Avatar"
+          />
+          <ul className="space-y-0.5 text-center px-4">
+            <li>Major: To Be Determind</li>
+            <li>Concentration: To Be Determind</li>
+            <li className="text-left">
+              <strong>Goals:</strong>
+              <ul className="list-disc list-inside ml-5 space-y-1">
+                <li>Likes to Read Books</li>
+                <li>Likes to Play Video Games</li>
+                <li>Wants to learn about all programming languages</li>
+                <li>Wants to continue to work on projects</li>
+                <li>Needs to pick a major and concentration</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div className="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
+          <h2 className="font-bold text-2xl">Club Engagement Officer</h2>
+          <h2 className="font-medium text-2xl">Dakota Riley</h2>
+          <hr />
+          <img
+            className="my-3 w-full h-75 object-contain"
+            src="/images/dakota.png"
+            alt="Dakota Avatar"
+          />
+          <ul className="space-y-0.5 text-center px-4">
+            <li>Major: Computer Science</li>
+            <li>Concentration: Software Engineering </li>
+            <li className="text-left">
+              <strong>About Me:</strong>
+              <ul className="list-disc list-inside ml-5 space-y-1">
+                <li>Space Nerd that likes to play Star Citizen (Ask me about my ships)</li>
+                <li>My favorite Pokemon is Torterra</li>
+              </ul>
+            </li>
+            <li className="text-left">
+              <strong>Goals:</strong>
+              <ul className="list-disc list-inside ml-5 space-y-1">
+                <li>Learn key front-end and back-end technologies to help solve problems with software in my workplace</li>
+                <li>Gain an understanding of the technologies that power Artificial Intelligence so I can implement AI into new features that enable more possibilites for our clients</li>
+                <li>Learn C++ and C# for game and game engine development as a hobby</li>
+                <li>Participate in group projects that allow me to network with others, enhance my skills in different technologies, and bring me out of my comfort zone to elevate my knowledge</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div className="flex flex-col border-2 w-1/3 rounded-2xl text-center p-2 shrink-0">
+          <h2 className="font-bold text-2xl">Club Event Coordinator</h2>
+          <h2 className="font-medium text-2xl">Jacob Garret</h2>
+          <hr />
+          <img
+            className="my-3 w-full h-75 object-contain"
+            src="/images/jacob.jpg"
+            alt="Jacob Avatar"
+          />
+          <ul className="space-y-0.5 text-center px-4">
+            <li>Major: Computer Science</li>
+            <li>Concentration: Software Engineering</li>
+            <li className="text-left">
+              <strong>About Me:</strong>
+              <ul className="list-disc list-inside ml-5 space-y-1">
+                <li>I enjoy hand crafting wooden toys, playing the 6-string guitar, and experimenting with unfamialiar technologies.</li>
+                <li>I have been playing a 6-string guitar since I was a toddler.</li>
+              </ul>
+            </li>
+            <li className="text-left">
+              <strong>Goals:</strong>
+              <ul className="list-disc list-inside ml-5 space-y-1">
+                <li>To expande my expertise beyond front-end design to include robust back-end development as well as server-side deployment.</li>
+                <li>To foster my current skills and knowledge in PMI to become a well-rounded project manager.</li>
+                <li>To collaborate with other developers on projects to gain real-world experiences to better prepare me to enter the workforce.</li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section className="my-6 mt-10">
-        <h1 className="font-bold text-4xl text-black text-center">
-          Meet the Board
-        </h1>
-        <hr />
-
-        <section className="flex flex-row text-black overflow-x-auto text-lg px-4 py-6">
-          <div className="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
-            <h2 className="font-bold text-2xl">Club President</h2>
-            <h2 className="font-medium text-2xl">Tony Davis</h2>
-            <hr />
-            <img
-              className="my-3 w-full h-75 object-contain"
-              src="/images/tony_davis.jpg"
-              alt="Tony Avatar"
-            />
-            <ul className="space-y-0.5 px-4">
-              <li>Fraud Analyst Turned Developer</li>
-              <li>Major: Computer Science</li>
-              <li>Concentration: Software Engineering</li>
-              <li className="text-left">
-                <strong>Goals:</strong>
-                <ul className="list-disc list-inside ml-5 space-y-1">
-                  <li>Strengthen leadership and organizational efficiency withinthe club, improving communication, structur, and resource sharing</li>
-                  <li>Create and lead a recurring "Introduction to Coding United" session each term, helping new members understand tools, collaboration practices, and project pathways</li>
-                  <li>Build a strong portfolio of creative and technical projects to support long-term goals in software engineering and emerging tech</li>
-                  <li>Grow skills in software engineering and web development, focusing on full-stack projects using React, Flask, APIs, and Cloud Services</li>
-                  <li>Explore robotics simulations as an extension of problem-solving and system design, including embedded engineering</li>
-                  <li>Build Python-based automation and AI/ML tools, drawing from fraud-analysis experience and real industry workflows</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
-            <h2 className="font-bold text-2xl">Club VP</h2>
-            <h2 className="font-medium text-2xl">Devell Robinson</h2>
-            <hr />
-            <img
-              className="my-3 w-full h-75 object-contain"
-              src="/images/Devell.png"
-              alt="Devell Avatar"
-            />
-            <ul className="space-y-0.5 text-center px-4">
-              <li>Major: Computer Science</li>
-              <li>Concentration: Software Engineering</li>
-              <li className="text-left">
-                <strong>Goals:</strong>
-                <ul className="list-disc list-inside ml-5 space-y-1">
-                  <li>Create an inclusive social platform designed for developers of all backgrounds, skill levels, and specialties. It will foster collaboration, learning, and community across every area of software development.</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
-            <h2 className="font-bold text-2xl">Club Secretary</h2>
-            <h2 className="font-medium text-2xl">Mikayla Gonzalez</h2>
-            <hr />
-            <img
-              className="my-3 w-full h-75 object-contain"
-              src="/images/Mikayla.png"
-              alt="Mikayla Avatar"
-            />
-            <ul className="space-y-0.5 text-center px-4">
-              <li>Major: To Be Determind</li>
-              <li>Concentration: To Be Determind</li>
-              <li className="text-left">
-                <strong>Goals:</strong>
-                <ul className="list-disc list-inside ml-5 space-y-1">
-                  <li>Likes to Read Books</li>
-                  <li>Likes to Play Video Games</li>
-                  <li>Wants to learn about all programming languages</li>
-                  <li>Wants to continue to work on projects</li>
-                  <li>Needs to pick a major and concentration</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
-            <h2 className="font-bold text-2xl">Club Engagement Officer</h2>
-            <h2 className="font-medium text-2xl">Dakota Riley</h2>
-            <hr />
-            <img
-              className="my-3 w-full h-75 object-contain"
-              src="/images/dakota.png"
-              alt="Dakota Avatar"
-            />
-            <ul className="space-y-0.5 text-center px-4">
-              <li>Major: Computer Science</li>
-              <li>Concentration: Software Engineering </li>
-              <li className="text-left">
-                <strong>About Me:</strong>
-                <ul className="list-disc list-inside ml-5 space-y-1">
-                  <li>Space Nerd that likes to play Star Citizen (Ask me about my ships)</li>
-                  <li>My favorite Pokemon is Torterra</li>
-                </ul>
-              </li>
-              <li className="text-left">
-                <strong>Goals:</strong>
-                <ul className="list-disc list-inside ml-5 space-y-1">
-                  <li>Learn key front-end and back-end technologies to help solve problems with software in my workplace</li>
-                  <li>Gain an understanding of the technologies that power Artificial Intelligence so I can implement AI into new features that enable more possibilites for our clients</li>
-                  <li>Learn C++ and C# for game and game engine development as a hobby</li>
-                  <li>Participate in group projects that allow me to network with others, enhance my skills in different technologies, and bring me out of my comfort zone to elevate my knowledge</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col border-2 w-1/3 rounded-2xl text-center p-2 shrink-0">
-            <h2 className="font-bold text-2xl">Club Event Coordinator</h2>
-            <h2 className="font-medium text-2xl">Jacob Garret</h2>
-            <hr />
-            <img
-              className="my-3 w-full h-75 object-contain"
-              src="/images/jacob.jpg"
-              alt="Jacob Avatar"
-            />
-            <ul className="space-y-0.5 text-center px-4">
-              <li>Major: Computer Science</li>
-              <li>Concentration: Software Engineering</li>
-              <li className="text-left">
-                <strong>About Me:</strong>
-                <ul className="list-disc list-inside ml-5 space-y-1">
-                  <li>I enjoy hand crafting wooden toys, playing the 6-string guitar, and experimenting with unfamialiar technologies.</li>
-                  <li>I have been playing a 6-string guitar since I was a toddler.</li>
-                </ul>
-              </li>
-              <li className="text-left">
-                <strong>Goals:</strong>
-                <ul className="list-disc list-inside ml-5 space-y-1">
-                  <li>To expande my expertise beyond front-end design to include robust back-end development as well as server-side deployment.</li>
-                  <li>To foster my current skills and knowledge in PMI to become a well-rounded project manager.</li>
-                  <li>To collaborate with other developers on projects to gain real-world experiences to better prepare me to enter the workforce.</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </section>
 
       <section className="my-6 text-black mt-15">
         <h1 className="font-bold text-4xl text-center">
