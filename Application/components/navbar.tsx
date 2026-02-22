@@ -13,6 +13,7 @@ export default function Navbar() {
             <Link href="/" className="hover:text-blue-400 transition-colors">Home</Link>
             <Link href="/about" className="hover:text-blue-400 transition-colors">About Us</Link>
             <Link href="/faq" className="hover:text-blue-400 transition-colors">FAQ</Link>
+            <Link href="/session" className="hover:text-blue-400 transition-colors">Recordings</Link>
         </HStack>
       </Flex>
     </Box>
