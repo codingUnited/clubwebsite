@@ -51,7 +51,7 @@ export default function Home() {
         )
       </section>
       <Container maxW="container.md" py={20} textAlign="center">
-        <VStack spacing={10} align="stretch">
+        <VStack gap={10} align="stretch">
           <Box>
             <Heading as="h1" size="2xl" fontWeight="bold" letterSpacing="tight" color="gray.800">
               Mission Statement
