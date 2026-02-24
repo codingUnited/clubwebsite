@@ -76,13 +76,13 @@ export default function About() {
                       alt="Tony Davis Avatar"
                       style={{ maxWidth: "300px", maxHeight: "300px", borderRadius: "10%", marginBottom: "1rem" }}
                     />
-                    <ul class="space-y-0.5 text-center px-4">
+                    <ul className="space-y-0.5 text-center px-4">
                       <li>Fraud Analyst Turned Developer</li>
                       <li>Major: Computer Science</li>
                       <li>Concentration: Software Engineering</li>
-                      <li class="text-left">
+                      <li className="text-left">
                         <strong>Goals:</strong>
-                        <ul class="list-disc list-inside ml-5 space-y-1">
+                        <ul className="list-disc list-inside ml-5 space-y-1">
                           <li>-Strengthen leardership and organizational efficiency within the club, improving communication, structur, and resource sharing</li>
                           <li>-Create and lead a recurring "Introduction to Coding United" session each term, helping new members understand tools, collaboration practices, and project pathways</li>
                           <li>-Build a strong portfolio of creative and technical projects to support long-term goals in software engineering and emerging tech</li>
@@ -124,12 +124,12 @@ export default function About() {
                       alt="Devell Avatar"
                       style={{ maxWidth: "300px", maxHeight: "300px", borderRadius: "10%", marginBottom: "1rem" }}
                     />
-                    <ul class="space-y-0.5 text-center px-4">
+                    <ul className="space-y-0.5 text-center px-4">
                       <li>Major: Computer Science</li>
                       <li>Concentration: Software Engineering</li>
-                      <li class="text-left">
+                      <li className="text-left">
                         <strong>Goals:</strong>
-                        <ul class="list-disc list-inside ml-5 space-y-1">
+                        <ul className="list-disc list-inside ml-5 space-y-1">
                           <li>Create an inclusive social platform designed for developers of all backgrounds, skill levels, and specialties.
                             It will foster collaboration, learning, and community across every area of software development. </li>
                         </ul>
@@ -167,12 +167,12 @@ export default function About() {
                       alt="Mikayla Avatar"
                       style={{ maxWidth: "300px", maxHeight: "300px", borderRadius: "10%", marginBottom: "1rem" }}
                     />
-                    <ul class="space-y-0.5 text-center px-4">
+                    <ul className="space-y-0.5 text-center px-4">
                       <li>Major: To Be Determind</li>
                       <li>Concentration: To Be Determind</li>
-                      <li class="text-left">
+                      <li className="text-left">
                         <strong>Goals:</strong>
-                        <ul class="list-disc list-inside ml-5 space-y-1">
+                        <ul className="list-disc list-inside ml-5 space-y-1">
                           <li>-Likes to Read Books</li>
                           <li>-Likes to Play Video Games</li>
                           <li>-Wants to learn about all programming languages</li>
@@ -213,19 +213,19 @@ export default function About() {
                       alt="Dakota Avatar"
                       style={{ maxWidth: "300px", maxHeight: "300px", borderRadius: "10%", marginBottom: "1rem" }}
                     />
-                    <ul class="space-y-0.5 text-center px-4">
+                    <ul className="space-y-0.5 text-center px-4">
                       <li>Major: Computer Science</li>
                       <li>Concentration: Software Engineering </li>
-                      <li class="text-left">
+                      <li className="text-left">
                         <strong>About Me:</strong>
-                        <ul class="list-disc list-inside ml-5 space-y-1">
+                        <ul className="list-disc list-inside ml-5 space-y-1">
                           <li>-Space Nerd that likes to play Star Citizen (Ask me about my ships)</li>
                           <li>-My favorite Pokemon is Torterra</li>
                         </ul>
                       </li>
-                      <li class="text-left">
+                      <li className="text-left">
                         <strong>Goals:</strong>
-                        <ul class="list-disc list-inside ml-5 space-y-1">
+                        <ul className="list-disc list-inside ml-5 space-y-1">
                           <li>-Learn key front-end and back-end technologies to help solve problems with software in my workplace</li>
                           <li>-Gain an understanding of the technologies that power Artificial Intelligence so I can implement AI into new features that enable more possibilites for our clients</li>
                           <li>-Learn C++ and C# for game and game engine development as a hobby</li>
@@ -265,19 +265,19 @@ export default function About() {
                       alt="Jacob Avatar"
                       style={{ maxWidth: "300px", maxHeight: "300px", borderRadius: "10%", marginBottom: "1rem" }}
                     />
-                    <ul class="space-y-0.5 text-center px-4">
+                    <ul className="space-y-0.5 text-center px-4">
                       <li>Major: Computer Science</li>
                       <li>Concentration: Software Engineering</li>
-                      <li class="text-left">
+                      <li className="text-left">
                         <strong>About Me:</strong>
-                        <ul class="list-disc list-inside ml-5 space-y-1">
+                        <ul className="list-disc list-inside ml-5 space-y-1">
                           <li>-I enjoy hand crafting wooden toys, playing the 6-string guitar, and experimenting with unfamialiar technologies.</li>
                           <li>-I have been playing a 6-string guitar since I was a toddler.</li>
                         </ul>
                       </li>
-                      <li class="text-left">
+                      <li className="text-left">
                         <strong>Goals:</strong>
-                        <ul class="list-disc list-inside ml-5 space-y-1">
+                        <ul className="list-disc list-inside ml-5 space-y-1">
                           <li>-To expande my expertise beyond front-end design to include robust back-end development as well as server-side deployment.</li>
                           <li>-To foster my current skills and knowledge in PMI to become a well-rounded project manager.</li>
                           <li>-To collaborate with other developers on projects to gain real-world experiences to better prepare me to enter the workforce.</li>
