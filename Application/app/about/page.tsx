@@ -58,7 +58,7 @@ export default function About() {
         <Center className=" flex flex-row text-black text-center text-lg px-4 py-12">
           <Drawer.Root>
             <Drawer.Trigger asChild>
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" bg="darkblue" color="white">
                 Club President
               </Button>
             </Drawer.Trigger>
@@ -81,6 +81,7 @@ export default function About() {
                       <li>Major: Computer Science</li>
                       <li>Concentration: Software Engineering</li>
                       <li className="text-left">
+                        <br />
                         <strong>Goals:</strong>
                         <ul className="list-disc list-inside ml-5 space-y-1">
                           <li>-Strengthen leardership and organizational efficiency within the club, improving communication, structur, and resource sharing</li>
@@ -94,11 +95,10 @@ export default function About() {
                     </ul>
                   </Drawer.Body>
                   <Drawer.Footer>
+                    <Drawer.CloseTrigger asChild>
                     <Button>Close</Button>
+                    </Drawer.CloseTrigger>
                   </Drawer.Footer>
-                  <Drawer.CloseTrigger asChild>
-                    <CloseButton size="sm" />
-                  </Drawer.CloseTrigger>
                 </Drawer.Content>
               </Drawer.Positioner>
             </Portal>
@@ -106,7 +106,7 @@ export default function About() {
 
           <Drawer.Root>
             <Drawer.Trigger asChild>
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" bg="darkblue" color="white">
                 Club Vice President
               </Button>
             </Drawer.Trigger>
@@ -128,20 +128,20 @@ export default function About() {
                       <li>Major: Computer Science</li>
                       <li>Concentration: Software Engineering</li>
                       <li className="text-left">
+                        <br />
                         <strong>Goals:</strong>
                         <ul className="list-disc list-inside ml-5 space-y-1">
-                          <li>Create an inclusive social platform designed for developers of all backgrounds, skill levels, and specialties.
+                          <li>-Create an inclusive social platform designed for developers of all backgrounds, skill levels, and specialties.
                             It will foster collaboration, learning, and community across every area of software development. </li>
                         </ul>
                       </li>
                     </ul>
                   </Drawer.Body>
-                  <Drawer.Footer>
+                 <Drawer.Footer>
+                    <Drawer.CloseTrigger asChild>
                     <Button>Close</Button>
+                    </Drawer.CloseTrigger>
                   </Drawer.Footer>
-                  <Drawer.CloseTrigger asChild>
-                    <CloseButton size="sm" />
-                  </Drawer.CloseTrigger>
                 </Drawer.Content>
               </Drawer.Positioner>
             </Portal>
@@ -149,7 +149,7 @@ export default function About() {
 
           <Drawer.Root>
             <Drawer.Trigger asChild>
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" bg="darkblue" color="white">
                 Club Secretary
               </Button>
             </Drawer.Trigger>
@@ -171,6 +171,7 @@ export default function About() {
                       <li>Major: To Be Determind</li>
                       <li>Concentration: To Be Determind</li>
                       <li className="text-left">
+                        <br />
                         <strong>Goals:</strong>
                         <ul className="list-disc list-inside ml-5 space-y-1">
                           <li>-Likes to Read Books</li>
@@ -183,11 +184,10 @@ export default function About() {
                     </ul>
                   </Drawer.Body>
                   <Drawer.Footer>
+                    <Drawer.CloseTrigger asChild>
                     <Button>Close</Button>
+                    </Drawer.CloseTrigger>
                   </Drawer.Footer>
-                  <Drawer.CloseTrigger asChild>
-                    <CloseButton size="sm" />
-                  </Drawer.CloseTrigger>
                 </Drawer.Content>
               </Drawer.Positioner>
             </Portal>
@@ -195,7 +195,7 @@ export default function About() {
 
           <Drawer.Root>
             <Drawer.Trigger asChild>
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" bg="darkblue" color="white">
                 Club Engagement Officer
               </Button>
             </Drawer.Trigger>
@@ -217,6 +217,7 @@ export default function About() {
                       <li>Major: Computer Science</li>
                       <li>Concentration: Software Engineering </li>
                       <li className="text-left">
+                        <br />
                         <strong>About Me:</strong>
                         <ul className="list-disc list-inside ml-5 space-y-1">
                           <li>-Space Nerd that likes to play Star Citizen (Ask me about my ships)</li>
@@ -224,6 +225,7 @@ export default function About() {
                         </ul>
                       </li>
                       <li className="text-left">
+                        <br />
                         <strong>Goals:</strong>
                         <ul className="list-disc list-inside ml-5 space-y-1">
                           <li>-Learn key front-end and back-end technologies to help solve problems with software in my workplace</li>
@@ -235,11 +237,10 @@ export default function About() {
                     </ul>
                   </Drawer.Body>
                   <Drawer.Footer>
+                    <Drawer.CloseTrigger asChild>
                     <Button>Close</Button>
+                    </Drawer.CloseTrigger>
                   </Drawer.Footer>
-                  <Drawer.CloseTrigger asChild>
-                    <CloseButton size="sm" />
-                  </Drawer.CloseTrigger>
                 </Drawer.Content>
               </Drawer.Positioner>
             </Portal>
@@ -247,7 +248,7 @@ export default function About() {
 
           <Drawer.Root>
             <Drawer.Trigger asChild>
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" bg="darkblue" color="white">
                 Club Event Coordinator
               </Button>
             </Drawer.Trigger>
@@ -269,6 +270,7 @@ export default function About() {
                       <li>Major: Computer Science</li>
                       <li>Concentration: Software Engineering</li>
                       <li className="text-left">
+                        <br />
                         <strong>About Me:</strong>
                         <ul className="list-disc list-inside ml-5 space-y-1">
                           <li>-I enjoy hand crafting wooden toys, playing the 6-string guitar, and experimenting with unfamialiar technologies.</li>
@@ -276,6 +278,7 @@ export default function About() {
                         </ul>
                       </li>
                       <li className="text-left">
+                        <br />
                         <strong>Goals:</strong>
                         <ul className="list-disc list-inside ml-5 space-y-1">
                           <li>-To expande my expertise beyond front-end design to include robust back-end development as well as server-side deployment.</li>
@@ -286,11 +289,10 @@ export default function About() {
                     </ul>
                   </Drawer.Body>
                   <Drawer.Footer>
+                    <Drawer.CloseTrigger asChild>
                     <Button>Close</Button>
+                    </Drawer.CloseTrigger>
                   </Drawer.Footer>
-                  <Drawer.CloseTrigger asChild>
-                    <CloseButton size="sm" />
-                  </Drawer.CloseTrigger>
                 </Drawer.Content>
               </Drawer.Positioner>
             </Portal>
@@ -298,171 +300,63 @@ export default function About() {
         </Center>
       </Card.Root>
 
-      <section className="my-6 text-black mt-15">
-        <h1 className="font-bold text-4xl text-center">
-          Meet our Club Officers
-        </h1>
-        <hr />
-        <section className="flex flex-row overflow-x-auto text-lg px-4 py-6">
-          <div className="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
-            <h2 className="font-medium text-2xl">John Schmidt</h2>
-            <hr />
-            <img
-              className="my-3 w-full h-75 object-contain"
-              src="/images/John S.jpg"
-              alt="John Schmidt Avatar"
-            />
-            <ul className="space-y-0.5 text-center px-4">
-              <li>Major: Computer Science</li>
-              <li>Concentration: Software Engineering</li>
-              <li>A CSS Developer walks into a bar.</li>
-              <li>And a table.</li>
-              <li>And a chair.</li>
-              <li>And the bartender.</li>
-              <li>(Because the layout was broken)</li>
-              <li className="text-left">
-                <strong>Goals:</strong>
-                <ul className="list-disc list-inside ml-5 space-y-1">
-                  <li>Work on various projects in collaboration with other members to get better experience</li>
-                  <li>Learn more about website design including working with React and APIs</li>
-                  <li>Build a homelab setup to learn more skills related to networking and server management</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col border-2 w-1/3 mr-15 rounded-2xl text-center p-2 shrink-0">
-            <h2 className="font-medium text-2xl">Stephen Berkley</h2>
-            <hr />
-            <img
-              className="my-3 w-full h-75 object-contain"
-              src="/images/Stephen_Berkley.png"
-              alt="Stephen Berkley Avatar"
-            />
-            <ul className="space-y-0.5 text-center px-4">
-              <li>Major: Computer Science</li>
-              <li>Concentration: Software Engineering</li>
-              <li>Why did the Java developer wear glasses?</li>
-              <li>...</li>
-              <li>...</li>
-              <li>Because they couldn't C#</li>
-              <li className="text-left">
-                <strong>Goals:</strong>
-                <ul className="list-disc list-inside ml-5 space-y-1">
-                  <li>Sharpen my Jaca and C++ skill to write cleaner, more efficient code.</li>
-                  <li>Explore game engine physics and backend systems.</li>
-                  <li>Collaborate on real projects to further expand my skill sets and to learn from others.</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </section>
+      <Card.Root as={Container} py={1} textAlign="center" bg={"white"} unstyled={true}>
+        <VStack gap={5} align="stretch">
+          <Box>
+            <Heading as="h1" size="2xl" fontWeight="bold" letterSpacing="tight" color="gray.800">
+              Meet the Officers
+            </Heading>
+            <Separator borderColor="black" borderBottomWidth="1px" mt={4} opacity={1} />
+          </Box>
+        </VStack>
+        <Center className=" flex flex-row text-black text-center text-lg px-4 py-12">
+          <Drawer.Root>
+            <Drawer.Trigger asChild>
+              <Button variant="outline" size="sm" bg="darkblue" color="white">
+                Grand PooBah of This and That
+              </Button>
+            </Drawer.Trigger>
+            <Portal>
+              <Drawer.Backdrop />
+              <Drawer.Positioner>
+                <Drawer.Content>
+                  <Drawer.Header>
+                    <Drawer.Title>Club Officer<br />John Schmidt</Drawer.Title>
+                  </Drawer.Header>
+                  <Drawer.Body>
+                    <img
+                      className="my-3 w-full h-75 object-contain"
+                      src="/images/John S.jpg"
+                      alt="John Schmidt Avatar"
+                      style={{ maxWidth: "300px", maxHeight: "300px", borderRadius: "10%", marginBottom: "1rem" }}
+                    />
+                    <ul className="space-y-0.5 text-center px-4">
+                      <li>Major: Computer Science</li>
+                      <li>Concentration: Software Engineering</li>
+                      <li className="text-left">
+                        <br />
+                        <strong>Goals:</strong>
+                        <ul className="list-disc list-inside ml-5 space-y-1">
+                          <li>-Work on various projects in collaboration with other members to get better experience</li>
+                          <li>-Learn more about website design including working with React and APIs</li>
+                          <li>-Build a homelab setup to learn more skills related to networking and server management</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </Drawer.Body>
+                  <Drawer.Footer>
+                    <Drawer.CloseTrigger asChild>
+                    <Button>Close</Button>
+                    </Drawer.CloseTrigger>
+                  </Drawer.Footer>
+                </Drawer.Content>
+              </Drawer.Positioner>
+            </Portal>
+          </Drawer.Root>
+          </Center>
+      </Card.Root>
 
-      <section className="my-6 text-black text-lg mt-15">
-        <h1 className="font-bold text-4xl text-center">
-          Meet our Club Members
-        </h1>
-        <hr />
-        <div className="flex space-x-10">
-          <div className="flex flex-col border-2 w-1/3 rounded-2xl text-center p-2 mt-4">
-            <h2 className="font-medium text-2xl">Erica Boterf</h2>
-            <hr />
-            <img
-              className="my-3 w-full h-75 object-contain"
-              src="/images/erica_boterf.jpg"
-              alt="Erica Boterf Avatar"
-            />
-            <ul className="space-y-0.5 text-center px-4">
-              <li>
-                I am a Computer Science student seeking my bachelor's degree. I
-                love working with computers and coding is life!
-              </li>
-              <li>Major: Computer Science</li>
-              <li className="text-left">
-                <strong>Goals:</strong>
-                <ul className="list-disc list-inside ml-5 space-y-1">
-                  <li>Working within a company handling data.</li>
-                  <li>Owning a homestead and living off the land</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col border-2 w-1/3 rounded-2xl text-center p-2 mt-4">
-            <h2 className="font-medium text-2xl">Bryton Sarrel</h2>
-            <hr />
-            <img
-              className="my-3 w-full h-75 object-contain"
-              src="/images/bryton_sarrell.png"
-              alt="Bryton Sarrel Avatar"
-            />
-            <ul className="space-y-0.5 text-center px-4">
-              <li>About Me: Computer Science Hobbyist and IT Professional - Currently Working as a Software Engineer</li>
-              <li>Major: Computer Science</li>
-              <li>Concentration: Software Engineering</li>
-              <li className="text-left">
-                <strong>Goals:</strong>
-                <ul className="list-disc list-inside ml-5 space-y-1">
-                  <li>Build open-source tools and applications for different hobbies and business use cases.</li>
-                  <li>Design and build open-source projects such as home automation systems and robotics.</li>
-                  <li>Use skills to contribute to charities and organizations.</li>
-                  <li>Contribute to the computer science community.</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col border-2 w-1/3 rounded-2xl text-center p-2 mt-4">
-            <h2 className="font-medium text-2xl">Jenn Cigler</h2>
-            <hr />
-            <img
-              className="my-3 w-full h-75 object-contain"
-              src="/images/jenn cigler.png"
-              alt="Jenn Cigler Avatar"
-            />
-            <ul className="space-y-0.5 text-center px-4">
-              <li>Major: Cybersecurity</li>
-              <li>I like plants, Pokemon, and pizza</li>
-              <li className="text-left">
-                <strong>Goals:</strong>
-                <ul className="list-disc list-inside ml-5 space-y-1">
-                  <li>I didn't know what to put for goals or shared any pictures</li>
-                  <li>So my club president added this random text your reading</li>
-                  <li>And generated some wierd AI art</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="flex space-x-10">
-          <div className="flex flex-col border-2 w-1/3 rounded-2xl text-center p-2 mt-4">
-            <h2 className="font-medium text-2xl">
-              Caroline aka 'Bailey' Potter
-            </h2>
-            <hr />
-            <img
-              className="my-3 w-full h-75 object-contain"
-              src="/images/Caroline_potter.png"
-              alt="Caroline Avatar"
-            />
-            <ul className="space-y-0.5 text-center px-4">
-              <li>Currently working as a Data Analyst in Healthcare and Product Development</li>
-              <li>Major: Data Analytics</li>
-              <li>Concentration: Project Management</li>
-              <li className="text-left">
-                <strong>Goals:</strong>
-                <ul className="list-disc list-inside ml-5 space-y-1">
-                  <li>Deepen my knowledge in programing languages, such as SQL, Python, and R through immersive projects and collaboration with peers.</li>
-                  <li>Effectively manipulate data and build predictive models using NumPy, Pandas, and Scikit-Learn libraries.</li>
-                  <li>Engage in applied learning by participating in hackathons and community initiatives that translate theoretical
-                    knowledge into practical real-world experience.</li>
-                  <li>Actively share knowledge, support fellow members, and promote and environment for continuous growth.</li>
-                  <li>Grow the community in Coding United Club by fostering a collaborative environment to improve our coding skills
-                    together.</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      
     </>
   );
 }
