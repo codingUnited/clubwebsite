@@ -96,7 +96,7 @@ export default function About() {
                   </Drawer.Body>
                   <Drawer.Footer>
                     <Drawer.CloseTrigger asChild>
-                    <Button>Close</Button>
+                      <Button>Close</Button>
                     </Drawer.CloseTrigger>
                   </Drawer.Footer>
                 </Drawer.Content>
@@ -137,9 +137,9 @@ export default function About() {
                       </li>
                     </ul>
                   </Drawer.Body>
-                 <Drawer.Footer>
+                  <Drawer.Footer>
                     <Drawer.CloseTrigger asChild>
-                    <Button>Close</Button>
+                      <Button>Close</Button>
                     </Drawer.CloseTrigger>
                   </Drawer.Footer>
                 </Drawer.Content>
@@ -185,7 +185,7 @@ export default function About() {
                   </Drawer.Body>
                   <Drawer.Footer>
                     <Drawer.CloseTrigger asChild>
-                    <Button>Close</Button>
+                      <Button>Close</Button>
                     </Drawer.CloseTrigger>
                   </Drawer.Footer>
                 </Drawer.Content>
@@ -238,7 +238,7 @@ export default function About() {
                   </Drawer.Body>
                   <Drawer.Footer>
                     <Drawer.CloseTrigger asChild>
-                    <Button>Close</Button>
+                      <Button>Close</Button>
                     </Drawer.CloseTrigger>
                   </Drawer.Footer>
                 </Drawer.Content>
@@ -271,26 +271,21 @@ export default function About() {
                       <li>Concentration: Software Engineering</li>
                       <li className="text-left">
                         <br />
-                        <strong>About Me:</strong>
                         <ul className="list-disc list-inside ml-5 space-y-1">
-                          <li>-I enjoy hand crafting wooden toys, playing the 6-string guitar, and experimenting with unfamialiar technologies.</li>
-                          <li>-I have been playing a 6-string guitar since I was a toddler.</li>
-                        </ul>
-                      </li>
-                      <li className="text-left">
-                        <br />
-                        <strong>Goals:</strong>
-                        <ul className="list-disc list-inside ml-5 space-y-1">
-                          <li>-To expande my expertise beyond front-end design to include robust back-end development as well as server-side deployment.</li>
-                          <li>-To foster my current skills and knowledge in PMI to become a well-rounded project manager.</li>
-                          <li>-To collaborate with other developers on projects to gain real-world experiences to better prepare me to enter the workforce.</li>
+                          <li>Hello,<br />
+                           My name is Jacob, and I serve as the Event Coordinator for Coding United while pursuing my B.S. in Computer Science with a concentration in Software Engineering at SNHU. I am passionate about helping individuals who strive for excellence reach their full potential. Since joining Coding United, I have connected with professionals who have challenged and inspired me to continually elevate my technical and professional development.
+                            I have always been driven to understand how things work. Whether by deconstructing physical systems or analyzing software applications. I actively research emerging programming languages to deepen my proficiency and expand my technical versatility. My hands-on projects include systems programming on Single Board Computers, web and embedded system security research, and the development of an enterprise-grade home networking lab. I believe there are no limits when you commit to continuous growth.
+                            I regularly participate in Capture-The-Flag (CTF) competitions. While they are competitive and engaging, they also strengthen my understanding of cybersecurity principles, including programming challenges, OSINT methodologies, vulnerability analysis, and penetration testing across virtual and embedded systems.<br />
+                            Keep pushing,<br />
+                            Jacob
+                          </li>
                         </ul>
                       </li>
                     </ul>
                   </Drawer.Body>
                   <Drawer.Footer>
                     <Drawer.CloseTrigger asChild>
-                    <Button>Close</Button>
+                      <Button>Close</Button>
                     </Drawer.CloseTrigger>
                   </Drawer.Footer>
                 </Drawer.Content>
@@ -346,17 +341,17 @@ export default function About() {
                   </Drawer.Body>
                   <Drawer.Footer>
                     <Drawer.CloseTrigger asChild>
-                    <Button>Close</Button>
+                      <Button>Close</Button>
                     </Drawer.CloseTrigger>
                   </Drawer.Footer>
                 </Drawer.Content>
               </Drawer.Positioner>
             </Portal>
           </Drawer.Root>
-          </Center>
+        </Center>
       </Card.Root>
 
-      
+
     </>
   );
 }
