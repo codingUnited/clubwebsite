@@ -1,5 +1,6 @@
 import {Box, Flex, HStack, Text} from "@chakra-ui/react";
 import Link from "next/link";
+import { ColorModeButton } from "@/components/ui/color-mode";
 
 export default function Navbar() {
 
@@ -15,6 +16,7 @@ export default function Navbar() {
             <Link href="/faq" className="hover:text-blue-400 transition-colors">FAQ</Link>
             <Link href="/session" className="hover:text-blue-400 transition-colors">Recordings</Link>
         </HStack>
+        <ColorModeButton />
       </Flex>
     </Box>
   );
