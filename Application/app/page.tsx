@@ -2,9 +2,11 @@ import PageBuilder from "@/components/ui/page-builder";
 import PageBuilderFooter from "@/components/ui/page-builder/template-builder/footer-template";
 import Image from "next/image";
 import { clubFeatures } from "@/app/data";
-import FeatureCard from "@/components/cards/feature-card";
+import { FeatureCard } from "@/components/cards/feature-card";
 import React from "react";
-import { Box, Heading, Text, Separator, Container, VStack } from '@chakra-ui/react';
+import { Box, Heading, Text, Separator, Container, VStack, Carousel, IconButton  } from '@chakra-ui/react';
+import { LuChevronLeft, LuChevronRight } from "react-icons/lu"
+
 
 export default function Home() {
   const HomePage = new PageBuilderFooter();
@@ -68,15 +70,43 @@ export default function Home() {
         </VStack>
       </Container>
 
-      <div className="flex flex-wrap justify-center p-2">
-        {clubFeatures.map((row, rowIndex) => (
-          <section className="flex flex-row" key={rowIndex}>
-            {row.map((feature, index) => (
-              <FeatureCard key={index} title={feature.title} bgColor={feature.bgColor} items={feature.items} />
-            ))}
-          </section>
-        ))}
-      </div>
+
+      <FeatureCarousel />
+
     </>
   );
+}
+
+const allFeatures = clubFeatures.flat();
+
+const FeatureCarousel = () => {
+  return (
+    <Carousel.Root slideCount={allFeatures.length} maxW="6xl" mx="auto">
+      <Carousel.ItemGroup>
+        {allFeatures.map((feature, index) => (
+          <Carousel.Item key={index} index={index} flex="0 0 auto" minW="0" width={{ base: "100%", md: "50%", lg: "33.33%" }} px={2} display="flex" flexDirection="row" alignItems="stretch">
+            <Box flex="1">
+              <FeatureCard title={feature.title} bgColor={feature.bgColor} items={feature.items} height="100%" />
+            </Box>
+          </Carousel.Item>
+        ))}
+      </Carousel.ItemGroup>
+
+      <Carousel.Control mt="4" justifyContent="center" gap="4">
+        <Carousel.PrevTrigger asChild>
+          <IconButton color="white" bgColor="black" size="sm" variant="outline" aria-label="Previous">
+            <LuChevronLeft />
+          </IconButton>
+        </Carousel.PrevTrigger>
+
+        <Carousel.Indicators />
+
+        <Carousel.NextTrigger asChild>
+          <IconButton color="white" bgColor="black" size="sm" variant="outline" aria-label="Next">
+            <LuChevronRight />
+          </IconButton>
+        </Carousel.NextTrigger>
+      </Carousel.Control>
+    </Carousel.Root>
+  )
 }
