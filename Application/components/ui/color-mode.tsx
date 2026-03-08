@@ -62,6 +62,8 @@ export const ColorModeButton = React.forwardRef<
         size="sm"
         ref={ref}
         {...props}
+        _light={{ color: "yellow.600" }}
+        _dark={{ color: "yellow.400" }}
         css={{
           _icon: {
             width: "5",
