@@ -84,7 +84,7 @@ export default function About() {
                         <br />
                         <strong>Goals:</strong>
                         <ul className="list-disc list-inside ml-5 space-y-1">
-                          <li>-Strengthen leardership and organizational efficiency within the club, improving communication, structur, and resource sharing</li>
+                          <li>-Strengthen leardership and organizational efficiency within the club, improving communication, structure, and resource sharing</li>
                           <li>-Create and lead a recurring "Introduction to Coding United" session each term, helping new members understand tools, collaboration practices, and project pathways</li>
                           <li>-Build a strong portfolio of creative and technical projects to support long-term goals in software engineering and emerging tech</li>
                           <li>-Grow skills in software engineering and web development, focusing on full-stack projects using React, Flask, APIs, and Cloud Services</li>
@@ -131,7 +131,7 @@ export default function About() {
                         <br />
                         <strong>Goals:</strong>
                         <ul className="list-disc list-inside ml-5 space-y-1">
-                          <li>-Create an inclusive social platform designed for developers of all backgrounds, skill levels, and specialties.
+                          <li>Create an inclusive social platform designed for developers of all backgrounds, skill levels, and specialties.
                             It will foster collaboration, learning, and community across every area of software development. </li>
                         </ul>
                       </li>
@@ -273,9 +273,11 @@ export default function About() {
                         <br />
                         <ul className="list-disc list-inside ml-5 space-y-1">
                           <li>Hello,<br />
-                           My name is Jacob, and I serve as the Event Coordinator for Coding United while pursuing my B.S. in Computer Science with a concentration in Software Engineering at SNHU. I am passionate about helping individuals who strive for excellence reach their full potential. Since joining Coding United, I have connected with professionals who have challenged and inspired me to continually elevate my technical and professional development.
+                          <br />
+                            My name is Jacob, and I serve as the Event Coordinator for Coding United while pursuing my B.S. in Computer Science with a concentration in Software Engineering at SNHU. I am passionate about helping individuals who strive for excellence reach their full potential. Since joining Coding United, I have connected with professionals who have challenged and inspired me to continually elevate my technical and professional development.
                             I have always been driven to understand how things work. Whether by deconstructing physical systems or analyzing software applications. I actively research emerging programming languages to deepen my proficiency and expand my technical versatility. My hands-on projects include systems programming on Single Board Computers, web and embedded system security research, and the development of an enterprise-grade home networking lab. I believe there are no limits when you commit to continuous growth.
                             I regularly participate in Capture-The-Flag (CTF) competitions. While they are competitive and engaging, they also strengthen my understanding of cybersecurity principles, including programming challenges, OSINT methodologies, vulnerability analysis, and penetration testing across virtual and embedded systems.<br />
+                            <br />
                             Keep pushing,<br />
                             Jacob
                           </li>
@@ -332,9 +334,10 @@ export default function About() {
                         <br />
                         <strong>Goals:</strong>
                         <ul className="list-disc list-inside ml-5 space-y-1">
-                          <li>-Work on various projects in collaboration with other members to get better experience</li>
-                          <li>-Learn more about website design including working with React and APIs</li>
-                          <li>-Build a homelab setup to learn more skills related to networking and server management</li>
+                          <li>-I am currently deepening my expertise in React and Tailwind CSS to build responsive, high-performance web applications that bridge the gap between clean UI and robust backends.</li>
+                          <li>-I’m fascinated by the intersection of software and the physical world. My goal is to integrate IoT sensors with custom web dashboards to create real-time data visualization tools.</li>
+                          <li>-I am actively exploring options for my homelab to master self-hosting, containerization with Docker, and network security. I aim to treat my home network as a sandbox for enterprise-level DevOps practices.</li>
+                          <li>-As an Appointed Officer, I am committed to fostering a community where we can build complex, multi-stack projects together and help fellow students bridge the gap between classroom theory and real-world implementation.</li>
                         </ul>
                       </li>
                     </ul>
