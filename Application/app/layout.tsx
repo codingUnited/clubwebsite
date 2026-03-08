@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Coding United Club",
-  description: "Cloding United Club for SNHU",
+  description: "Coding United Club for SNHU",
 };
 
 export default function RootLayout({
