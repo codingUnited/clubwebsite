@@ -50,9 +50,8 @@ export default function Home() {
             </Text>
           </VStack>
         </Box>
-        )
       </section>
-      <Container maxW="container.md" py={20} textAlign="center">
+      <Container maxW="container.md" py={20} textAlign="center" bg="white">
         <VStack gap={10} align="stretch">
           <Box>
             <Heading as="h1" size="2xl" fontWeight="bold" letterSpacing="tight" color="gray.800">
