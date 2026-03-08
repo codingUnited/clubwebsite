@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <Box bg="blue.900" px={8} py={4} color="white" borderBottom="1px solid" borderColor="whiteAlpha.200">
             <Flex h={16} alignItems="center" justifyContent="center">
-                <p className="text-sm text-gray-400">&copy; 2026 Coding United. All rights reserved.</p>
+                <p className="text-sm text-gray-400">&copy; 2026 Coding United Club. All rights reserved.</p>
 
                 <HStack gap={8} alignItems="center" mx="auto">
                     <Link href="/" className="hover:text-blue-400 transition-colors">Home</Link>
