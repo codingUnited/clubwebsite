@@ -38,18 +38,23 @@ const OfficerDrawer = ({ member }: { member: typeof boardMembers[0] }) => (
                 <Separator my={4} />
                 
                 <Text fontWeight="bold" mb={2}>Goals:</Text>
-                <List.Root variant="marker">
-                  {member.goals.map((goal, i) => (
-                    <List.Item key={i} fontSize="xs">{goal}</List.Item>
-                  ))}
-                </List.Root>
+                {member.goals.length > 1 ? (
+                  <List.Root variant="marker">
+                    {member.goals.map((goal, i) => (
+                      <List.Item key={i} fontSize="sm">{goal}</List.Item>
+                    ))}
+                  </List.Root>
+                ) : (
+                  <>{member.goals.map((goal) => (
+                      <Text key={goal} fontSize="sm" whiteSpace={"pre-line"}>{goal}</Text>
+                    ))}</>
+                    
+                  
+                )}
               </Box>
             </VStack>
           </Drawer.Body>
           <Drawer.Footer>
-            <Drawer.CloseTrigger asChild>
-              <Button variant="outline">Close</Button>
-            </Drawer.CloseTrigger>
           </Drawer.Footer>
         </Drawer.Content>
       </Drawer.Positioner>
