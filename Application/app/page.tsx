@@ -34,11 +34,11 @@ export default function Home() {
         {/* <!-- Content Container --> */}
         <Box position="absolute" zIndex={10} top={{ base: "2", lg: "8%" }} left={{ base: "0", lg: "10" }} right={{ base: "0", lg: "auto" }} bg="blue.800/80" backdropFilter="blur(8px)" p={{ base: 4, lg: 10 }} rounded={{ base: "none", lg: "2xl" }} maxW={{ base: "4xl", lg: "2xl" }} textAlign="center" shadow="2xl">
           <VStack gap={5} align="stretch">
-            <Heading as="h1" fontFamily="mono" color="gray.300" fontSize={{ base: "lg", md: "3xl" }} letterSpacing="wider">
+            <Heading as="h1" fontFamily="mono" color="grey.300" fontSize={{ base: "lg", md: "3xl" }} letterSpacing="wider">
               Welcome to Coding United
             </Heading>
 
-            <Separator borderColor="gray.500/50" />
+            <Separator borderColor="border" />
 
             <Text color="purple.200" fontSize={{ base: "sm", sm: "lg", md: "xl" }} lineHeight="tall" fontWeight="medium">
               A student-led tech club dedicated to building real-world projects,
@@ -51,17 +51,17 @@ export default function Home() {
           </VStack>
         </Box>
       </section>
-      <Container maxW="container.md" py={20} textAlign="center" bg="white">
+      <Container maxW="container.md" py={20} textAlign="center" bg="bg">
         <VStack gap={10} align="stretch">
           <Box>
-            <Heading as="h1" size="2xl" fontWeight="bold" letterSpacing="tight" color="gray.800">
+            <Heading as="h1" size="2xl" fontWeight="bold" letterSpacing="tight" color="fg">
               Mission Statement
             </Heading>
-            <Separator borderColor="black" borderBottomWidth="2px" mt={4} opacity={1} />
+            <Separator borderColor="border" borderBottomWidth="2px" mt={4} opacity={1} />
           </Box>
 
           <Text
-            fontSize={{ base: '2xl', md: '4xl' }} fontFamily="serif" lineHeight="shorter" color="gray.700" fontWeight="medium">
+            fontSize={{ base: '2xl', md: '4xl' }} fontFamily="serif" lineHeight="shorter" color="fg.muted" fontWeight="medium">
             Our mission is to foster a vibrant and inclusive community of
             student developers, empowering everyone with the skills and
             experience to succeed in the world of technology.

@@ -7,7 +7,7 @@ export default function Faqs() {
 
     <Box bg="gray.50" py="10">
       <Container maxW="700px" textAlign="center">
-        <Heading color='black' size='lg' mb='10'>
+        <Heading color='fg' size='lg' mb='10'>
           Frequently Asked Questions
         </Heading>
     
@@ -31,7 +31,7 @@ export default function Faqs() {
             >
 
 
-              <Span flex="1" color='black' fontWeight="black" textAlign='left'>
+              <Span flex="1" color='fg' fontWeight="black" textAlign='left'>
                  {faq.title}
               </Span>
               <Accordion.ItemIndicator 
@@ -41,7 +41,7 @@ export default function Faqs() {
 
             </Accordion.ItemTrigger>
             <Accordion.ItemContent>
-              <Accordion.ItemBody px='5' pb='5' color="gray.600" textAlign='left'>
+              <Accordion.ItemBody px='5' pb='5' color="fg.muted" textAlign='left'>
                  {faq.response}
               </Accordion.ItemBody>
             </Accordion.ItemContent>

@@ -1,0 +1,79 @@
+[
+    {
+        "title": "Club President",
+        "name": "Tony Davis",
+        "image": "/images/tony_davis.jpg",
+        "major": "Computer Science",
+        "concentration": "Software Engineering",
+        "bio": "Fraud Analyst Turned Developer",
+        "goals": [
+            "Strengthen leardership and organizational efficiency within the club, improving communication, structure, and resource sharing",
+            "Create and lead a recurring \"Introduction to Coding United\" session each term, helping new members understand tools, collaboration practices, and project pathways",
+            "Build a strong portfolio of creative and technical projects to support long-term goals in software engineering and emerging tech",
+            "Grow skills in software engineering and web development, focusing on full-stack projects using React, Flask, APIs, and Cloud Services",
+            "Explore robotics simulations as an extension of problem-solving and system design, including embedded engineering",
+            "Build Python-based automation and AI/ML tools, drawing from fraud-analysis experience and real industry workflows"
+        ]
+    },
+    {
+        "title": "Club Vice President",
+        "name": "Devell Robinson",
+        "image": "/images/Devell_New.png",
+        "major": "Computer Science",
+        "concentration": "Software Engineering",
+        "goals": [
+            "Create nad inclusive social platform designe for developers of all background, skill levels, and specialties. It will foster collaboration, learning, and community across every are of software development."
+        ]
+    },
+    {
+        "title": "Club Secretary",
+        "name": "Mikayla Gonzalez",
+        "image": "/images/Mikayla.png",
+        "major": "To Be Determined",
+        "concentration": "To Be Determined",
+        "goals": [
+            "Likes to Read Books",
+            "Likes to Play Video Games",
+            "Wants to learn about all programming languages",
+            "Wants to continue to work on projects",
+            "Needs to pick a major and concentration"
+        ]
+    },
+    {
+        "title": "Club Engagement Officer",
+        "name": "Dakota Riley",
+        "image": "/images/dakota.png",
+        "major": "Computer Science",
+        "concentration": "Software Engineering",
+        "bio": "Space Nerd that likes to play Star Citizen (Ask me about my ships)",
+        "goals": [
+            "Learn key front-end and back-end technologies to help solve problems with software in my workplace",
+            "Gain an understanding of the technologies that power Artificial Intelligence so I can implement AI into new features that enable more possibilities for our clients",
+            "Learn C++ and C# for game and game engine development as a hobby",
+            "Participate in group projects that allow me to network with others, enhance my skills in different technologies, and bring me out of my comfort zone to elevate my knowledge"
+        ]
+    },
+    {
+        "title": "Club Event Coordinator",
+        "name": "Jacob Garrett",
+        "image": "/images/jacob.jpg",
+        "major": "Computer Science",
+        "concentration": "Software Engineering",
+        "goals": [
+            "Hello, My name is Jacob, and I serve as the Event Coordinator for Coding United while pursuing my B.S. in Computer Science with a concentration in Software Engineering at SNHU. I am passionate about helping individuals who strive for excellence reach their full potential. Since joining Coding United, I have connected with professionals who have challenged and inspired me to continually elevate my technical and professional development. I have always been driven to understand how things work. Whether by deconstructing physical systems or analyzing software applications. I actively research emerging programming languages to deepen my proficiency and expand my technical versatility. My hands-on projects include systems programming on Single Board Computers, web and embedded system security research, and the development of an enterprise-grade home networking lab. I believe there are no limits when you commit to continuous growth. I regularly participate in Capture-The-Flag (CTF) competitions. While they are competitive and engaging, they also strengthen my understanding of cybersecurity principles, including programming challenges, OSINT methodologies, vulnerability analysis, and penetration testing across virtual and embedded systems. Keep pushing, Jacob"
+        ]
+    },
+    {
+        "title": "Grand PooBah of This and That",
+        "name": "John Schmidt",
+        "image": "/images/John S.jpg",
+        "major": "Computer Science",
+        "concentration": "Software Engineering",
+        "goals": [
+            "I am currently deepening my expertise in React and Tailwind CSS to build responsive, high-performance web applications that bridge the gap between clean UI and robust backends.",
+            "I’m fascinated by the intersection of software and the physical world. My goal is to integrate IoT sensors with custom web dashboards to create real-time data visualization tools.",
+            "I am actively exploring options for my homelab to master self-hosting, containerization with Docker, and network security. I aim to treat my home network as a sandbox for enterprise-level DevOps practices.",
+            "As an Appointed Officer, I am committed to fostering a community where we can build complex, multi-stack projects together and help fellow students bridge the gap between classroom theory and real-world implementation."
+        ]
+    }
+]
