@@ -5,7 +5,7 @@ export default function Faqs() {
   return (
     <>
 
-    <Box bg="gray.50" py="10">
+    <Box bg={{ base: "gray.50", _dark: "blackAlpha.400" }} py="10">
       <Container maxW="700px" textAlign="center">
         <Heading color='fg' size='lg' mb='10'>
           Frequently Asked Questions
@@ -16,10 +16,11 @@ export default function Faqs() {
           <Accordion.Item 
           key={faq.title} 
           value={faq.title}
-          bg='white'
+          bg={{ base: "white", _dark: "gray.800" }}
           borderRadius='xl'
           boxShadow='md'
           overflow='hidden'
+          borderWidth="1px"
           >
             <Accordion.ItemTrigger
             display='flex'
@@ -27,7 +28,7 @@ export default function Faqs() {
             px='5'
             py='4'
             cursor='pointer'
-            _hover={{bg: 'gray.100'}}
+            _hover={{bg: { base: "gray.100", _dark: "gray.700" } }}
             >
 
 
