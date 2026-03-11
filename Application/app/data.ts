@@ -1,7 +1,7 @@
 
 
 export const clubFeatures = [
-    [{
+    {
         title: "Club Projects",
         bgColor: "blue.600",
         items: [
@@ -31,8 +31,7 @@ export const clubFeatures = [
             "Helps develop well-rounded, adaptable developers",
         ],
     },
-],
-[
+
     {
         title: "Coding Education and Guidance",
         bgColor: "blue.600",
@@ -63,5 +62,23 @@ export const clubFeatures = [
             "Build valuable communication and leadership skills along the way",
         ]
     },
-]
+    {
+        title: "Mentorship Program",
+        bgColor: "blue.600",
+        items: [
+            "COMING SOON",
+            "Connect with more experienced members for personalized guidance and support",
+            "Mentors can help work through challenges you might be facing in you journey",
+            "Mentors can not do the work for you, but they can help point you in the right direction"
+        ]
+    },
+    {
+        title: "Ambassador Program",
+        bgColor: "blue.600",
+        items: [
+            "COMING SOON",
+            "Work directly with the club leadership and project leads to help promote club initiatives",
+            "Gain experience in leadership and communication skills",
+        ]
+    }
 ]
