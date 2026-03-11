@@ -1,11 +1,13 @@
+"use client";
 import PageBuilder from "@/components/ui/page-builder";
 import PageBuilderFooter from "@/components/ui/page-builder/template-builder/footer-template";
 import Image from "next/image";
 import { clubFeatures } from "@/app/data";
 import { FeatureCard } from "@/components/cards/feature-card";
-import React from "react";
-import { Box, Heading, Text, Separator, Container, VStack, Carousel, IconButton  } from '@chakra-ui/react';
-import { LuChevronLeft, LuChevronRight } from "react-icons/lu"
+import React, { useEffect, useState } from "react";
+import { Box, Heading, Text, Separator, Container, VStack, Carousel, IconButton, SimpleGrid  } from '@chakra-ui/react';
+import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
+
 
 
 export default function Home() {
@@ -34,13 +36,13 @@ export default function Home() {
         {/* <!-- Content Container --> */}
         <Box position="absolute" zIndex={10} top={{ base: "2", lg: "8%" }} left={{ base: "0", lg: "10" }} right={{ base: "0", lg: "auto" }} bg="blue.800/80" backdropFilter="blur(8px)" p={{ base: 4, lg: 10 }} rounded={{ base: "none", lg: "2xl" }} maxW={{ base: "4xl", lg: "2xl" }} textAlign="center" shadow="2xl">
           <VStack gap={5} align="stretch">
-            <Heading as="h1" fontFamily="mono" color="grey.300" fontSize={{ base: "lg", md: "3xl" }} letterSpacing="wider">
+            <Heading as="h1" fontFamily="mono" color="whiteAlpha.900" fontSize={{ base: "lg", md: "3xl" }} letterSpacing="wider">
               Welcome to Coding United
             </Heading>
 
-            <Separator borderColor="border" />
+            <Separator borderColor="whiteAlpha.900" />
 
-            <Text color="purple.200" fontSize={{ base: "sm", sm: "lg", md: "xl" }} lineHeight="tall" fontWeight="medium">
+            <Text color="whiteAlpha.900" fontSize={{ base: "sm", sm: "lg", md: "xl" }} lineHeight="tall" fontWeight="medium">
               A student-led tech club dedicated to building real-world projects,
               supporting academic success, and growing together through hands-on
               coding, curiosity, and collaboration.
@@ -78,34 +80,30 @@ export default function Home() {
 
 const allFeatures = clubFeatures.flat();
 
+
 const FeatureCarousel = () => {
+
   return (
-    <Carousel.Root slideCount={allFeatures.length} maxW="6xl" mx="auto">
-      <Carousel.ItemGroup>
-        {allFeatures.map((feature, index) => (
-          <Carousel.Item key={index} index={index} flex="0 0 auto" minW="0" width={{ base: "100%", md: "50%", lg: "33.33%" }} px={2} display="flex" flexDirection="row" alignItems="stretch">
-            <Box flex="1">
-              <FeatureCard title={feature.title} bgColor={feature.bgColor} items={feature.items} height="100%" />
-            </Box>
-          </Carousel.Item>
-        ))}
-      </Carousel.ItemGroup>
-
-      <Carousel.Control mt="4" justifyContent="center" gap="4">
-        <Carousel.PrevTrigger asChild>
-          <IconButton color="white" bgColor="black" size="sm" variant="outline" aria-label="Previous">
-            <LuChevronLeft />
-          </IconButton>
-        </Carousel.PrevTrigger>
-
-        <Carousel.Indicators />
-
-        <Carousel.NextTrigger asChild>
-          <IconButton color="white" bgColor="black" size="sm" variant="outline" aria-label="Next">
-            <LuChevronRight />
-          </IconButton>
-        </Carousel.NextTrigger>
-      </Carousel.Control>
-    </Carousel.Root>
-  )
-}
+    <Box py={10} bg="bg.subtle">
+      <Container maxW="7xl">
+        <VStack gap={8}>
+          <SimpleGrid 
+            columns={{ base: 1, md: 2, lg: 3 }} 
+            gap={6} 
+            width="full"
+          >
+            {allFeatures.map((feature, index) => (
+              <FeatureCard 
+                key={`${feature.title}-${index}`}
+                title={feature.title} 
+                bgColor={feature.bgColor} 
+                items={feature.items}
+                height="full" 
+              />
+            ))}
+          </SimpleGrid>
+        </VStack>
+      </Container>
+    </Box>
+  );
+};
