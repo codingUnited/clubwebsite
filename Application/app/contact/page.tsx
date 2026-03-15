@@ -20,21 +20,21 @@ export default function Contact() {
 
     return (
 
-        <Box py={{ base: 10, md: 16 }} bg='gray.50' minH='100vh'>
+        <Box py={{ base: 10, md: 16 }} bg='bg.muted' minH='100vh'>
 
             <Container maxW='lg'>
 
-                <Box bg='white' rounded='xl' shadow='md' borderWidth='1px' borderColor='gray.200' p={{ base: 6, md: 8 }}>
+                <Box bg='bg.panel' rounded='xl' shadow='md' borderWidth='1px' borderColor='border' p={{ base: 6, md: 8 }}>
 
-                    <Fieldset.Root size="lg" mx='auto' maxW="md" color='black' textAlign="center">
+                    <Fieldset.Root size="lg" mx='auto' maxW="md" color='fg' textAlign="center">
 
                         <Stack gap={2} textAlign='center' mb={6}>
 
-                            <Fieldset.Legend fontSize='xl' color='black' fontWeight='bold'>
+                            <Fieldset.Legend fontSize='xl' color='fg' fontWeight='bold'>
                                 Contact details
                             </Fieldset.Legend>
 
-                            <Fieldset.HelperText color='gray.600'>
+                            <Fieldset.HelperText color='fg.muted'>
                                 Please provide your contact details below and we will reach out to you soon!
                             </Fieldset.HelperText>
                         </Stack>
