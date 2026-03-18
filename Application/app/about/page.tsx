@@ -1,10 +1,10 @@
 "use client";
 import PageBuilder from "@/components/ui/page-builder";
-import { 
-  Box, Heading, Text, Separator, Container, VStack, 
-  Card, Center, Button, Drawer, Portal, Flex, List, Strong 
+import {
+  Box, Heading, Text, Separator, Container, VStack,
+  Card, Center, Button, Drawer, Portal, Flex, List, Strong
 } from '@chakra-ui/react';
-import boardMembers  from "@/data/board-members.json";
+import boardMembers from "@/data/board-members.json";
 
 
 
@@ -34,9 +34,9 @@ const OfficerDrawer = ({ member }: { member: typeof boardMembers[0] }) => (
                 <Text fontSize="sm"><Strong>Major:</Strong> {member.major}</Text>
                 <Text fontSize="sm"><Strong>Concentration:</Strong> {member.concentration}</Text>
                 {member.bio && <Text fontSize="sm" mt={2} fontStyle="italic">{member.bio}</Text>}
-                
+
                 <Separator my={4} />
-                
+
                 <Text fontWeight="bold" mb={2}>Goals:</Text>
                 {member.goals.length > 1 ? (
                   <List.Root variant="marker">
@@ -46,10 +46,10 @@ const OfficerDrawer = ({ member }: { member: typeof boardMembers[0] }) => (
                   </List.Root>
                 ) : (
                   <>{member.goals.map((goal) => (
-                      <Text key={goal} fontSize="sm" whiteSpace={"pre-line"}>{goal}</Text>
-                    ))}</>
-                    
-                  
+                    <Text key={goal} fontSize="sm" whiteSpace={"pre-line"}>{goal}</Text>
+                  ))}</>
+
+
                 )}
               </Box>
             </VStack>
@@ -95,20 +95,59 @@ export default function About() {
         <Heading size="xl" mb={4} color="fg">Meet the Board</Heading>
         <Separator borderColor="border" mb={8} />
         <Flex wrap="wrap" justify="center" gap={4}>
-          {boardMembers.slice(0, 5).map((member, index) => (
+          {boardMembers.filter(member => member.role === "board").map((member, index) => (
             <OfficerDrawer key={index} member={member} />
           ))}
         </Flex>
       </Container>
 
-      {/* Officers Section */}
+      {/* Council of Project and Courses Section */}
       <Container maxW="container.lg" py={5} textAlign="center">
-        <Heading size="xl" mb={4} color="fg">Meet the Officers</Heading>
+        <Heading size="xl" mb={4} color="fg">Meet the Council of Projects and Courses</Heading>
         <Separator borderColor="border" mb={8} />
         <Flex wrap="wrap" justify="center" gap={4}>
-          {boardMembers.slice(5).map((member, index) => (
+          {boardMembers.filter(member => member.role === "projects").map((member, index) => (
             <OfficerDrawer key={index} member={member} />
           ))}
+        </Flex>
+      </Container>
+      {/* Council of Membership Section */}
+      <Container maxW="container.lg" py={5} textAlign="center">
+        <Heading size="xl" mb={4} color="fg">Meet the Council of Membership</Heading>
+        <Separator borderColor="border" mb={8} />
+        <Flex wrap="wrap" justify="center" gap={4}>
+          {boardMembers
+            .filter(member => member.role === "membership")
+            .map((member, index) => (
+              <OfficerDrawer key={index} member={member} />
+            ))}
+        </Flex>
+      </Container>
+
+      
+      {/* Council of Mentorship Section */}
+      <Container maxW="container.lg" py={5} textAlign="center">
+        <Heading size="xl" mb={4} color="fg">Meet the Council of Mentorship</Heading>
+        <Separator borderColor="border" mb={8} />
+        <Flex wrap="wrap" justify="center" gap={4}>
+          {boardMembers
+            .filter(member => member.role === "mentor")
+            .map((member, index) => (
+              <OfficerDrawer key={index} member={member} />
+            ))}
+        </Flex>
+      </Container>
+
+      {/* Council of Engagement Section */}
+      <Container maxW="container.lg" py={5} textAlign="center">
+        <Heading size="xl" mb={4} color="fg">Meet the Council of Engagement</Heading>
+        <Separator borderColor="border" mb={8} />
+        <Flex wrap="wrap" justify="center" gap={4}>
+          {boardMembers
+            .filter(member => member.role === "engagement")
+            .map((member, index) => (
+              <OfficerDrawer key={index} member={member} />
+            ))}
         </Flex>
       </Container>
     </>

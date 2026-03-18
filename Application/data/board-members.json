@@ -2,6 +2,7 @@
     {
         "title": "Club President",
         "name": "Tony Davis",
+        "role": "board",
         "image": "/images/tony_davis.jpg",
         "major": "Computer Science",
         "concentration": "Software Engineering",
@@ -18,6 +19,7 @@
     {
         "title": "Club Vice President",
         "name": "Devell Robinson",
+        "role": "board",
         "image": "/images/Devell_New.png",
         "major": "Computer Science",
         "concentration": "Software Engineering",
@@ -28,20 +30,20 @@
     {
         "title": "Club Secretary",
         "name": "Mikayla Gonzalez",
-        "image": "/images/Mikayla.png",
+        "role": "board",
+        "image": "/images/MikaylaNew.jpg",
         "major": "To Be Determined",
         "concentration": "To Be Determined",
+        "bio": "I am a stay at home mom to my son and I am going to school to better myself for my son.",
         "goals": [
-            "Likes to Read Books",
-            "Likes to Play Video Games",
-            "Wants to learn about all programming languages",
-            "Wants to continue to work on projects",
-            "Needs to pick a major and concentration"
+            "My goal is to learn how to code and figure out what career path to take.",
+            "I am looking at robotics but haven't fully decided yet."
         ]
     },
     {
         "title": "Club Engagement Officer",
         "name": "Dakota Riley",
+        "role": "board",
         "image": "/images/dakota.PNG",
         "major": "Computer Science",
         "concentration": "Software Engineering",
@@ -56,6 +58,7 @@
     {
         "title": "Club Event Coordinator",
         "name": "Jacob Garrett",
+        "role": "board",
         "image": "/images/jacob.jpg",
         "major": "Computer Science",
         "concentration": "Software Engineering",
@@ -66,6 +69,7 @@
     {
         "title": "Grand PooBah of This and That",
         "name": "John Schmidt",
+        "role": "projects",
         "image": "/images/John S.jpg",
         "major": "Computer Science",
         "concentration": "Software Engineering",
@@ -74,6 +78,33 @@
             "I’m fascinated by the intersection of software and the physical world. My goal is to integrate IoT sensors with custom web dashboards to create real-time data visualization tools.",
             "I am actively exploring options for my homelab to master self-hosting, containerization with Docker, and network security. I aim to treat my home network as a sandbox for enterprise-level DevOps practices.",
             "As an Appointed Officer, I am committed to fostering a community where we can build complex, multi-stack projects together and help fellow students bridge the gap between classroom theory and real-world implementation."
+        ]
+    },
+    {
+        "title": "Project Lead Chris",
+        "name": "Christopher Natale",
+        "role": "projects",
+        "image": "/images/ChrisNatale.JPG",
+        "major": "Computer Science",
+        "concentration": "Software Engineering",
+        "bio": "After more than 10 years in sales, I decided to pursure a B.A. in Computer Science to transition into a career in Software Engineering. I have always been fascinated by computers and the development of the programs we use everyday.",
+        "goals": [
+            "I am focused on building full-stack applications, with a particular interest in back-end development. My goal is to create software that empowers people and makes a meaningful impact on their daily lives. ",
+            "I’ve been working with technologies such as JavaScript, React, Next.js Node.js, Express, MongoDB, and Python to build scalable and user-focused applications.",
+            "As an appointed Officer, I strive to foster a welcoming and collaborative community where members can learn from one another and build projects that strengthen their skills and prepare them for real-world careers.",
+            "In my free time, I enjoy playing video games, building applications, traveling with my wife, and relaxing with my three dogs, Chad, Fiona, and Lola."
+        ]
+    },
+    {
+        "title": "Membership Ambassador",
+        "name": "Tanisha Terry-Rascoe",
+        "role": "membership",
+        "image": "/images/Tanisha.jpg",
+        "major": "Computer Science",
+        "concentration": "Software Engineering",
+        "goals": [
+            "To foster community and connections.",
+            "Bring people together based on common nerdy interests."
         ]
     }
 ]
