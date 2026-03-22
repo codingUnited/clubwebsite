@@ -1,42 +1,55 @@
-import {Box, Flex, HStack, Text} from "@chakra-ui/react";
+"use client";
+
+import { Box, Flex, Text, IconButton, Stack, HStack } from "@chakra-ui/react";
+import { useState } from "react"; // Use standard React state
 import Link from "next/link";
-import { ColorModeButton } from "@/components/ui/color-mode";
+import { HiMenu, HiX } from "react-icons/hi";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
 
-    return (
-        <Box 
-          bg="blue.900" 
-          px={8} py={4} 
-          color="white" 
-          borderBottom="1px solid" 
-          borderColor="whiteAlpha.200"
-          >
+  return (
+    <Box as="nav" bg="blue.900" color="white" borderBottom="1px solid" borderColor="whiteAlpha.200">
+      <Flex h={16} px={8} alignItems="center" justifyContent="space-between">
+        <Text fontSize="xl" fontWeight="bold">Coding United</Text>
 
-      <Flex 
-        h={16} 
-        alignItems="center" 
-        justifyContent="space-between"
+        {/* Hamburger Icon */}
+        <IconButton 
+          display={{ base: "flex", md: "none" }} 
+          onClick={() => setIsOpen(!isOpen)}
+          variant="solid"
+          aria-label="Toggle Menu"
         >
+          {isOpen ? <HiX /> : <HiMenu />}
+        </IconButton>
 
-        <Link href="/">
-          <Text 
-            fontSize="xl" 
-            fontWeight="bold" 
-            cursor="pointer" 
-            _hover={{ color: "blue.400" }}>Coding United
-          </Text>
-
-        </Link>
-        <HStack 
-          gap={8}>
-            <Link href="/" className="hover:text-blue-400 transition-colors">Home</Link>
-            <Link href="/about" className="hover:text-blue-400 transition-colors">About Us</Link>
-            <Link href="/faq" className="hover:text-blue-400 transition-colors">FAQ</Link>
-            <Link href="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
+        {/* Desktop Links */}
+        <HStack gap={8} display={{ base: "none", md: "flex" }}>
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/about">About Us</NavLink>
+          <NavLink href="/faq">FAQ</NavLink>
+          <NavLink href="/contact">Contact</NavLink>
         </HStack>
-        <ColorModeButton />
       </Flex>
+
+      {/* Manual Mobile Menu (No snippets required) */}
+      {isOpen && (
+        <Box display={{ md: "none" }} pb={4} px={8}>
+          <Stack gap={4}>
+            <NavLink href="/">Home</NavLink>
+            <NavLink href="/about">About Us</NavLink>
+            <NavLink href="/faq">FAQ</NavLink>
+            <NavLink href="/contact">Contact</NavLink>
+          </Stack>
+        </Box>
+      )}
     </Box>
   );
 }
+
+// Simple NavLink to avoid scope errors
+const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
+  <Link href={href} passHref>
+    <Text _hover={{ color: "blue.400" }} py={2}>{children}</Text>
+  </Link>
+);
