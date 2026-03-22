@@ -1,5 +1,8 @@
 [
     {
+        "_comment": " Roles are set as 'board' for elected board, 'projects' for Council of Projects, 'membership' for council of membership, 'mentorship' for council of mentorship, and 'engagement' for council of engagement. This will be used to determine which council the member belongs to"
+    },
+    {
         "title": "Club President",
         "name": "Tony Davis",
         "role": "board",

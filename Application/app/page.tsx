@@ -27,32 +27,30 @@ export default function Home() {
         <div className="relative w-full h-full group">
           {/* <!-- Background Image --> */}
           <img
-            src="/images/newhero.png"
+            src="/images/HeroV2.jpg"
             alt="Default"
             className="absolute inset-0 w-full h-full object-cover object-bottom transition-opacity duration-300"
           />
 
         </div>
-        {/* <!-- Content Container --> */}
-        <Box position="absolute" zIndex={10} top={{ base: "2", lg: "8%" }} left={{ base: "0", lg: "10" }} right={{ base: "0", lg: "auto" }} bg="blue.800/80" backdropFilter="blur(8px)" p={{ base: 4, lg: 10 }} rounded={{ base: "none", lg: "2xl" }} maxW={{ base: "4xl", lg: "2xl" }} textAlign="center" shadow="2xl">
-          <VStack gap={5} align="stretch">
-            <Heading as="h1" fontFamily="mono" color="whiteAlpha.900" fontSize={{ base: "lg", md: "3xl" }} letterSpacing="wider">
+      </section>
+      <Container maxW="container.md" py={20} textAlign="center" bg="bg">
+        <VStack gap={10} align="stretch">
+          <Box>
+            <Heading as="h1" size="2xl" fontWeight="bold" letterSpacing="tight" color="fg">
               Welcome to Coding United
             </Heading>
+            <Separator borderColor="border" borderBottomWidth="2px" mt={4} opacity={1} />
+          </Box>
 
-            <Separator borderColor="whiteAlpha.900" />
-
-            <Text color="whiteAlpha.900" fontSize={{ base: "sm", sm: "lg", md: "xl" }} lineHeight="tall" fontWeight="medium">
-              A student-led tech club dedicated to building real-world projects,
+          <Text
+            fontSize={{ base: '2xl', md: '4xl' }} fontFamily="serif" lineHeight="shorter" color="fg.muted" fontWeight="medium">
+            A student-led tech club dedicated to building real-world projects,
               supporting academic success, and growing together through hands-on
               coding, curiosity, and collaboration.
-              <Box as="span" display="block" mt={4} fontStyle="italic" color="whiteAlpha.900">
-                We are not here to fit in. We are here to build, to learn, and to become.
-              </Box>
-            </Text>
-          </VStack>
-        </Box>
-      </section>
+          </Text>
+        </VStack>
+      </Container>
       <Container maxW="container.md" py={20} textAlign="center" bg="bg">
         <VStack gap={10} align="stretch">
           <Box>
