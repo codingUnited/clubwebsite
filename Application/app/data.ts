@@ -12,7 +12,7 @@ export const clubFeatures = [
         ],
     },
     {
-        title: "Open Office Hours",
+        title: "Open Office Hours (Every Sunday)",
         bgColor: "blue.600",
         items: [
             "Online learning can feel isolating--it's easy to think you're on your own",

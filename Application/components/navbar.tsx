@@ -35,7 +35,9 @@ export default function Navbar() {
       zIndex="docked"
     >
       <Flex h={16} px={8} alignItems="center" justifyContent="space-between">
-        <Text fontSize="xl" fontWeight="bold">Coding United</Text>
+        <Link href="/">
+          <Text fontSize="xl" fontWeight="bold">Coding United</Text>
+        </Link>
 
         <HStack gap={4}>
           {/* Desktop Links */}
@@ -64,6 +66,9 @@ export default function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             variant="outline"
             aria-label="Toggle Menu"
+            color="white"
+            _hover={{ bg: "whiteAlpha.200" }}
+            borderColor="whiteAlpha.400"
           >
             {isOpen ? <HiX /> : <HiMenu />}
           </IconButton>
