@@ -32,10 +32,10 @@ const Footer = () => {
                     gap={{ base: 4, md: 8}}
                     alignItems="center">
 
-                    <Link href="/" className="hover:text-blue-400 transition-colors">Home</Link>
-                    <Link href="/about" className="hover:text-blue-400 transition-colors">About Us</Link>
-                    <Link href="/faq" className="hover:text-blue-400 transition-colors">FAQ</Link>
-                    <Link href="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
+                    <Link href="/"  scroll={true} className="hover:text-blue-400 transition-colors">Home</Link>
+                    <Link href="/about" scroll={true} className="hover:text-blue-400 transition-colors">About Us</Link>
+                    <Link href="/faq" scroll={true} className="hover:text-blue-400 transition-colors">FAQ</Link>
+                    <Link href="/contact" scroll={true} className="hover:text-blue-400 transition-colors">Contact</Link>
                 </Stack>
             </Flex>
         </Box>

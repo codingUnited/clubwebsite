@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <title>{HomePage.getTitle()}</title>
-      <section className="relative h-[70vh] overflow-hidden">
+      <section className="relative h-[40vh] md:h-[70vh] overflow-hidden">
         <div className="relative w-full h-full group">
           {/* <!-- Background Image --> */}
           <img
@@ -34,7 +34,7 @@ export default function Home() {
 
         </div>
       </section>
-      <Container maxW="container.md" py={20} textAlign="center" bg="bg">
+      <Container maxW="container.md" py={{ base: 10, md: 20 }} textAlign="center" bg="bg">
         <VStack gap={10} align="stretch">
           <Box>
             <Heading as="h1" size="2xl" fontWeight="bold" letterSpacing="tight" color="fg">
@@ -51,7 +51,7 @@ export default function Home() {
           </Text>
         </VStack>
       </Container>
-      <Container maxW="container.md" py={20} textAlign="center" bg="bg">
+      <Container maxW="container.md" py={{ base: 10, md: 20 }} textAlign="center" bg="bg">
         <VStack gap={10} align="stretch">
           <Box>
             <Heading as="h1" size="2xl" fontWeight="bold" letterSpacing="tight" color="fg">
