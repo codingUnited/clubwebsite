@@ -44,11 +44,9 @@ export default function Contact() {
                         width="640px" 
                         height="800px" 
                         src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=W_GuK964P0KdikbzaG2ISMJazIcub_VFrF3wb8MS6u5UNTI3WlNFRjIwWkVaS1lWM1dRUUhSQzdTViQlQCN0PWcu&embed=true" 
-                        frameBorder="0" 
-                        marginWidth="0" 
-                        marginHeight="0" 
+                        
                         style={{ border:"none", maxWidth: "100%" }} 
-                        allowfullscreen 
+                        
                         /> 
                 </Box>
             </Container>
