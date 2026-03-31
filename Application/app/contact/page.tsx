@@ -24,7 +24,7 @@ export default function Contact() {
 
         <Box py={{ base: 10, md: 16 }} bg='bg.muted' minH='100vh'>
             <Container maxW='3xl'>
-                <VStack spacing={6} mb={8} textAlign="Center">
+                <VStack gap={6} mb={8} align="center">
                     <Heading size="xl">Contact Coding United</Heading>
                     <Text fontSize="lg" color='muted'>
                         Have questions or want to get in touch? Fill out the form below and we'll get back to you as soon as possible.
