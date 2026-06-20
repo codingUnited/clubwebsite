@@ -42,21 +42,6 @@
         ]
     },
     {
-        "title": "Club Engagement Officer",
-        "name": "Dakota Riley",
-        "role": "board",
-        "image": "/images/dakota.PNG",
-        "major": "Computer Science",
-        "concentration": "Software Engineering",
-        "bio": "Space Nerd that likes to play Star Citizen (Ask me about my ships)",
-        "goals": [
-            "Learn key front-end and back-end technologies to help solve problems with software in my workplace",
-            "Gain an understanding of the technologies that power Artificial Intelligence so I can implement AI into new features that enable more possibilities for our clients",
-            "Learn C++ and C# for game and game engine development as a hobby",
-            "Participate in group projects that allow me to network with others, enhance my skills in different technologies, and bring me out of my comfort zone to elevate my knowledge"
-        ]
-    },
-    {
         "title": "Club Event Coordinator",
         "name": "Jacob Garrett",
         "role": "board",
@@ -98,14 +83,14 @@
     },
     {
         "title": "Membership Ambassador",
-        "name": "Tanisha Terry-Rascoe",
+        "name": "Sharif Hancock",
         "role": "membership",
-        "image": "/images/Tanisha.jpg",
+        "image": "/images/Sharif.jpg",
         "major": "Computer Science",
         "concentration": "Software Engineering",
+        "bio": "I'm 29 years old, I am a full time dad. I love cars and motorcycles, I have my associates in automotive technology and a licensed mechanic in my state. I love buiilding computers and learning about the new components",
         "goals": [
-            "To foster community and connections.",
-            "Bring people together based on common nerdy interests."
+            "I want to become a full-stack developer and imporve my skills in the tech space. I'd love to own a few tech companies in the future to help change the tech industry and change the world with innovative technology and solutions to real world problems."
         ]
     }
 ]
