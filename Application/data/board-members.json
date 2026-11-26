@@ -2,23 +2,6 @@
   
     {
         "title": "Club President",
-        "name": "Tony Davis",
-        "role": "board",
-        "image": "/images/tony_davis.jpg",
-        "major": "Computer Science",
-        "concentration": "Software Engineering",
-        "bio": "Fraud Analyst Turned Developer",
-        "goals": [
-            "Strengthen leardership and organizational efficiency within the club, improving communication, structure, and resource sharing",
-            "Create and lead a recurring \"Introduction to Coding United\" session each term, helping new members understand tools, collaboration practices, and project pathways",
-            "Build a strong portfolio of creative and technical projects to support long-term goals in software engineering and emerging tech",
-            "Grow skills in software engineering and web development, focusing on full-stack projects using React, Flask, APIs, and Cloud Services",
-            "Explore robotics simulations as an extension of problem-solving and system design, including embedded engineering",
-            "Build Python-based automation and AI/ML tools, drawing from fraud-analysis experience and real industry workflows"
-        ]
-    },
-    {
-        "title": "Club Vice President",
         "name": "Devell Robinson",
         "role": "board",
         "image": "/images/Devell_New.png",
@@ -29,7 +12,7 @@
         ]
     },
     {
-        "title": "Club Secretary",
+        "title": "Club Vice President",
         "name": "Mikayla Gonzalez",
         "role": "board",
         "image": "/images/MikaylaNew.jpg",
@@ -39,6 +22,18 @@
         "goals": [
             "My goal is to learn how to code and figure out what career path to take.",
             "I am looking at robotics but haven't fully decided yet."
+        ]
+    },
+    {
+        "title": "Club Secretary",
+        "name": "Sharif Hancock",
+        "role": "board",
+        "image": "/images/Sharif.jpg",
+        "major": "Computer Science",
+        "concentration": "Software Engineering",
+        "bio": "I'm 29 years old, I am a full time dad. I love cars and motorcycles, I have my associates in automotive technology and a licensed mechanic in my state. I love buiilding computers and learning about the new components",
+        "goals": [
+            "I want to become a full-stack developer and imporve my skills in the tech space. I'd love to own a few tech companies in the future to help change the tech industry and change the world with innovative te`chnology and solutions to real world problems."
         ]
     },
     {
@@ -79,18 +74,6 @@
             "I’ve been working with technologies such as JavaScript, React, Next.js Node.js, Express, MongoDB, and Python to build scalable and user-focused applications.",
             "As an appointed Officer, I strive to foster a welcoming and collaborative community where members can learn from one another and build projects that strengthen their skills and prepare them for real-world careers.",
             "In my free time, I enjoy playing video games, building applications, traveling with my wife, and relaxing with my three dogs, Chad, Fiona, and Lola."
-        ]
-    },
-    {
-        "title": "Membership Ambassador",
-        "name": "Sharif Hancock",
-        "role": "membership",
-        "image": "/images/Sharif.jpg",
-        "major": "Computer Science",
-        "concentration": "Software Engineering",
-        "bio": "I'm 29 years old, I am a full time dad. I love cars and motorcycles, I have my associates in automotive technology and a licensed mechanic in my state. I love buiilding computers and learning about the new components",
-        "goals": [
-            "I want to become a full-stack developer and imporve my skills in the tech space. I'd love to own a few tech companies in the future to help change the tech industry and change the world with innovative technology and solutions to real world problems."
         ]
     }
 ]
